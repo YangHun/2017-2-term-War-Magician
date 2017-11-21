@@ -109,9 +109,16 @@ public class MagicManager : MonoBehaviour {
         Debug.Log("Transform end");
         yield return new WaitForSeconds(timeToDefault);
 
-        float[,] resultHeight = myTerrain.terrainData.GetHeights(x - (transformSize / 2), y - (transformSize / 2), transformSize, transformSize);
-        Debug.Log("Revert begin " + resultHeight[25,25]);
-        yield return StartCoroutine(TTCore(x, y, resultHeight, defaultHeight));
+        for (int i = 0; i < transformSize; i++)
+        {
+            for (int j = 0; j < transformSize; j++)
+            {
+                targetHeight[i, j] = Mathf.Clamp(targetHeight[i, j], 0.0f, 1.0f);
+            }
+        }
+        // float[,] resultHeight = myTerrain.terrainData.GetHeights(x - (transformSize / 2), y - (transformSize / 2), transformSize, transformSize);
+        Debug.Log("Revert begin " + targetHeight[25,25]);
+        yield return StartCoroutine(TTCore(x, y, targetHeight, defaultHeight));
         Debug.Log("Revert end");
     }
 
@@ -124,13 +131,13 @@ public class MagicManager : MonoBehaviour {
         {
             for (int j = 0; j < transformSize; j++)
             {
-                tmp[i, j] = from[i, j];
                 difference[i, j] = (to[i, j] - from[i, j]) / frameToTransform;
             }
         }
 
         for (float frameCount = 0; frameCount <= frameToTransform; frameCount++)
         {
+            tmp = myTerrain.terrainData.GetHeights(x - (transformSize / 2), y - (transformSize / 2), transformSize, transformSize);
             for (int i = 0; i < transformSize; i++)
             {
                 for (int j = 0; j < transformSize; j++)
