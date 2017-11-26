@@ -108,6 +108,17 @@ public class MagicManager : MonoBehaviour {
         */
     }
 
+    public void GetMagicCirclePath(string path)
+    {
+        //TODO: Parse parameter 'path' to find appropriate magic function
+    }
+
+    public void GetMagicCircleImage(string filepath)
+    {
+        //TODO: Load image of parameter 'filepath' and process image to find magic function
+        //--> Yang
+    }
+
     void Elemental(Vector3 destination, Element e)
     {
         Transform initialTransform = gameObject.transform;
