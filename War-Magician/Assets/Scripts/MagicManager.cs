@@ -31,6 +31,11 @@ public class MagicManager : MonoBehaviour {
     [SerializeField]
     float timeToDefault;    // Time to change modified terrain into default
 
+    // Variables for psychokinesis
+    GameObject obj = null;
+    [SerializeField]
+    float velocity;
+
     // Use this for initialization
     void Start () {
         myTerrain = GameObject.Find("Terrain").GetComponent<Terrain>();
@@ -39,7 +44,7 @@ public class MagicManager : MonoBehaviour {
         {
             for ( int j = 0; j < transformSize; j++)
             {
-                basicTransformArray[i, j] = transformHeight * (1 - Mathf.Cos(2 * Mathf.PI * i / transformSize)) * (1 - Mathf.Cos(2 * Mathf.PI * j / transformSize)) / 4;
+                basicTransformArray[i, j] = transformHeight * (1 - Mathf.Cos(2 * Mathf.PI * i / transformSize)) * (1 - Mathf.Cos(2 * Mathf.PI * j / transformSize)) / 4;    // basicTransformArray initialization
             }
         }
 
@@ -58,6 +63,34 @@ public class MagicManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.layer == 8)
+            {
+                Debug.Log("Location: " + hit.point);
+                obj = hit.transform.gameObject;
+            }
+        }
+        else if(Input.GetMouseButtonDown(1))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                Debug.Log("Location: " + hit.point);
+                Vector3 end = hit.point;
+                if (obj != null)
+                {
+                    Psychokinesis(obj, end);
+                    obj = null;
+                }
+            }
+        }
+
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -72,6 +105,7 @@ public class MagicManager : MonoBehaviour {
             if (Physics.Raycast(ray, out hit))
                 TerrainTransform(hit.point, false);
         }
+        */
     }
 
     void Elemental(Vector3 destination, Element e)
@@ -87,7 +121,26 @@ public class MagicManager : MonoBehaviour {
         StartCoroutine(TTBegin((int)destination.x, (int)destination.z, up));
     }
 
-    IEnumerator TTBegin(int x, int y, bool up)    // Getting higer/lower from default terrain
+    void Psychokinesis(GameObject obj, Vector3 destination)
+    {
+        Vector3 diff = destination - obj.transform.position;
+        Debug.Log("diff = " + diff);
+        Vector3 diffXZ = new Vector3(diff.x, 0, diff.z);
+        float p = diffXZ.magnitude;
+        float q = diff.y;
+        float g = Physics.gravity.magnitude;
+        float det = Mathf.Pow(velocity, 4) - 2 * g * q * velocity * velocity - g * g * p * p;
+        float tanTheta;
+        if (det >= 0)
+            tanTheta = (velocity * velocity + Mathf.Sqrt(det)) / (g * p);
+        else
+            tanTheta = 1 / Mathf.Sqrt(2);
+        Vector3 direction = (Quaternion.Euler(0, 0, Mathf.Atan(tanTheta) * Mathf.Rad2Deg) * Quaternion.LookRotation(diffXZ)) * Vector3.forward;
+        Debug.Log(direction);
+        obj.GetComponent<Rigidbody>().velocity = direction * velocity;
+    }
+
+    IEnumerator TTBegin(int x, int y, bool up)
     {
         float[,] defaultHeight = myTerrain.terrainData.GetHeights(x - (transformSize / 2), y - (transformSize / 2), transformSize, transformSize);
         float[,] targetHeight = new float[transformSize, transformSize];
@@ -103,10 +156,8 @@ public class MagicManager : MonoBehaviour {
                     targetHeight[i, j] = defaultHeight[i, j] - basicTransformArray[i, j];
             }
         }
-
-        Debug.Log("Transform begin " + defaultHeight[25, 25]);
+        
         yield return StartCoroutine(TTCore(x, y, defaultHeight, targetHeight));
-        Debug.Log("Transform end");
         yield return new WaitForSeconds(timeToDefault);
 
         for (int i = 0; i < transformSize; i++)
@@ -117,9 +168,7 @@ public class MagicManager : MonoBehaviour {
             }
         }
         // float[,] resultHeight = myTerrain.terrainData.GetHeights(x - (transformSize / 2), y - (transformSize / 2), transformSize, transformSize);
-        Debug.Log("Revert begin " + targetHeight[25,25]);
         yield return StartCoroutine(TTCore(x, y, targetHeight, defaultHeight));
-        Debug.Log("Revert end");
     }
 
     IEnumerator TTCore(int x, int y, float[,] from, float[,] to)
