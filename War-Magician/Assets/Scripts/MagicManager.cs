@@ -113,6 +113,8 @@ public class MagicManager : MonoBehaviour {
     public void GetMagicCirclePath(string path)
     {
         //TODO: Parse parameter 'path' to find appropriate magic function
+        
+
     }
 
     public void GetMagicCircleImageType(string element, MagicType m)

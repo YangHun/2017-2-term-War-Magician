@@ -15,6 +15,7 @@ public class LineTracker : MonoBehaviour
 
     List<Vector3> positions;
 
+    bool LeftTriggerButtonDown = false;
     bool canDraw = false;
 
     // Use this for initialization
@@ -35,20 +36,19 @@ public class LineTracker : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            ClearLine();
-        }
+       
 
-        else if (OVRInput.Get(OVRInput.RawButton.X, OVRInput.Controller.Active) || Input.GetKey(KeyCode.LeftControl))
+        if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) >= 0.9f || Input.GetKey(KeyCode.LeftControl))
         {
             // for debug
             //dest_line.SetPosition(0, RightIndex.transform.position);
             //dest_line.SetPosition(1, RightIndex.transform.position + destination);
 
+
             if (!canDraw)
                 return;
-            
+
+            Debug.Log("Enter?");
             if (_renderer.positionCount < maxPoint)
             {
                 _renderer.positionCount++;
@@ -63,10 +63,21 @@ public class LineTracker : MonoBehaviour
             }
      
         }
-        
-        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) > 0 || Input.GetKeyDown(KeyCode.LeftControl))
         {
-            canDraw = false;
+            if (LeftTriggerButtonDown == false)
+            {
+                ClearLine();
+                LeftTriggerButtonDown = true;
+            }
+        }
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) == 0 || Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            if (LeftTriggerButtonDown == true)
+            {
+                canDraw = false;
+                LeftTriggerButtonDown = false;
+            }
         }
     }
 
