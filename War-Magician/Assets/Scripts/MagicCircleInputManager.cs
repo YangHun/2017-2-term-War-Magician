@@ -7,6 +7,7 @@ using System.Text;
 public class MagicCircleInputManager : MonoBehaviour {
 
     public ImageProcessor machine;
+    public float[] predictions;
     private string _path; //Setter
 
     public LineRenderer EulerLineTracker;
@@ -81,19 +82,20 @@ public class MagicCircleInputManager : MonoBehaviour {
        
     }
 
-    IEnumerator PredictionInput()
+    void PredictionInput()
     {
-        result = machine.prediction;
-        Debug.Log(result);
+        predictions = null;
         StartCoroutine(TexToJpegBinary());
-        Debug.Log("start coroutine : TexToJpegBinary");        
-       
-        yield return null;
     }
 
     public IEnumerator CallMagic()
     {
-        result = machine.prediction;
+        if ( predictions == null)
+        {
+            result = new float[3];
+        }
+        result = predictions;
+
         float q = Mathf.Infinity * -1.0f;
         int index = -1;
         for (int i = 0; i < result.Length; i++)
@@ -152,7 +154,7 @@ public class MagicCircleInputManager : MonoBehaviour {
         else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             //for image processing
-            StartCoroutine(PredictionInput());
+            PredictionInput();
 
             //Reset
             Transform vertices = target.transform.Find("Vertex");
@@ -655,8 +657,14 @@ public class MagicCircleInputManager : MonoBehaviour {
         tex.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
         yield return null;
         bytes = tex.EncodeToJPG();
-        
-        yield return StartCoroutine(machine._predictInput(bytes));
+
+        yield return StartCoroutine(machine.StartPredict(bytes));
+
+        if (predictions == null)
+            yield break;
+
+        yield return StartCoroutine(CallMagic());
+
     }
     
     public string Path
