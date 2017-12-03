@@ -76,7 +76,6 @@ public class GameFlowManager : MonoBehaviour {
 
     void OnStateTutorialFirstCast()
     {
-        Debug.Log("Enter2?");
         if (fsm.isFirstFrame)
             UIManager.I.ChangeTutorialSystemUI("Do Cast! \nPress Left Index Trigger.");
 
