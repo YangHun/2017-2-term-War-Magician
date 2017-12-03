@@ -15,9 +15,9 @@ public class Point : MonoBehaviour {
     private PointerEventData ped;
     
     public float distance = 0.0f;
-    
-    
-    
+
+    bool LeftTriggerButtonDown = false;
+
 
     // Use this for initialization
     void Start()
@@ -36,28 +36,18 @@ public class Point : MonoBehaviour {
         
     }
 	
-   
-
 	// Update is called once per frame
 	void Update () {
 		
 
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) == 0.0f ||Input.GetKeyUp(KeyCode.LeftControl))
         {
-
-        }
-        else if ( Input.GetKeyDown(KeyCode.LeftControl))
-        {
-           
-        }
-        else if (Input.GetKey(KeyCode.LeftControl))
-        {
-
-        }
-        else
-        {
+            if (LeftTriggerButtonDown == true)
+            {
+               
+            }
             List<bool> isfading = MagicCircleInputManager.I.isFading;
-            if ( !isfading.Contains(true) && RightIndexBone3.parent.parent.gameObject.activeSelf)
+            if (!isfading.Contains(true) && RightIndexBone3.parent.parent.gameObject.activeSelf)
             {
                 MagicCircleInputManager.I.isFading.Clear();
                 Vector3 pos = (RightIndexBone3.transform.position - Camera.main.transform.position).normalized;
@@ -70,6 +60,24 @@ public class Point : MonoBehaviour {
                 transform.position = RightIndexBone3.transform.position + RightIndexBone3.forward * distance;
                 //transform.position = RightIndexBone3.transform.position;
             }
+            
+
+        }
+
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) < 0.9f || Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            if (LeftTriggerButtonDown == false)
+            {
+                LeftTriggerButtonDown = true;
+            }
+        }
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) >= 0.9f || Input.GetKey(KeyCode.LeftControl))
+        {
+
+        }
+        else
+        {
+           
             
         }
 	}

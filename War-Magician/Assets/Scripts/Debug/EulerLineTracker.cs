@@ -12,7 +12,8 @@ public class EulerLineTracker : MonoBehaviour {
     public InnerCircle innerCircle;
 
     public float linedistance = 0.001f;
-       
+
+    bool LeftTriggerButtonDown = false;
 
 	// Use this for initialization
 	void Start () {
@@ -25,19 +26,27 @@ public class EulerLineTracker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) == 0 || Input.GetKeyUp(KeyCode.LeftControl))
         {
-                       
+            if (LeftTriggerButtonDown == true)
+            {
+                LeftTriggerButtonDown = false;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.LeftControl))
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) < 0.9f || Input.GetKeyDown(KeyCode.LeftControl))
         {
-            _renderer.positionCount = 1;
-            _renderer.materials[0].SetColor("_TintColor", Color.white);
-                         
+            if (LeftTriggerButtonDown == false)
+            {
+                _renderer.positionCount = 1;
+                _renderer.materials[0].SetColor("_TintColor", Color.white);
+                LeftTriggerButtonDown = true;
+            } 
         }
-        else if (Input.GetKey(KeyCode.LeftControl))
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) >= 0.9f|| Input.GetKey(KeyCode.LeftControl))
         {
-            _renderer.SetPosition(_renderer.positionCount - 1, RightIndexBone3.transform.position);
+           
+                _renderer.SetPosition(_renderer.positionCount - 1, RightIndexBone3.transform.position);
+           
         }
         else
         {

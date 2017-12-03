@@ -6,6 +6,7 @@ using System.Text;
 
 public class MagicCircleInputManager : MonoBehaviour {
 
+    public bool isContinuous = true;
     public ImageProcessor machine;
     public float[] predictions;
     private string _path; //Setter
@@ -28,6 +29,7 @@ public class MagicCircleInputManager : MonoBehaviour {
     bool SecondTouched = false;
     string lastPointname = "";
 
+    bool LeftTriggerButtonDown = false;
 
     //for Continuous
     public bool canDraw = false;
@@ -131,61 +133,76 @@ public class MagicCircleInputManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) == 0 || Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            if (LeftTriggerButtonDown == true)
+            {
+                //for image processing
+                if (isContinuous)
+                    PredictionInput();
+                else
+                    MagicManager.I.GetMagicCirclePath(Path);
+
+                //Reset
+                Transform vertices = target.transform.Find("Vertex");
+                for (int i = vertices.childCount - 1; i > 0; i--)
+                {
+                    BloomFade(vertices.GetChild(i - 1).gameObject, "Black", fadeSpeed * 0.1f, true);
+                    //target.SetBloomColor(Color.black, vertices.GetChild(i).gameObject);
+                }
+
+                if (FirstTouched)
+                {
+                    AdditionalCircleFade(ElementName);
+                    LineBloomFade(EulerLineTracker.gameObject, ElementName);
+                }
+                if (SecondTouched)
+                {
+                    BloomFade(target.transform.Find("Circle").Find("Inner Circle").gameObject, ElementName, 0.0f, false);
+                }
+
+                getKey = false;
+                FirstTouched = false;
+                SecondTouched = false;
+                //ElementName = "";
+                lastPointname = "";
+                Path = "";
+                canDraw = false;
+
+                LeftTriggerButtonDown = false;
+            }
+        }
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) < 0.9f || Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            if (LeftTriggerButtonDown == false)
+            {
+
+                destination = target.transform.forward * (-1.0f);
+                Vector3 initpos = target.transform.Find("Vertex").Find("Center").position;
+                initpos -= destination;
+
+                for (int i = 0; i < target.transform.Find("Vertex").childCount; i++)
+                {
+                    FadeIn(target.transform.Find("Vertex").GetChild(i).gameObject, false);
+                }
+
+
+                if (!getKey)
+                    getKey = true;
+
+                LeftTriggerButtonDown = true;
+
+            }
+        }
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) >= 0.9f || Input.GetKey(KeyCode.LeftControl))
+        {
+
+        }
         
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            destination = target.transform.forward * (-1.0f);
-            Vector3 initpos = target.transform.Find("Vertex").Find("Center").position;
-            initpos -= destination;
-
-            for (int i = 0; i < target.transform.Find("Vertex").childCount; i++)
-            {
-                FadeIn(target.transform.Find("Vertex").GetChild(i).gameObject, false);
-            }
-
-
-            if (!getKey)
-                getKey = true;
-        }
-        else if (Input.GetKey(KeyCode.LeftControl))
-        {
-
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            //for image processing
-            PredictionInput();
-
-            //Reset
-            Transform vertices = target.transform.Find("Vertex");
-            for (int i = vertices.childCount - 1; i > 0; i--)
-            {
-                BloomFade(vertices.GetChild(i - 1).gameObject, "Black", fadeSpeed * 0.1f, true);
-                //target.SetBloomColor(Color.black, vertices.GetChild(i).gameObject);
-            }
-
-            if (FirstTouched)
-            {
-                AdditionalCircleFade(ElementName);
-                LineBloomFade(EulerLineTracker.gameObject, ElementName);
-            }
-            if (SecondTouched)
-            {
-                BloomFade(target.transform.Find("Circle").Find("Inner Circle").gameObject, ElementName, 0.0f, false);
-            }
-
-            getKey = false;
-            FirstTouched = false;
-            SecondTouched = false;
-            //ElementName = "";
-            lastPointname = "";
-            Path = "";
-            canDraw = false;
-        }
 
         else
         {
-
+           
         }
         
 
