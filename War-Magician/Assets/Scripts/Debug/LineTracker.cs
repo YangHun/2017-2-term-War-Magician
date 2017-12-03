@@ -8,7 +8,6 @@ public class LineTracker : MonoBehaviour
 {
 
     public Transform RightIndex;
-    public Point target;
 
     const int maxPoint = 500;
 
@@ -16,9 +15,7 @@ public class LineTracker : MonoBehaviour
 
     List<Vector3> positions;
 
-    Vector3 destination = Vector3.zero;
-
-    
+    bool canDraw = false;
 
     // Use this for initialization
     void Start()
@@ -41,16 +38,17 @@ public class LineTracker : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             ClearLine();
-            destination = target.transform.forward * (-1.0f);
         }
 
-        if (OVRInput.Get(OVRInput.RawButton.X, OVRInput.Controller.Active) || Input.GetKey(KeyCode.LeftControl))
+        else if (OVRInput.Get(OVRInput.RawButton.X, OVRInput.Controller.Active) || Input.GetKey(KeyCode.LeftControl))
         {
             // for debug
             //dest_line.SetPosition(0, RightIndex.transform.position);
             //dest_line.SetPosition(1, RightIndex.transform.position + destination);
-        
 
+            if (!canDraw)
+                return;
+            
             if (_renderer.positionCount < maxPoint)
             {
                 _renderer.positionCount++;
@@ -63,6 +61,12 @@ public class LineTracker : MonoBehaviour
                 positions.Add(RightIndex.position);
                 _renderer.SetPositions(positions.ToArray());
             }
+     
+        }
+        
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            canDraw = false;
         }
     }
 
@@ -73,6 +77,11 @@ public class LineTracker : MonoBehaviour
             _renderer.positionCount = 0;
             positions.Clear();
         }
+    }
+
+    public void StartDrawLine()
+    {
+        canDraw = true;
     }
 
 }

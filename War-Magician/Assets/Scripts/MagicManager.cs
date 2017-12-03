@@ -10,11 +10,12 @@ public class MagicManager : MonoBehaviour {
         get { return _manager; }
     }
 
-    // Magic informations
-
+    // Magic types
+    public enum MagicType { MAGIC_ELEMENTAL, MAGIC_TERRAIN_DOWN, MAGIC_TERRAIN_UP, MAGIC_PSYCHOKINESIS,
+                            MAGIC_TURRET, MAGIC_LASER };
 
     // Variables for elemental bullet magic
-    enum Element { Water, Fire, Electricity }
+    enum Element { Water, Fire, Electricity }   // TODO: Edit later
     [SerializeField]
     GameObject[] elementalBullet = new GameObject[3];
 
@@ -62,8 +63,9 @@ public class MagicManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
+	void Update ()
+    {
+        
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -89,7 +91,7 @@ public class MagicManager : MonoBehaviour {
                 }
             }
         }
-
+        
         /*
         if (Input.GetMouseButtonDown(0))
         {
@@ -113,22 +115,54 @@ public class MagicManager : MonoBehaviour {
         //TODO: Parse parameter 'path' to find appropriate magic function
     }
 
-    public void GetMagicCircleImage(string filepath)
+    public void GetMagicCircleImageType(string element, MagicType m)
     {
-        //TODO: Load image of parameter 'filepath' and process image to find magic function
-        //--> Yang
+        _DoMagic(element, m);
+    }
+
+    private void _DoMagic(string element, MagicType m)       // TODO: 
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit))
+        {
+            Debug.Log(hit.transform.gameObject.name);
+            switch (m)
+            {
+                case MagicType.MAGIC_ELEMENTAL:
+                    switch(element)
+                    {
+                        case "Thunder": Elemental(hit.point, Element.Electricity); break;
+                        case "Water": Elemental(hit.point, Element.Water); break;
+                        case "Flame": Elemental(hit.point, Element.Fire); break;
+                        default: Debug.Log("No elemental bullet: " + element); break;
+                    }
+                    break;
+                case MagicType.MAGIC_TERRAIN_UP:
+                    TerrainTransform(hit.point, true);
+                    break;
+                case MagicType.MAGIC_TERRAIN_DOWN:
+                    TerrainTransform(hit.point, false);
+                    break;
+                default:
+                    Debug.Log("No magic matched");
+                    break;
+            }
+        }
+
+        
     }
 
     void Elemental(Vector3 destination, Element e)
     {
-        Transform initialTransform = gameObject.transform;
-        initialTransform.forward = destination - gameObject.transform.position;
+        Vector3 direction = destination - Camera.main.transform.position;
 
-        Instantiate(elementalBullet[(int)e], gameObject.transform); // TODO: Replace Instantiate() to setActive() with memory pool
+        GameObject obj = Instantiate(elementalBullet[(int)e], Camera.main.transform.position, Quaternion.LookRotation(Camera.main.transform.forward)); // TODO: Replace Instantiate() to setActive() with memory pool
     }
 
     void TerrainTransform(Vector3 destination, bool up)  // TODO: Exception for edge selection case
     {
+        Debug.Log(destination);
         StartCoroutine(TTBegin((int)destination.x, (int)destination.z, up));
     }
 
