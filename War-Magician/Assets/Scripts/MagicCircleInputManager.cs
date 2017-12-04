@@ -13,6 +13,7 @@ public class MagicCircleInputManager : MonoBehaviour {
 
     public LineRenderer EulerLineTracker;
     public LineRenderer ContinuousLineTracker;
+    public LineRenderer GuideLineRenderer;
 
     Dictionary<string, Color> BloomDict = new Dictionary<string, Color>();
     public List<bool> isFading;
@@ -82,12 +83,39 @@ public class MagicCircleInputManager : MonoBehaviour {
             target.transform.Find("Additional Circle").GetChild(i).GetComponent<SpriteRenderer>().materials[0].SetColor("_Color", c);
         }
        
+        if (GuideLineRenderer != null)
+        {
+            c = GuideLineRenderer.materials[0].GetColor("_TintColor");
+            c.a = 0.0f;
+            GuideLineRenderer.materials[0].SetColor("_TintColor", c);
+        }
+
     }
 
     void PredictionInput()
     {
         predictions = null;
         StartCoroutine(TexToJpegBinary());
+    }
+
+    public IEnumerator GuideFadeIn()
+    {
+        if (GuideLineRenderer == null)
+            yield break;
+        
+
+        for ( ; ; )
+        {
+            Color c = GuideLineRenderer.materials[0].GetColor("_TintColor");
+            c.a += Time.deltaTime * fadeSpeed;
+            GuideLineRenderer.materials[0].SetColor("_TintColor", c);
+
+            yield return null;
+
+            if (c.a >= 1.0f)
+                break;
+        }
+
     }
 
     public IEnumerator CallMagic()
