@@ -12,8 +12,8 @@ public class MagicManager : MonoBehaviour {
 
     // Magic types
     public enum Element { Thunder, Air, Flame, Soil, Water, Ice }
-    public enum MagicType { MAGIC_ELEMENTAL, MAGIC_TERRAIN_DOWN, MAGIC_TERRAIN_UP, MAGIC_PSYCHOKINESIS,
-                            MAGIC_TURRET, MAGIC_LASER }
+    public enum MagicType { MAGIC_ELEMENTAL, MAGIC_TERRAIN_DOWN, MAGIC_TERRAIN_UP, MAGIC_TURRET,
+                            MAGIC_LASER, MAGIC_AOE }
 
     // Variables for elemental bullet magic
     [SerializeField]
@@ -31,11 +31,6 @@ public class MagicManager : MonoBehaviour {
     int frameToTransform;  // Frame to modify terrain
     [SerializeField]
     float timeToDefault;    // Time to change modified terrain into default
-
-    // Variables for psychokinesis
-    GameObject obj = null;
-    [SerializeField]
-    float velocity;
 
     // Use this for initialization
     void Start () {
@@ -65,33 +60,10 @@ public class MagicManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.layer == 8)
-            {
-                Debug.Log("Location: " + hit.point);
-                obj = hit.transform.gameObject;
-            }
+            _DoMagic("Thunder", MagicType.MAGIC_LASER);
         }
-        else if(Input.GetMouseButtonDown(1))
-        {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
-            {
-                Debug.Log("Location: " + hit.point);
-                Vector3 end = hit.point;
-                if (obj != null)
-                {
-                    Psychokinesis(obj, end);
-                    obj = null;
-                }
-            }
-        }
-        
         /*
         if (Input.GetMouseButtonDown(0))
         {
@@ -128,6 +100,7 @@ public class MagicManager : MonoBehaviour {
             case "5432165":
                 _DoMagic("Water", MagicType.MAGIC_ELEMENTAL);
                 break;
+            // Insert case here!
             default:
                 Debug.Log("No magic matched with path");
                 break;
@@ -139,69 +112,100 @@ public class MagicManager : MonoBehaviour {
         _DoMagic(element, m);
     }
 
-    private void _DoMagic(string element, MagicType m)       // TODO: 
+    private void _DoMagic(string element, MagicType m)
     {
-        RaycastHit hit;
-
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit))
+        Vector3 direction = Camera.main.transform.forward;   // TODO: Change direction to wand front vector
+        switch (m)
         {
-            Debug.Log(hit.transform.gameObject.name);
+            // Insert case here!
+            case MagicType.MAGIC_ELEMENTAL:
+                switch (element)
+                {
+                    case "Thunder": Elemental(direction, Element.Thunder); break;
+                    case "Water": Elemental(direction, Element.Water); break;
+                    case "Flame": Elemental(direction, Element.Flame); break;
+                    default: Debug.Log("No elemental bullet: " + element); break;
+                }
+                break;
+            case MagicType.MAGIC_LASER:
+                Laser(direction);
+                break;
+            case MagicType.MAGIC_TERRAIN_UP:
+            case MagicType.MAGIC_TERRAIN_DOWN:
+                _DoRaycastMagic(direction, element, m);
+                break;
+            case MagicType.MAGIC_AOE:
+                break;
+            default:
+                Debug.Log("No magic matched");
+                break;
+        }
+        
+    }
+
+    private void _DoRaycastMagic(Vector3 direction, string element, MagicType m)
+    {
+
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(Camera.main.transform.position, direction);
+        Debug.Log(hits);
+
+        Vector3 target = Vector3.zero;
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].transform.gameObject.layer != 10)
+            {
+                target = hits[i].point;
+                Debug.Log(hits[i].transform.gameObject.name);
+                break;
+            }
+        }
+
+        if (target != Vector3.zero)
+        {
             switch (m)
             {
-                case MagicType.MAGIC_ELEMENTAL:
-                    switch(element)
-                    {
-                        case "Thunder": Elemental(hit.point, Element.Thunder); break;
-                        case "Water": Elemental(hit.point, Element.Water); break;
-                        case "Flame": Elemental(hit.point, Element.Flame); break;
-                        default: Debug.Log("No elemental bullet: " + element); break;
-                    }
-                    break;
                 case MagicType.MAGIC_TERRAIN_UP:
-                    TerrainTransform(hit.point, true);
+                    TerrainTransform(target, true);
                     break;
                 case MagicType.MAGIC_TERRAIN_DOWN:
-                    TerrainTransform(hit.point, false);
+                    TerrainTransform(target, false);
                     break;
+                // Insert case here!
                 default:
                     Debug.Log("No magic matched");
                     break;
             }
         }
-
-        
+        else
+            Debug.Log("Raycast failed");
     }
 
-    void Elemental(Vector3 destination, Element e)
+    void Elemental(Vector3 direction, Element e)
     {
-        Vector3 direction = destination - Camera.main.transform.position;
-
-        GameObject obj = Instantiate(elementalBullet[(int)e], Camera.main.transform.position, Quaternion.LookRotation(Camera.main.transform.forward)); // TODO: Replace Instantiate() to setActive() with memory pool
+        Instantiate(elementalBullet[(int)e / 2], Camera.main.transform.position, Quaternion.LookRotation(direction));
     }
 
-    void TerrainTransform(Vector3 destination, bool up)  // TODO: Exception for edge selection case
+    void TerrainTransform(Vector3 destination, bool up)
     {
         Debug.Log(destination);
         StartCoroutine(TTBegin((int)destination.x, (int)destination.z, up));
     }
 
-    void Psychokinesis(GameObject obj, Vector3 destination)
+    void Laser(Vector3 direction)
     {
-        Vector3 diff = destination - obj.transform.position;
-        Debug.Log("diff = " + diff);
-        Vector3 diffXZ = new Vector3(diff.x, 0, diff.z);
-        float p = diffXZ.magnitude;
-        float q = diff.y;
-        float g = Physics.gravity.magnitude;
-        float det = Mathf.Pow(velocity, 4) - 2 * g * q * velocity * velocity - g * g * p * p;
-        float tanTheta;
-        if (det >= 0)
-            tanTheta = (velocity * velocity + Mathf.Sqrt(det)) / (g * p);
-        else
-            tanTheta = 1 / Mathf.Sqrt(2);
-        Vector3 direction = (Quaternion.Euler(0, 0, Mathf.Atan(tanTheta) * Mathf.Rad2Deg) * Quaternion.LookRotation(diffXZ)) * Vector3.forward;
-        Debug.Log(direction);
-        obj.GetComponent<Rigidbody>().velocity = direction * velocity;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);    // TODO: Change ray
+        RaycastHit[] hits;
+        hits = Physics.SphereCastAll(ray, 0.1f);
+
+        Vector3 target = Vector3.zero;
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].transform.gameObject.layer == 11)
+            {
+                Destroy(hits[i].transform.gameObject);      // TODO: Deactivate instead of destroy
+            }
+        }
     }
 
     IEnumerator TTBegin(int x, int y, bool up)
