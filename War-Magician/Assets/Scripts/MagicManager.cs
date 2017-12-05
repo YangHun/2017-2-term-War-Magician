@@ -11,11 +11,11 @@ public class MagicManager : MonoBehaviour {
     }
 
     // Magic types
+    public enum Element { Thunder, Air, Flame, Soil, Water, Ice }
     public enum MagicType { MAGIC_ELEMENTAL, MAGIC_TERRAIN_DOWN, MAGIC_TERRAIN_UP, MAGIC_PSYCHOKINESIS,
-                            MAGIC_TURRET, MAGIC_LASER };
+                            MAGIC_TURRET, MAGIC_LASER }
 
     // Variables for elemental bullet magic
-    enum Element { Water, Fire, Electricity }   // TODO: Edit later
     [SerializeField]
     GameObject[] elementalBullet = new GameObject[3];
 
@@ -112,9 +112,26 @@ public class MagicManager : MonoBehaviour {
 
     public void GetMagicCirclePath(string path)
     {
-        //TODO: Parse parameter 'path' to find appropriate magic function
+        // TODO: Parse parameter 'path' to find appropriate magic function
         
-
+        switch (path)
+        {
+            case "1234561":
+            case "1654321":
+                _DoMagic("Thunder", MagicType.MAGIC_ELEMENTAL);
+                break;
+            case "3456123":
+            case "3216543":
+                _DoMagic("Water", MagicType.MAGIC_ELEMENTAL);
+                break;
+            case "5612345":
+            case "5432165":
+                _DoMagic("Water", MagicType.MAGIC_ELEMENTAL);
+                break;
+            default:
+                Debug.Log("No magic matched with path");
+                break;
+        }
     }
 
     public void GetMagicCircleImageType(string element, MagicType m)
@@ -134,9 +151,9 @@ public class MagicManager : MonoBehaviour {
                 case MagicType.MAGIC_ELEMENTAL:
                     switch(element)
                     {
-                        case "Thunder": Elemental(hit.point, Element.Electricity); break;
+                        case "Thunder": Elemental(hit.point, Element.Thunder); break;
                         case "Water": Elemental(hit.point, Element.Water); break;
-                        case "Flame": Elemental(hit.point, Element.Fire); break;
+                        case "Flame": Elemental(hit.point, Element.Flame); break;
                         default: Debug.Log("No elemental bullet: " + element); break;
                     }
                     break;
