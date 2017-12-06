@@ -46,7 +46,7 @@ public class ImageProcessor : MonoBehaviour {
             Debug.Log(i + " :" + result[0, i]);
         }
 
-        MagicCircleInputManager.I.predictions = output;
+        VRInputManager.I.predictions = output;
 
         yield return null;
 

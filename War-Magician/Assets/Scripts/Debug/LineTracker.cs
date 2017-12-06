@@ -14,8 +14,7 @@ public class LineTracker : MonoBehaviour
     LineRenderer _renderer;
 
     List<Vector3> positions;
-
-    bool LeftTriggerButtonDown = false;
+    
     bool canDraw = false;
 
     // Use this for initialization
@@ -32,56 +31,38 @@ public class LineTracker : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnLIndexTrigger() //Stay
     {
+        if (!canDraw)
+            return;
 
-       
-
-        if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) >= 0.9f || Input.GetKey(KeyCode.LeftControl))
+        if (_renderer.positionCount < maxPoint)
         {
-            // for debug
-            //dest_line.SetPosition(0, RightIndex.transform.position);
-            //dest_line.SetPosition(1, RightIndex.transform.position + destination);
-
-
-            if (!canDraw)
-                return;
-
-            Debug.Log("Enter?");
-            if (_renderer.positionCount < maxPoint)
-            {
-                _renderer.positionCount++;
-                _renderer.SetPosition(_renderer.positionCount - 1, RightIndex.position);
-                positions.Add(RightIndex.position);
-            }
-            else if (_renderer.positionCount >= maxPoint)
-            {
-                positions.RemoveAt(0);
-                positions.Add(RightIndex.position);
-                _renderer.SetPositions(positions.ToArray());
-            }
-     
+            _renderer.positionCount++;
+            _renderer.SetPosition(_renderer.positionCount - 1, RightIndex.position);
+            positions.Add(RightIndex.position);
         }
-        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) > 0 || Input.GetKeyDown(KeyCode.LeftControl))
+        else if (_renderer.positionCount >= maxPoint)
         {
-            if (LeftTriggerButtonDown == false)
-            {
-                ClearLine();
-                LeftTriggerButtonDown = true;
-            }
+            positions.RemoveAt(0);
+            positions.Add(RightIndex.position);
+            _renderer.SetPositions(positions.ToArray());
         }
-        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) == 0 || Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            if (LeftTriggerButtonDown == true)
-            {
-                canDraw = false;
-                LeftTriggerButtonDown = false;
-            }
-        }
+
     }
 
-    public void ClearLine()
+    public void OnLIndexTriggerDown()
+    {
+        ClearLine();
+    }
+
+
+    public void OnLIndexTriggerUp()
+    {
+        canDraw = false;
+    }
+
+    void ClearLine()
     {
         if (_renderer.positionCount > 0)
         {

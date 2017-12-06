@@ -20,7 +20,7 @@ public class RightIndex : MonoBehaviour {
     {
         if(col.tag == "Point")
         {
-            MagicCircleInputManager.I.TriggerAction(col);
+            MagicCircleDrawManager.I.TriggerAction(col);
         }
            
         if(col.name == "Points")
