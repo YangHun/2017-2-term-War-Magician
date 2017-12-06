@@ -86,7 +86,7 @@ public class GameFlowManager : MonoBehaviour {
                 UIManager.I.ChangeTutorialSystemUI("Touch the top vertex and draw a circle Through vertices. If finished, Depress trigger.");
                 LeftTriggerButtonDown = true;
 
-                StartCoroutine(MagicCircleInputManager.I.GuideFadeIn());
+                StartCoroutine(MagicCircleDrawManager.I.GuideFadeIn());
             }
         }
         else

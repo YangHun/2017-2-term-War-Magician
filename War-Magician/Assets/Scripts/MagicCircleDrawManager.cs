@@ -4,15 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 
-public class MagicCircleInputManager : MonoBehaviour {
+/// <summary>
+/// About drawing and fading magic circle UI and Line Renderer.
+/// Also have a Path string of Euler Line Tracker.
+/// </summary>
+public class MagicCircleDrawManager : MonoBehaviour {
 
-    public bool isContinuous = true;
-    public ImageProcessor machine;
-    public float[] predictions;
-    private string _path; //Setter
-
-    public LineRenderer EulerLineTracker;
-    public LineRenderer ContinuousLineTracker;
+    public EulerLineTracker EulerLineTracker;
+    public LineTracker ContinuousLineTracker;
     public LineRenderer GuideLineRenderer;
 
     Dictionary<string, Color> BloomDict = new Dictionary<string, Color>();
@@ -26,24 +25,20 @@ public class MagicCircleInputManager : MonoBehaviour {
 
     bool getKey = false;
     bool FirstTouched = false;
-    string ElementName = "";
+    public string ElementName = "";
     bool SecondTouched = false;
     string lastPointname = "";
 
-    bool LeftTriggerButtonDown = false;
+    private string _path; //Setter
 
     //for Continuous
     public bool canDraw = false;
 
     Vector3 destination;
-
-    float[] result;
-
-    byte[] bytes;
-
+    
     // Static variables for singleton
-    private static MagicCircleInputManager _manager = null;
-    public static MagicCircleInputManager I
+    private static MagicCircleDrawManager _manager = null;
+    public static MagicCircleDrawManager I
     {
         get { return _manager; }
     }
@@ -92,11 +87,7 @@ public class MagicCircleInputManager : MonoBehaviour {
 
     }
 
-    void PredictionInput()
-    {
-        predictions = null;
-        StartCoroutine(TexToJpegBinary());
-    }
+    
 
     public IEnumerator GuideFadeIn()
     {
@@ -118,122 +109,62 @@ public class MagicCircleInputManager : MonoBehaviour {
 
     }
 
-    public IEnumerator CallMagic()
+    
+    public void OnLIndexTriggreUp()
     {
-        if ( predictions == null)
-        {
-            result = new float[3];
-        }
-        result = predictions;
 
-        float q = Mathf.Infinity * -1.0f;
-        int index = -1;
-        for (int i = 0; i < result.Length; i++)
+        //Reset Fades
+        Transform vertices = target.transform.Find("Vertex");
+        for (int i = vertices.childCount - 1; i > 0; i--)
         {
-            if (q <= result[i])
-            {
-                q = result[i];
-                index = i;
-            }
+            BloomFade(vertices.GetChild(i - 1).gameObject, "Black", fadeSpeed * 0.1f, true);
+            //target.SetBloomColor(Color.black, vertices.GetChild(i).gameObject);
         }
 
-        switch (index)
+        if (FirstTouched)
         {
-            case 0:
-                MagicManager.I.GetMagicCircleImageType(ElementName, MagicManager.MagicType.MAGIC_ELEMENTAL);
-                break;
-            case 1:
-                MagicManager.I.GetMagicCircleImageType(ElementName, MagicManager.MagicType.MAGIC_TERRAIN_DOWN);
-                break;
-            case 2:
-                MagicManager.I.GetMagicCircleImageType(ElementName, MagicManager.MagicType.MAGIC_TERRAIN_UP);
-                break;
-            default:
-                Debug.Log("Nothing Called");
-                break;
+            AdditionalCircleFade(ElementName);
+            LineBloomFade(EulerLineTracker.gameObject, ElementName);
         }
+        if (SecondTouched)
+        {
+            BloomFade(target.transform.Find("Circle").Find("Inner Circle").gameObject, ElementName, 0.0f, false);
+        }
+            
+        getKey = false;
+        FirstTouched = false;
+        SecondTouched = false;
+        //ElementName = "";
+        lastPointname = "";
+        Path = "";
+        canDraw = false;
 
-        ElementName = "";
+        ContinuousLineTracker.OnLIndexTriggerUp();
 
-        yield return null;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnLIndexTriggerDown()
     {
-        if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) == 0 || Input.GetKeyUp(KeyCode.LeftControl))
+        destination = target.transform.forward * (-1.0f);
+        Vector3 initpos = target.transform.Find("Vertex").Find("Center").position;
+        initpos -= destination;
+
+        for (int i = 0; i < target.transform.Find("Vertex").childCount; i++)
         {
-            if (LeftTriggerButtonDown == true)
-            {
-                //for image processing
-                if (isContinuous)
-                    PredictionInput();
-                else
-                    MagicManager.I.GetMagicCirclePath(Path);
-
-                //Reset
-                Transform vertices = target.transform.Find("Vertex");
-                for (int i = vertices.childCount - 1; i > 0; i--)
-                {
-                    BloomFade(vertices.GetChild(i - 1).gameObject, "Black", fadeSpeed * 0.1f, true);
-                    //target.SetBloomColor(Color.black, vertices.GetChild(i).gameObject);
-                }
-
-                if (FirstTouched)
-                {
-                    AdditionalCircleFade(ElementName);
-                    LineBloomFade(EulerLineTracker.gameObject, ElementName);
-                }
-                if (SecondTouched)
-                {
-                    BloomFade(target.transform.Find("Circle").Find("Inner Circle").gameObject, ElementName, 0.0f, false);
-                }
-
-                getKey = false;
-                FirstTouched = false;
-                SecondTouched = false;
-                //ElementName = "";
-                lastPointname = "";
-                Path = "";
-                canDraw = false;
-
-                LeftTriggerButtonDown = false;
-            }
+            FadeIn(target.transform.Find("Vertex").GetChild(i).gameObject, false);
         }
-        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) < 0.9f || Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            if (LeftTriggerButtonDown == false)
-            {
+        if (!getKey)
+            getKey = true;
 
-                destination = target.transform.forward * (-1.0f);
-                Vector3 initpos = target.transform.Find("Vertex").Find("Center").position;
-                initpos -= destination;
+        ContinuousLineTracker.OnLIndexTriggerDown();
+        EulerLineTracker.OnLIndexTriggerDown();
 
-                for (int i = 0; i < target.transform.Find("Vertex").childCount; i++)
-                {
-                    FadeIn(target.transform.Find("Vertex").GetChild(i).gameObject, false);
-                }
+    }
 
-
-                if (!getKey)
-                    getKey = true;
-
-                LeftTriggerButtonDown = true;
-
-            }
-        }
-        else if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) >= 0.9f || Input.GetKey(KeyCode.LeftControl))
-        {
-
-        }
-        
-
-        else
-        {
-           
-        }
-        
-
+    public void OnLIndexTrigger() //Stay
+    {
+        ContinuousLineTracker.OnLIndexTrigger();
+        EulerLineTracker.OnLIndexTrigger();
     }
 
     public void TriggerAction(Collider col)
@@ -288,8 +219,8 @@ public class MagicCircleInputManager : MonoBehaviour {
                         break;
                 }
 
-                EulerLineTracker.GetComponent<EulerLineTracker>().SetNextPosition(nextpos, destination);
-                ContinuousLineTracker.GetComponent<LineTracker>().StartDrawLine();
+                EulerLineTracker.SetNextPosition(nextpos, destination);
+                ContinuousLineTracker.StartDrawLine();
                 lastPointname = name;
 
                 Path = p;
@@ -691,26 +622,7 @@ public class MagicCircleInputManager : MonoBehaviour {
         yield return null;
     }
 
-    IEnumerator TexToJpegBinary()
-    {
-        Camera cam = Camera.allCameras[1];
-        RenderTexture rt = cam.targetTexture;
-        Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
-        cam.Render();
-        yield return null; 
-        RenderTexture.active = rt;
-        tex.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
-        yield return null;
-        bytes = tex.EncodeToJPG();
-
-        yield return StartCoroutine(machine.StartPredict(bytes));
-
-        if (predictions == null)
-            yield break;
-
-        yield return StartCoroutine(CallMagic());
-
-    }
+  
     
     public string Path
     {
