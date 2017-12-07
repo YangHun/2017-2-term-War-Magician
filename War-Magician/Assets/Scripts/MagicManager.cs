@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,6 +36,11 @@ public class MagicManager : MonoBehaviour {
     // Variables for teleport magic
     [SerializeField]
     Transform playerTransform;
+
+    // Variables for AOE magic
+    [SerializeField]
+    GameObject[] AOEBullet = new GameObject[6];
+    float fallingHeight;
 
     // Use this for initialization
     void Start () {
@@ -118,18 +124,17 @@ public class MagicManager : MonoBehaviour {
 
     private void _DoMagic(string element, MagicType m)
     {
+        Element e;
+        Enum.TryParse(element, out e);
         Vector3 direction = Camera.main.transform.forward;   // TODO: Change direction to wand front vector
         switch (m)
         {
             // Insert case here!
             case MagicType.MAGIC_ELEMENTAL:
-                switch (element)
-                {
-                    case "Thunder": Elemental(direction, Element.Thunder); break;
-                    case "Water": Elemental(direction, Element.Water); break;
-                    case "Flame": Elemental(direction, Element.Flame); break;
-                    default: Debug.Log("No elemental bullet: " + element); break;
-                }
+                if ((int)e % 2 == 0)
+                    Elemental(direction, e);
+                else
+                    Debug.Log("No elemental bullet: " + element);
                 break;
             case MagicType.MAGIC_LASER:
                 Laser(direction);
@@ -142,6 +147,7 @@ public class MagicManager : MonoBehaviour {
                 Teleport(direction);
                 break;
             case MagicType.MAGIC_PLAYER_AOE:
+                AOE(direction, e);
                 break;
             default:
                 Debug.Log("No magic matched");
@@ -234,6 +240,20 @@ public class MagicManager : MonoBehaviour {
                 playerTransform.position = destination;
             }
         }
+    }
+
+    void AOE(Vector3 direction, Element e)
+    {
+        if ((int)e % 2 == 0)            // Ground attack only
+        {
+            Vector3 from = direction;
+            from.y = fallingHeight;
+            Instantiate(AOEBullet[(int)e / 2], from, Quaternion.LookRotation(Vector3.down));
+        }
+        else if (e == Element.Soil)     // No AOE
+            Debug.Log("No soil aoe");
+        else                            // Ground & air
+            Instantiate(AOEBullet[(int)e], Camera.main.transform.position, Quaternion.LookRotation(direction));
     }
 
     IEnumerator TTBegin(int x, int y, bool up)
