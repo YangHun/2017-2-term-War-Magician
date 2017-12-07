@@ -12,8 +12,8 @@ public class MagicManager : MonoBehaviour {
 
     // Magic types
     public enum Element { Thunder, Air, Flame, Soil, Water, Ice }
-    public enum MagicType { MAGIC_ELEMENTAL, MAGIC_TERRAIN_DOWN, MAGIC_TERRAIN_UP, MAGIC_TURRET,
-                            MAGIC_LASER, MAGIC_AOE }
+    public enum MagicType { MAGIC_ELEMENTAL, MAGIC_TERRAIN_DOWN, MAGIC_TERRAIN_UP, MAGIC_TURRET, MAGIC_LASER,
+                            MAGIC_PLAYER_AOE, MATIC_TOP_AOE, MAGIC_RAGE, MAGIC_TELEPORT, MAGIC_SPECIAL }
 
     // Variables for elemental bullet magic
     [SerializeField]
@@ -31,6 +31,10 @@ public class MagicManager : MonoBehaviour {
     int frameToTransform;  // Frame to modify terrain
     [SerializeField]
     float timeToDefault;    // Time to change modified terrain into default
+
+    // Variables for teleport magic
+    [SerializeField]
+    Transform playerTransform;
 
     // Use this for initialization
     void Start () {
@@ -62,7 +66,7 @@ public class MagicManager : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _DoMagic("Thunder", MagicType.MAGIC_LASER);
+            _DoMagic("Thunder", MagicType.MAGIC_TELEPORT);
         }
         /*
         if (Input.GetMouseButtonDown(0))
@@ -134,7 +138,10 @@ public class MagicManager : MonoBehaviour {
             case MagicType.MAGIC_TERRAIN_DOWN:
                 _DoRaycastMagic(direction, element, m);
                 break;
-            case MagicType.MAGIC_AOE:
+            case MagicType.MAGIC_TELEPORT:
+                Teleport(direction);
+                break;
+            case MagicType.MAGIC_PLAYER_AOE:
                 break;
             default:
                 Debug.Log("No magic matched");
@@ -185,6 +192,11 @@ public class MagicManager : MonoBehaviour {
     {
         Instantiate(elementalBullet[(int)e / 2], Camera.main.transform.position, Quaternion.LookRotation(direction));
     }
+    
+    public void ElementalForTurret(Vector3 origin, Vector3 destination, Element e)
+    {
+        Instantiate(elementalBullet[(int)e / 2], origin, Quaternion.LookRotation(destination - origin));
+    }
 
     void TerrainTransform(Vector3 destination, bool up)
     {
@@ -204,6 +216,22 @@ public class MagicManager : MonoBehaviour {
             if (hits[i].transform.gameObject.layer == 11)
             {
                 Destroy(hits[i].transform.gameObject);      // TODO: Deactivate instead of destroy
+            }
+        }
+    }
+
+    void Teleport(Vector3 direction)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.transform.position, direction, out hit))    // TODO: No camera vector
+        {
+            int layer = hit.transform.gameObject.layer;
+            if (layer == 10 || layer == 13)
+            {
+                Vector3 destination = Camera.main.transform.position;
+                destination.x = hit.point.x;
+                destination.z = hit.point.z;
+                playerTransform.position = destination;
             }
         }
     }
