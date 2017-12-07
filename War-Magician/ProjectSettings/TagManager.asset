@@ -16,10 +16,10 @@ TagManager:
   - 
   - Cube
   - Line
-  - 
-  - 
-  - 
-  - 
+  - TransparentWall
+  - Monster
+  - Spell
+  - Castle
   - 
   - 
   - 
