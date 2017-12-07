@@ -247,6 +247,7 @@ MonoBehaviour:
   transformSize: 30
   frameToTransform: 20
   timeToDefault: 3
+  playerTransform: {fileID: 1725832863}
 --- !u!4 &420389910
 Transform:
   m_ObjectHideFlags: 0
@@ -343,13 +344,13 @@ GameObject:
   - component: {fileID: 701649336}
   - component: {fileID: 701649335}
   - component: {fileID: 701649334}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &701649334
 Rigidbody:
   m_ObjectHideFlags: 0
