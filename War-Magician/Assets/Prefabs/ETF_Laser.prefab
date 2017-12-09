@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198693667074653856}
   - component: {fileID: 199492904158400106}
   m_Layer: 0
-  m_Name: ETF_Thunder
+  m_Name: ETF_Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1967827983791270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.273, z: -1.178}
+  m_LocalPosition: {x: 0, y: 0.03, z: -0.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1693921179
+  randomSeed: 1974778338
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3395,7 +3395,7 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_RenderAlignment: 0
-  m_Pivot: {x: 0, y: 0, z: 0}
+  m_Pivot: {x: 0, y: 0.18, z: 0}
   m_UseCustomVertexStreams: 0
   m_VertexStreams: 0001030405
   m_Mesh: {fileID: 0}

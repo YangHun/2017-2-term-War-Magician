@@ -1,0 +1,251 @@
+fileFormatVersion: 2
+guid: 056747f65aab5b344af1a7dc4d30d3d7
+timeCreated: 1512848056
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: creature/frog/frog
+    100002: creature/frog/frog 1
+    100004: creature/frog/frog_bone_0
+    100006: creature/frog/frog_bone_1
+    100008: creature/frog/frog_bone_10
+    100010: creature/frog/frog_bone_11
+    100012: creature/frog/frog_bone_12
+    100014: creature/frog/frog_bone_13
+    100016: creature/frog/frog_bone_14
+    100018: creature/frog/frog_bone_15
+    100020: creature/frog/frog_bone_16
+    100022: creature/frog/frog_bone_17
+    100024: creature/frog/frog_bone_18
+    100026: creature/frog/frog_bone_19
+    100028: creature/frog/frog_bone_2
+    100030: creature/frog/frog_bone_20
+    100032: creature/frog/frog_bone_21
+    100034: creature/frog/frog_bone_22
+    100036: creature/frog/frog_bone_23
+    100038: creature/frog/frog_bone_24
+    100040: creature/frog/frog_bone_25
+    100042: creature/frog/frog_bone_26
+    100044: creature/frog/frog_bone_27
+    100046: creature/frog/frog_bone_28
+    100048: creature/frog/frog_bone_29
+    100050: creature/frog/frog_bone_3
+    100052: creature/frog/frog_bone_30
+    100054: creature/frog/frog_bone_31
+    100056: creature/frog/frog_bone_32
+    100058: creature/frog/frog_bone_33
+    100060: creature/frog/frog_bone_34
+    100062: creature/frog/frog_bone_35
+    100064: creature/frog/frog_bone_36
+    100066: creature/frog/frog_bone_37
+    100068: creature/frog/frog_bone_38
+    100070: creature/frog/frog_bone_39
+    100072: creature/frog/frog_bone_4
+    100074: creature/frog/frog_bone_40
+    100076: creature/frog/frog_bone_41
+    100078: creature/frog/frog_bone_42
+    100080: creature/frog/frog_bone_43
+    100082: creature/frog/frog_bone_44
+    100084: creature/frog/frog_bone_45
+    100086: creature/frog/frog_bone_46
+    100088: creature/frog/frog_bone_5
+    100090: creature/frog/frog_bone_6
+    100092: creature/frog/frog_bone_7
+    100094: creature/frog/frog_bone_8
+    100096: creature/frog/frog_bone_9
+    100098: //RootNode
+    400000: creature/frog/frog
+    400002: creature/frog/frog 1
+    400004: creature/frog/frog_bone_0
+    400006: creature/frog/frog_bone_1
+    400008: creature/frog/frog_bone_10
+    400010: creature/frog/frog_bone_11
+    400012: creature/frog/frog_bone_12
+    400014: creature/frog/frog_bone_13
+    400016: creature/frog/frog_bone_14
+    400018: creature/frog/frog_bone_15
+    400020: creature/frog/frog_bone_16
+    400022: creature/frog/frog_bone_17
+    400024: creature/frog/frog_bone_18
+    400026: creature/frog/frog_bone_19
+    400028: creature/frog/frog_bone_2
+    400030: creature/frog/frog_bone_20
+    400032: creature/frog/frog_bone_21
+    400034: creature/frog/frog_bone_22
+    400036: creature/frog/frog_bone_23
+    400038: creature/frog/frog_bone_24
+    400040: creature/frog/frog_bone_25
+    400042: creature/frog/frog_bone_26
+    400044: creature/frog/frog_bone_27
+    400046: creature/frog/frog_bone_28
+    400048: creature/frog/frog_bone_29
+    400050: creature/frog/frog_bone_3
+    400052: creature/frog/frog_bone_30
+    400054: creature/frog/frog_bone_31
+    400056: creature/frog/frog_bone_32
+    400058: creature/frog/frog_bone_33
+    400060: creature/frog/frog_bone_34
+    400062: creature/frog/frog_bone_35
+    400064: creature/frog/frog_bone_36
+    400066: creature/frog/frog_bone_37
+    400068: creature/frog/frog_bone_38
+    400070: creature/frog/frog_bone_39
+    400072: creature/frog/frog_bone_4
+    400074: creature/frog/frog_bone_40
+    400076: creature/frog/frog_bone_41
+    400078: creature/frog/frog_bone_42
+    400080: creature/frog/frog_bone_43
+    400082: creature/frog/frog_bone_44
+    400084: creature/frog/frog_bone_45
+    400086: creature/frog/frog_bone_46
+    400088: creature/frog/frog_bone_5
+    400090: creature/frog/frog_bone_6
+    400092: creature/frog/frog_bone_7
+    400094: creature/frog/frog_bone_8
+    400096: creature/frog/frog_bone_9
+    400098: //RootNode
+    4300000: creature/frog/frog
+    7400000: Stand [6]
+    7400002: AttackUnarmed [7]
+    9500000: //RootNode
+    13700000: creature/frog/frog
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_frog_frog_1
+    second: {fileID: 2100000, guid: 50eabed99b03ee842ac0568fca0dd46d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Stand [6]
+      takeName: Stand [6]
+      firstFrame: 0
+      lastFrame: 88
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AttackUnarmed [7]
+      takeName: AttackUnarmed [7]
+      firstFrame: 0
+      lastFrame: 88
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

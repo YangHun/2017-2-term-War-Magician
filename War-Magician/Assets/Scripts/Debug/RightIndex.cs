@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RightIndex : MonoBehaviour {
-
-    public EulerLineTracker line;
-
+    
 	// Use this for initialization
 	void Start () {
 		
