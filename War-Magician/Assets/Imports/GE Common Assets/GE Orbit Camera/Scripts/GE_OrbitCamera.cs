@@ -1,11 +1,11 @@
 ﻿// GE Common Assets 1.0
 // Free asssets for using in many packages of Gold Experience Team.
 //
-// Developer:			Gold Experience Team (https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:4162)
+// Author:	Gold Experience Team (http://www.ge-team.com)
 
 // Support:	geteamdev@gmail.com
 //
-// Please direct any bugs/comments/suggestions to geteamdev@gmail.com.
+// Please direct any bugs/comments/suggestions to support e-mail.
 
 
 #region Namespaces

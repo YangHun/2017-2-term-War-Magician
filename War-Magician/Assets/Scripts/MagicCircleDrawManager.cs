@@ -18,7 +18,7 @@ public class MagicCircleDrawManager : MonoBehaviour {
     public List<bool> isFading;
     public float fadeSpeed = 2.0f;
 
-    public enum PointType { POINT_THUNDER, POINT_AIR, POINT_FLAME, POINT_SOIL, POINT_WATER, POINT_ICE, POINT_NULL };
+    public enum PointType { POINT_NULL, POINT_THUNDER, POINT_AIR, POINT_FLAME, POINT_SOIL, POINT_WATER, POINT_ICE};
     public PointType firstPoint = PointType.POINT_NULL;
 
     public Point target;
@@ -86,9 +86,7 @@ public class MagicCircleDrawManager : MonoBehaviour {
         }
 
     }
-
     
-
     public IEnumerator GuideFadeIn()
     {
         if (GuideLineRenderer == null)
@@ -270,11 +268,11 @@ public class MagicCircleDrawManager : MonoBehaviour {
 
         float timer = 0.0f;
 
+        Color c = r.materials[0].GetColor("_MKGlowColor");
+
         while (true)
         {
             timer += fadeSpeed * Time.deltaTime;
-
-            Color c = r.materials[0].GetColor("_MKGlowColor");
 
             c.r += BloomDict[obj.name].r * fadeSpeed * Time.deltaTime;
             c.g += BloomDict[obj.name].g * fadeSpeed * Time.deltaTime;
@@ -328,7 +326,7 @@ public class MagicCircleDrawManager : MonoBehaviour {
 
                 yield return null;
 
-                if (timer >= fadeSpeed && (bc.r > BloomDict[key].r && bc.g > BloomDict[key].g && bc.b > BloomDict[key].b))
+                if (timer >= fadeSpeed && (bc.r >= BloomDict[key].r && bc.g >= BloomDict[key].g && bc.b >= BloomDict[key].b))
                     break;
             }
 
@@ -362,7 +360,7 @@ public class MagicCircleDrawManager : MonoBehaviour {
                 break;
 
         }
-
+        
         Color c_ = Color.white;
         c_.a = 0.0f;
 
@@ -466,12 +464,12 @@ public class MagicCircleDrawManager : MonoBehaviour {
         yield return null;
 
         float timer = 0.0f;
-
+        Color c = r.materials[0].GetColor("_MKGlowColor");
         while (true)
         {
             timer += fadeSpeed * Time.deltaTime;
 
-            Color c = r.materials[0].GetColor("_MKGlowColor");
+            
 
             c.r -= BloomDict[obj.name].r * fadeSpeed * Time.deltaTime;
             c.g -= BloomDict[obj.name].g * fadeSpeed * Time.deltaTime;
@@ -501,12 +499,12 @@ public class MagicCircleDrawManager : MonoBehaviour {
         yield return null;
 
         float timer = 0.0f;
-
+        Color c = r.materials[0].GetColor("_Color");
         while (true)
         {
             timer += fadeSpeed * Time.deltaTime;
 
-            Color c = r.materials[0].GetColor("_Color");
+            
             c.a -= fadeSpeed * Time.deltaTime;
             obj.GetComponent<SpriteRenderer>().materials[0].SetColor("_Color", c);
             yield return null;

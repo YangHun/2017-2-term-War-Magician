@@ -12,6 +12,8 @@ public class VRInputManager : MonoBehaviour {
     public bool LIndexTriggerDown = false;
     public bool LHandTriggerDown = false;
 
+    public Camera LineCamera;
+    public CameraFade cameramanager;
 
     // Continuous Casting Variables
     public bool isContinuous = true;
@@ -66,7 +68,7 @@ public class VRInputManager : MonoBehaviour {
             if (isContinuous)
                 PredictContunuousInput(); //This calls MagicManager.I.GetMagicCircleImageType().
             else
-                MagicManager.I.GetMagicCirclePath(MagicCircleDrawManager.I.Path);
+                MagicManager.I.GetMagicCirclePath(MagicCircleDrawManager.I.ElementName, MagicCircleDrawManager.I.Path);
 
             MagicCircleDrawManager.I.OnLIndexTriggreUp();
 
@@ -98,6 +100,28 @@ public class VRInputManager : MonoBehaviour {
             MagicCircleDrawManager.I.OnLIndexTrigger(); 
 
         }
+
+        //------------------------------------------
+
+        if(OVRInput.Get(OVRInput.RawAxis1D.LHandTrigger, OVRInput.Controller.Active) == 0)
+        {
+             if (LHandTriggerDown)
+            {
+                LHandTriggerDown = false;
+            }
+        }
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LHandTrigger, OVRInput.Controller.Active) < 0.9)
+        {
+            if (!LHandTriggerDown)
+            {
+                MagicManager.I.Teleport();
+                LHandTriggerDown = true;
+            }
+        }
+        else if (OVRInput.Get(OVRInput.RawAxis1D.LHandTrigger, OVRInput.Controller.Active) >= 0.9)
+        {
+
+        }
     }
 
     void PredictContunuousInput()
@@ -108,7 +132,7 @@ public class VRInputManager : MonoBehaviour {
 
     IEnumerator TexToJpegBinary()
     {
-        Camera cam = Camera.allCameras[1];
+        Camera cam = LineCamera;
         RenderTexture rt = cam.targetTexture;
         Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
         cam.Render();
