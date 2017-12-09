@@ -33,9 +33,15 @@ public class MagicManager : MonoBehaviour {
     [SerializeField]
     float timeToDefault;    // Time to change modified terrain into default
 
+    
+
     // Variables for teleport magic
     [SerializeField]
     Transform playerTransform;
+    [SerializeField]
+    float minDistance;
+    [SerializeField]
+    float teleportDistance;    // Time to change modified terrain into default
 
     // Variables for AOE magic
     [SerializeField]
@@ -92,7 +98,7 @@ public class MagicManager : MonoBehaviour {
         */
     }
 
-    public void GetMagicCirclePath(string path)
+    public void GetMagicCirclePath(string element, string path)
     {
         // TODO: Parse parameter 'path' to find appropriate magic function
         
@@ -100,17 +106,26 @@ public class MagicManager : MonoBehaviour {
         {
             case "1234561":
             case "1654321":
-                _DoMagic("Thunder", MagicType.MAGIC_ELEMENTAL);
+                _DoMagic(element, MagicType.MAGIC_ELEMENTAL);
                 break;
             case "3456123":
             case "3216543":
-                _DoMagic("Water", MagicType.MAGIC_ELEMENTAL);
+                _DoMagic(element, MagicType.MAGIC_ELEMENTAL);
                 break;
             case "5612345":
             case "5432165":
-                _DoMagic("Water", MagicType.MAGIC_ELEMENTAL);
+                _DoMagic(element, MagicType.MAGIC_ELEMENTAL);
                 break;
             // Insert case here!
+            case "4":
+                _DoMagic(element, MagicType.MAGIC_TERRAIN_DOWN);
+                break;
+            case "41":
+                _DoMagic(element, MagicType.MAGIC_TERRAIN_UP);
+                break;
+            case "126354":
+                _DoMagic(element, MagicType.MAGIC_LASER);
+                break;
             default:
                 Debug.Log("No magic matched with path");
                 break;
@@ -142,9 +157,6 @@ public class MagicManager : MonoBehaviour {
             case MagicType.MAGIC_TERRAIN_UP:
             case MagicType.MAGIC_TERRAIN_DOWN:
                 _DoRaycastMagic(direction, element, m);
-                break;
-            case MagicType.MAGIC_TELEPORT:
-                Teleport(direction);
                 break;
             case MagicType.MAGIC_PLAYER_AOE:
                 AOE(direction, e);
@@ -226,18 +238,38 @@ public class MagicManager : MonoBehaviour {
         }
     }
 
-    void Teleport(Vector3 direction)
+    public void Teleport()
     {
+        Vector3 direction = Camera.main.transform.forward;
+
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, direction, out hit))    // TODO: No camera vector
         {
+            Debug.Log(hit.point);
+
             int layer = hit.transform.gameObject.layer;
             if (layer == 10 || layer == 13)
             {
-                Vector3 destination = Camera.main.transform.position;
+                Vector3 destination = playerTransform.position;
+
+                Vector3 dir = hit.point - destination;
+                dir.y = 0;
+
                 destination.x = hit.point.x;
                 destination.z = hit.point.z;
-                playerTransform.position = destination;
+                
+                
+                float length = (destination - playerTransform.position).magnitude;
+                if (length < minDistance)
+                {
+                    return;
+                }
+                else if (length > teleportDistance)
+                {
+                    destination = (dir).normalized * teleportDistance + playerTransform.position;
+                    playerTransform.position = destination;
+                }
+//                playerTransform.GetComponent<CharacterController>().SimpleMove(destination);
             }
         }
     }
