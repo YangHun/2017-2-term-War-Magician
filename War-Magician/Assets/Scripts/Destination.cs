@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Destination : MonoBehaviour {
     public GameObject GFM;
+
+    public int HP = 100;
+    
 	// Use this for initialization
 	void Start () {
 	}
@@ -17,7 +20,8 @@ public class Destination : MonoBehaviour {
     {
         if (other.CompareTag("FieldMonster"))
         {
-            GFM.GetComponent<GameFlowManager>().Transition(HelenaStateType.MainGame_GameOver);
+            //other.gameObject.GetComponent<Animator>().SetTrigger("Dead");
+            //GFM.GetComponent<GameFlowManager>().Transition(HelenaStateType.MainGame_GameOver);
         }
     }
 }
