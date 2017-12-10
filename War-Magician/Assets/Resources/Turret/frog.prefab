@@ -486,6 +486,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4687966510021168}
   - component: {fileID: 95572917742301522}
+  - component: {fileID: 135032573574490702}
+  - component: {fileID: 114896810803925066}
+  - component: {fileID: 54009389756241922}
   m_Layer: 0
   m_Name: frog
   m_TagString: Untagged
@@ -533,6 +536,21 @@ GameObject:
   - component: {fileID: 4865077515464272}
   m_Layer: 0
   m_Name: creature/frog/frog_bone_42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1780889428452330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4138848894418756}
+  m_Layer: 0
+  m_Name: forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -846,6 +864,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4564011980872874}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4138848894418756
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780889428452330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.824, z: 0.56}
+  m_LocalScale: {x: -0.06576121, y: -0.06576121, z: -0.06576121}
+  m_Children: []
+  m_Father: {fileID: 4687966510021168}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4142239074683930
 Transform:
@@ -1255,11 +1286,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1693814495532304}
   m_LocalRotation: {x: 0.010015187, y: 0.97015136, z: -0.016662018, w: 0.24171987}
-  m_LocalPosition: {x: 229.68, y: 41.84, z: 261.69}
+  m_LocalPosition: {x: 230.937, y: 42.656, z: 260.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4310818065119098}
   - {fileID: 4996478865881528}
+  - {fileID: 4138848894418756}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1462,6 +1494,21 @@ Transform:
   m_Father: {fileID: 4687966510021168}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!54 &54009389756241922
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693814495532304}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!95 &95572917742301522
 Animator:
   serializedVersion: 3
@@ -1479,6 +1526,33 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114896810803925066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693814495532304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17293044d9e58344d9a5397cbf03c7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 1839039111523184, guid: 5b1eef9a445faf7409f85cbfdc5a9d4a, type: 2}
+  enemies: []
+  Target: {fileID: 0}
+  forward: {fileID: 0}
+--- !u!135 &135032573574490702
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693814495532304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137309584406035938
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

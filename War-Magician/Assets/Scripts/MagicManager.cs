@@ -300,9 +300,11 @@ public class MagicManager : MonoBehaviour {
         Vector3 target = Vector3.zero;
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i].transform.gameObject.layer == 11)
+            //if (hits[i].transform.gameObject.layer == 11)
+            if (hits[i].transform.tag == "FieldMonster" || hits[i].transform.tag == "AirMonster")
             {
-                Destroy(hits[i].transform.gameObject);      // TODO: Deactivate instead of destroy
+                //Destroy(hits[i].transform.gameObject);      // TODO: Deactivate instead of destroy]
+                hits[i].transform.gameObject.GetComponent<Monster_HP>().GetDamaged(20);
             }
         }
     }
@@ -342,8 +344,7 @@ public class MagicManager : MonoBehaviour {
             return;
 
         GameObject g = (GameObject) Instantiate(target, playerTransform.position, Quaternion.identity);
-        g.AddComponent<Turret>();
-        g.GetComponent<Turret>().Bullet = targetbullet;
+        
     }
 
     public void Teleport()
