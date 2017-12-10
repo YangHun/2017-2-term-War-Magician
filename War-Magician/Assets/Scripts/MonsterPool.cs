@@ -7,7 +7,6 @@ public class MonsterPool : MonoBehaviour {
     public GameObject MonsterFly;
     public GameObject MonsterBird;
     public GameObject MonsterTotem;
-    //  public GameObject MonsterBoss;
     public GameObject MonsterSwarm;
     public GameObject MonsterShield;
     public GameObject target_field;
@@ -109,23 +108,70 @@ public class MonsterPool : MonoBehaviour {
     {
         GetComponent<MonsterSpawner>().NumOfMonster++;
         List<GameObject> list = ObjectPool[point][ClassifyEnumObject(input)];
-        for (int i = 0; i < list.Count; i++)
+        RaycastHit hit;
+        if (input == Category.NORMAL || input == Category.SHIELD || input == Category.TOTEM || input == Category.SWARM)
         {
-            if (!list[i].activeSelf)
+            for (int i = 0; i < list.Count; i++)
             {
-                list[i].SetActive(true);
-                return list[i];
+                if (!list[i].activeSelf)
+                {
+                    Physics.Raycast(point.Pivot.position, Vector3.down, out hit);
+                    list[i].transform.position = hit.point + new Vector3(0, list[i].GetComponent<CapsuleCollider>().height, 0);
+                    list[i].transform.rotation = Quaternion.identity;
+                    list[i].GetComponent<AI_FIELD>().target = target_field;
+                    list[i].GetComponent<Monster_HP>().HP = list[i].GetComponent<AI_FIELD>().originHP;
+                    list[i].GetComponent<Monster_HP>().alreadyDead = false;
+
+                    list[i].SetActive(true);
+                    return list[i];
+                }
             }
+            int ret = list.Count;
+            GameObject temp = ClassifyEnumObject(input);
+            Physics.Raycast(point.Pivot.position, Vector3.down, out hit);
+            for (int i = 0; i < addonPoolSize; i++)
+            {
+                GameObject g = Instantiate(temp);
+                g.transform.position = hit.point + new Vector3(0, g.GetComponent<CapsuleCollider>().height, 0);
+                g.transform.rotation = Quaternion.identity;
+                g.GetComponent<AI_FIELD>().target = target_field;
+                g.SetActive(false);
+                list.Add(g);
+            }
+            list[ret].GetComponent<Monster_HP>().HP = list[ret].GetComponent<AI_FIELD>().originHP;
+            list[ret].SetActive(true);
+            return list[ret];
         }
-        int ret = list.Count;
-        GameObject temp = ClassifyEnumObject(input);
-        for (int i = 0; i < addonPoolSize; i++)
+        else
         {
-            GameObject g = Instantiate(temp);
-            g.SetActive(false);
-            list.Add(g);
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (!list[i].activeSelf)
+                {
+                    list[i].transform.position = point.Pivot.position;
+                    list[i].transform.rotation = Quaternion.identity;
+                    list[i].GetComponent<Monster_HP>().HP = list[i].GetComponent<AI_AIR>().originHP;
+                    list[i].GetComponent<Monster_HP>().alreadyDead = false;
+                    list[i].GetComponent<AI_AIR>().isInitialized = false;
+                    list[i].SetActive(true);
+                    return list[i];
+                }
+            }
+            int ret = list.Count;
+            GameObject temp = ClassifyEnumObject(input);
+            Physics.Raycast(point.Pivot.position, Vector3.down, out hit);
+            for (int i = 0; i < addonPoolSize; i++)
+            {
+                GameObject g = Instantiate(temp);
+                g.transform.position = hit.point + new Vector3(0, g.GetComponent<CapsuleCollider>().height, 0);
+                g.transform.rotation = Quaternion.identity;
+                g.SetActive(false);
+                list.Add(g);
+            }
+            list[ret].GetComponent<Monster_HP>().HP = list[ret].GetComponent<AI_AIR>().originHP;
+            list[ret].SetActive(true);
+            return list[ret];
         }
-        return list[ret];
     }
 
     GameObject ClassifyEnumObject(Category input)

@@ -2960,7 +2960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9e9660cc4de3148ae519bf4165ca65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
+  HP: 10
 --- !u!114 &114710695831172364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2974,6 +2974,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   originSpeed: 2
+  originHP: 10
+  mesh: {fileID: 0}
 --- !u!136 &136855583487318266
 CapsuleCollider:
   m_ObjectHideFlags: 1

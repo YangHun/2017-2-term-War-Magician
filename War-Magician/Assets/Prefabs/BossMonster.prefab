@@ -1434,7 +1434,7 @@ GameObject:
   - component: {fileID: 114350399851482084}
   - component: {fileID: 114888666756667724}
   m_Layer: 10
-  m_Name: bossMonster (1)
+  m_Name: BossMonster
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4261,7 +4261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9e9660cc4de3148ae519bf4165ca65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 5000
+  HP: 5000
 --- !u!137 &137868807175794164
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

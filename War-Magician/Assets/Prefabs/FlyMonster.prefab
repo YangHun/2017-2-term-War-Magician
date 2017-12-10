@@ -3526,6 +3526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 0.5
+  originHP: 1
 --- !u!114 &114856345626193876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3537,7 +3538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9e9660cc4de3148ae519bf4165ca65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 1
+  HP: 1
 --- !u!136 &136464311952941196
 CapsuleCollider:
   m_ObjectHideFlags: 1

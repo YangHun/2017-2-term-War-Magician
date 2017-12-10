@@ -5081,6 +5081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   originSpeed: 3.5
+  originHP: 3
+  mesh: {fileID: 0}
 --- !u!114 &114620921162805036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5092,7 +5094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9e9660cc4de3148ae519bf4165ca65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
+  HP: 3
 --- !u!114 &114926906984033854
 MonoBehaviour:
   m_ObjectHideFlags: 1
