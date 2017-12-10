@@ -53,13 +53,13 @@ public class VRInputManager : MonoBehaviour {
 
         if (isContinuous)
         {
-            MagicCircleDrawManager.I.EulerLineTracker.GetComponent<LineRenderer>().startWidth = 0.0f;
-            MagicCircleDrawManager.I.ContinuousLineTracker.GetComponent<LineRenderer>().startWidth = 0.025f;
+            MagicCircleDrawManager.I.EulerLineTracker.gameObject.GetComponent<LineRenderer>().startWidth = 0.0f;
+            MagicCircleDrawManager.I.ContinuousLineTracker.gameObject.GetComponent<LineRenderer>().startWidth = 0.025f;
         }
         else
         {
-            MagicCircleDrawManager.I.EulerLineTracker.GetComponent<LineRenderer>().startWidth = 0.025f;
-            MagicCircleDrawManager.I.ContinuousLineTracker.GetComponent<LineRenderer>().startWidth = 0.0f;
+            MagicCircleDrawManager.I.EulerLineTracker.gameObject.GetComponent<LineRenderer>().startWidth = 0.025f;
+            MagicCircleDrawManager.I.ContinuousLineTracker.gameObject.GetComponent<LineRenderer>().startWidth = 0.0f;
         }
 
     }
@@ -102,13 +102,14 @@ public class VRInputManager : MonoBehaviour {
             
             if (!LIndexTriggerDown)
             {
-                MagicCircleDrawManager.I.OnLIndexTriggerDown();
-
                 if (JoystickOn)
                 {
                     MagicManager.I.AOETopObject.OnLIndexTriggerDown();
                 }
-
+                else
+                {
+                    MagicCircleDrawManager.I.OnLIndexTriggerDown();
+                }
 
                 LIndexTriggerDown = true;
             }
