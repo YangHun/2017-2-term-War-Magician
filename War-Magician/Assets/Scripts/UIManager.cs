@@ -13,8 +13,8 @@ public class UIManager : MonoBehaviour {
     }
 
 
-    public Text TutorialSystemText; 
-
+    public Text TutorialSystemText;
+    public Canvas MainCanvas;
 
     // Use this for initialization
     void Start () {

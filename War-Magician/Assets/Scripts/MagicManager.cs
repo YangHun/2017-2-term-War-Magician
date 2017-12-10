@@ -229,13 +229,13 @@ public class MagicManager : MonoBehaviour {
     {
 
         RaycastHit[] hits;
-        hits = Physics.RaycastAll(Camera.main.transform.position, direction);
+        hits = Physics.RaycastAll(Wand.transform.position, direction);
         Debug.Log(hits);
 
         Vector3 target = Vector3.zero;
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i].transform.gameObject.layer != 10)
+            if (hits[i].transform.gameObject.layer != 9)
             {
                 target = hits[i].point;
                 Debug.Log(hits[i].transform.gameObject.name);
@@ -458,7 +458,7 @@ public class MagicManager : MonoBehaviour {
         // float[,] resultHeight = myTerrain.terrainData.GetHeights(x - (transformSize / 2), y - (transformSize / 2), transformSize, transformSize);
         yield return StartCoroutine(TTCore(x, y, targetHeight, defaultHeight));
 
-        Destroy(gameObject);
+        Destroy(obstcl.gameObject);
         yield return null;
 
     }
