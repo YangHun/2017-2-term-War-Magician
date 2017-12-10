@@ -461,6 +461,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1244902440430066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4755635222260260}
+  m_Layer: 0
+  m_Name: forward
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1268819848057896
 GameObject:
   m_ObjectHideFlags: 1
@@ -1087,6 +1102,7 @@ GameObject:
   - component: {fileID: 4887005913196180}
   - component: {fileID: 95111758211798594}
   - component: {fileID: 135399544714482936}
+  - component: {fileID: 114407018155358544}
   m_Layer: 0
   m_Name: gryphon
   m_TagString: Untagged
@@ -1919,6 +1935,19 @@ Transform:
   m_Father: {fileID: 4796435262326488}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4755635222260260
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244902440430066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.603, z: 1.039}
+  m_LocalScale: {x: 0.22447276, y: 0.22447276, z: 0.22447276}
+  m_Children: []
+  m_Father: {fileID: 4887005913196180}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4773656328934230
 Transform:
   m_ObjectHideFlags: 1
@@ -2082,11 +2111,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859825343815312}
   m_LocalRotation: {x: 0.010015187, y: 0.97015136, z: -0.016662018, w: 0.24171987}
-  m_LocalPosition: {x: 229.68, y: 41.84, z: 261.69}
+  m_LocalPosition: {x: 229.73087, y: 42.637997, z: 261.95197}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4873247213097140}
   - {fileID: 4659459498545836}
+  - {fileID: 4755635222260260}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2234,6 +2264,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114407018155358544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1859825343815312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17293044d9e58344d9a5397cbf03c7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 1752872718775070, guid: 10f24b7cd2cf680438fe53f9a9107769, type: 2}
+  enemies: []
+  Target: {fileID: 0}
+  forward: {fileID: 4755635222260260}
+  skillcooltime: 2
 --- !u!135 &135399544714482936
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -9,7 +9,7 @@ public class AOETop : MonoBehaviour {
     int count;
     [SerializeField]
     float timer;
-    public const float lifetime = 15.0f;
+    public const float lifetime = 30.0f;
 
     private void OnEnable()
     {
@@ -36,7 +36,7 @@ public class AOETop : MonoBehaviour {
         Debug.Log("enter?");
         MagicManager.I.GetTopAOEMagic(transform.forward);
 
-        if (count >= 3)
+        if (count >= 5)
         {
             
             MagicManager.I.AOETopEnd();

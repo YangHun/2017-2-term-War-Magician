@@ -300,9 +300,11 @@ public class MagicManager : MonoBehaviour {
         Vector3 target = Vector3.zero;
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i].transform.gameObject.layer == 11)
+            //if (hits[i].transform.gameObject.layer == 11)
+            if (hits[i].transform.tag == "FieldMonster" || hits[i].transform.tag == "AirMonster")
             {
-                Destroy(hits[i].transform.gameObject);      // TODO: Deactivate instead of destroy
+                //Destroy(hits[i].transform.gameObject);      // TODO: Deactivate instead of destroy]
+                hits[i].transform.gameObject.GetComponent<Monster_HP>().GetDamaged(20);
             }
         }
     }
@@ -342,22 +344,21 @@ public class MagicManager : MonoBehaviour {
             return;
 
         GameObject g = (GameObject) Instantiate(target, playerTransform.position, Quaternion.identity);
-        g.AddComponent<Turret>();
-        g.GetComponent<Turret>().Bullet = targetbullet;
+        
     }
 
     public void Teleport()
     {
-        //Vector3 direction = Camera.main.transform.forward;
-        Vector3 direction = Wand.forward;
+        Vector3 direction = Camera.main.transform.forward;
+        //Vector3 direction = Wand.forward;
 
         RaycastHit hit;
-        if (Physics.Raycast(Wand.position, direction, out hit))    // TODO: No camera vector
+        if (Physics.Raycast(playerTransform.position, direction, out hit))    // TODO: No camera vector
         {
             Debug.Log(hit.point);
 
             int layer = hit.transform.gameObject.layer;
-            if (layer == 10 || layer == 13)
+            if (layer == 10 || layer == 12)
             {
                 Vector3 destination = playerTransform.position;
 
@@ -366,8 +367,8 @@ public class MagicManager : MonoBehaviour {
 
                 destination.x = hit.point.x;
                 destination.z = hit.point.z;
-                
-                
+
+               
                 float length = (destination - playerTransform.position).magnitude;
                 if (length < minDistance)
                 {
@@ -377,8 +378,10 @@ public class MagicManager : MonoBehaviour {
                 {
                     destination = (dir).normalized * teleportDistance + playerTransform.position;
                     playerTransform.position = destination;
+                    //playerTransform.GetComponent<CharacterController>().SimpleMove(destination);
                 }
-                playerTransform.GetComponent<CharacterController>().SimpleMove(destination);
+                  
+                     
             }
         }
     }

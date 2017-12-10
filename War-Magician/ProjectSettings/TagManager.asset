@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Boss
-  - FieldMonster
-  - Point
+  - AirMonster
   - ManaObject
+  - Point
   layers:
   - Default
   - TransparentFX
@@ -17,10 +16,10 @@ TagManager:
   - UI
   - 
   - 
-  - FieldMonster
-  - AirMonster
-  - Bullet
-  - Line
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
