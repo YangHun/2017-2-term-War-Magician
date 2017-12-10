@@ -99,7 +99,7 @@ public class MagicManager : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _DoMagic("Thunder", MagicType.MAGIC_TELEPORT);
+            _DoMagic("Thunder", MagicType.MAGIC_SPECIAL);
         }
         /*
         if (Input.GetMouseButtonDown(0))
@@ -124,7 +124,27 @@ public class MagicManager : MonoBehaviour {
         // TODO: Parse parameter 'path' to find appropriate magic function
 
         Debug.Log(path);
-    
+        
+        if ((path.IndexOf("12") != -1 || path.IndexOf("21") != -1) &&
+            (path.IndexOf("13") != -1 || path.IndexOf("31") != -1) &&
+            (path.IndexOf("14") != -1 || path.IndexOf("41") != -1) &&
+            (path.IndexOf("15") != -1 || path.IndexOf("51") != -1) &&
+            (path.IndexOf("16") != -1 || path.IndexOf("61") != -1) &&
+            (path.IndexOf("23") != -1 || path.IndexOf("32") != -1) &&
+            (path.IndexOf("24") != -1 || path.IndexOf("42") != -1) &&
+            (path.IndexOf("25") != -1 || path.IndexOf("52") != -1) &&
+            (path.IndexOf("26") != -1 || path.IndexOf("62") != -1) &&
+            (path.IndexOf("34") != -1 || path.IndexOf("43") != -1) &&
+            (path.IndexOf("35") != -1 || path.IndexOf("53") != -1) &&
+            (path.IndexOf("36") != -1 || path.IndexOf("63") != -1) &&
+            (path.IndexOf("45") != -1 || path.IndexOf("54") != -1) &&
+            (path.IndexOf("46") != -1 || path.IndexOf("64") != -1) &&
+            (path.IndexOf("56") != -1 || path.IndexOf("65") != -1))
+        {
+            _DoMagic(element, MagicType.MAGIC_SPECIAL);
+            return;
+        }
+
         switch (path)
         {
             case "1234561":
@@ -196,6 +216,9 @@ public class MagicManager : MonoBehaviour {
         switch (m)
         {
             // Insert case here!
+            case MagicType.MAGIC_SPECIAL:
+                Special();
+                break;
             case MagicType.MAGIC_ELEMENTAL:
                 if ((int)e % 2 == 0)
                     Elemental(direction, e);
@@ -426,6 +449,23 @@ public class MagicManager : MonoBehaviour {
             Debug.Log("No soil aoe");
         else                            // Ground & air
             Instantiate(AOEBullet[(int)e], Camera.main.transform.position, Quaternion.LookRotation(direction));
+    }
+
+    void Special()
+    {
+        GameObject[] fields = GameObject.FindGameObjectsWithTag("FieldMonster");
+        if (fields != null)
+        {
+            foreach (GameObject fmonster in fields)
+                fmonster.GetComponent<Monster_HP>().HP = 0;
+        }
+
+        GameObject[] airs = GameObject.FindGameObjectsWithTag("AirMonster");
+        if (airs != null)
+        {
+            foreach (GameObject amonster in airs)
+                amonster.GetComponent<Monster_HP>().HP = 0;
+        }
     }
 
     IEnumerator TTBegin(int x, int y, bool up, GameObject obstcl)
