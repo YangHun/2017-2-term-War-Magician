@@ -57,6 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bolt: {fileID: 1121185813584886, guid: e5ae93577a7019047a01e6d8daa27385, type: 2}
+  delay_Attack: 1
 --- !u!114 &114626929140562618
 MonoBehaviour:
   m_ObjectHideFlags: 1

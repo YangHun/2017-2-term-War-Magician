@@ -5,9 +5,9 @@ using UnityEngine;
 public class Fly_OnAttack : StateMachineBehaviour {
     public GameObject bolt;
     GameObject Target;
-    float delay_Attack = 10f;
-    float timeCounter_Attack = 8f;
-    float boltSpeed = 3f;
+    public float delay_Attack;
+    float timeCounter_Attack = 0f;
+    float boltSpeed = 6f;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

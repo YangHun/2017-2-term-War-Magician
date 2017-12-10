@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 public class Totem : MonoBehaviour {
-
+    public bool isDead = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,18 +15,18 @@ public class Totem : MonoBehaviour {
 	}
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "FieldMonster")
+        if ( other.tag == "FieldMonster")
         {
-            other.GetComponent<NavMeshAgent>().speed = other.GetComponent<AI_FIELD>().originSpeed * 1.5f;
-            other.GetComponent<Animator>().SetTrigger("Run");
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "FieldMonster")
-        {
-            other.GetComponent<NavMeshAgent>().speed = other.GetComponent<AI_FIELD>().originSpeed * 1.5f;
-            other.GetComponent<Animator>().SetTrigger("Run");
+            if (!isDead)
+            {
+                other.GetComponent<NavMeshAgent>().speed = other.GetComponent<AI_FIELD>().originSpeed * 3f;
+                other.GetComponent<Animator>().SetTrigger("Run");
+            }
+            else
+            {
+                other.GetComponent<NavMeshAgent>().speed = other.GetComponent<AI_FIELD>().originSpeed * 1f;
+                other.GetComponent<Animator>().SetTrigger("Walk");
+            }
         }
     }
     private void OnTriggerExit(Collider other)
