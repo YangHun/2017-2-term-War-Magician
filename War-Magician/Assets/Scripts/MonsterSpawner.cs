@@ -24,6 +24,7 @@ public class MonsterSpawner : MonoBehaviour {
     float TimeCounter_FLY = 0.0f;
     float TimeCounter_BIRD = 0.0f;
     int Cycle_Normal = 0;
+    int Cycle_Shield = 0;
     public int NumOfMonster = 0;
     public GameObject bossMonster;
     public GameObject bossTarget;
@@ -50,11 +51,11 @@ public class MonsterSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         TimeCounter_NORMAL += Time.deltaTime;
-    //    TimeCounter_TOTEM += Time.deltaTime;
-     //   TimeCounter_SWARM += Time.deltaTime;
+        TimeCounter_TOTEM += Time.deltaTime;
+        TimeCounter_SWARM += Time.deltaTime;
         TimeCounter_SHIELD += Time.deltaTime;
-      //  TimeCounter_FLY += Time.deltaTime;
-     //   TimeCounter_BIRD += Time.deltaTime;
+        TimeCounter_FLY += Time.deltaTime;
+        TimeCounter_BIRD += Time.deltaTime;
         if (TimeCounter_NORMAL >= SpawnTime_NORMAL)
         {
             for (int i = Cycle_Normal * 6; i < (Cycle_Normal + 1) * 6; i++)
@@ -95,11 +96,17 @@ public class MonsterSpawner : MonoBehaviour {
 
         if (TimeCounter_SHIELD >= SpawnTime_SHIELD)
         {
-            for (int i = 0; i < point_field.Length; i++)
+            for (int i = Cycle_Shield * 3; i < (Cycle_Shield + 1) * 3; i++)
             {
+
                 GameObject g = GetComponent<MonsterPool>().GetObject(Spawnpoint_field[i], MonsterPool.Category.SHIELD);
                 g.GetComponent<NavMeshAgent>().enabled = true;
                 g.GetComponent<AI_FIELD>().Init();
+            }
+            Cycle_Shield++;
+            if (Cycle_Shield == 10)
+            {
+                Cycle_Shield = 0;
             }
             TimeCounter_SHIELD = 0;
         }

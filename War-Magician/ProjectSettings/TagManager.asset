@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Point
-  - ManaObject
-  - FieldMonster
   - Boss
+  - FieldMonster
   layers:
   - Default
   - TransparentFX
@@ -17,19 +15,12 @@ TagManager:
   - UI
   - 
   - 
-  - Cube
-  - Line
-<<<<<<< HEAD
-  - TransparentWall
-  - Monster
-  - Spell
-  - Castle
-=======
-  - Monster
   - 
   - 
   - 
->>>>>>> origin/monster
+  - 
+  - 
+  - 
   - 
   - 
   - 
