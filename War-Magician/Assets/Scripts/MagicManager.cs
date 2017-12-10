@@ -18,7 +18,21 @@ public class MagicManager : MonoBehaviour {
 
     // Variables for elemental bullet magic
     [SerializeField]
+    Transform Wand;
+
+    // Variables for elemental bullet magic
+    [SerializeField]
     GameObject[] elementalBullet = new GameObject[3];
+
+    // Variables for elemental bullet magic
+    [SerializeField]
+    GameObject LaserEffect;
+
+    // Variables for turret magic
+    [SerializeField]
+    GameObject[] Turret = new GameObject[5];
+    [SerializeField]
+    GameObject[] TurretBullet = new GameObject[5];
 
     // Variables for terrain transform magic
     Terrain myTerrain;
@@ -33,14 +47,24 @@ public class MagicManager : MonoBehaviour {
     [SerializeField]
     float timeToDefault;    // Time to change modified terrain into default
 
+    
+
     // Variables for teleport magic
     [SerializeField]
     Transform playerTransform;
+    [SerializeField]
+    float minDistance;
+    [SerializeField]
+    float teleportDistance;    // Time to change modified terrain into default
 
     // Variables for AOE magic
     [SerializeField]
     GameObject[] AOEBullet = new GameObject[6];
     float fallingHeight;
+
+    // Variables for AOE Top magic
+    [SerializeField]
+    public AOETop AOETopObject;
 
     // Use this for initialization
     void Start () {
@@ -92,25 +116,58 @@ public class MagicManager : MonoBehaviour {
         */
     }
 
-    public void GetMagicCirclePath(string path)
+    public void GetMagicCirclePath(string element, string path)
     {
         // TODO: Parse parameter 'path' to find appropriate magic function
-        
+
+        Debug.Log(path);
+    
         switch (path)
         {
             case "1234561":
             case "1654321":
-                _DoMagic("Thunder", MagicType.MAGIC_ELEMENTAL);
+                _DoMagic(element, MagicType.MAGIC_ELEMENTAL);
                 break;
             case "3456123":
             case "3216543":
-                _DoMagic("Water", MagicType.MAGIC_ELEMENTAL);
+                _DoMagic(element, MagicType.MAGIC_ELEMENTAL);
                 break;
             case "5612345":
             case "5432165":
-                _DoMagic("Water", MagicType.MAGIC_ELEMENTAL);
+                _DoMagic(element, MagicType.MAGIC_ELEMENTAL);
                 break;
             // Insert case here!
+            case "4":
+                _DoMagic(element, MagicType.MAGIC_TERRAIN_DOWN);
+                break;
+            case "41":
+                _DoMagic(element, MagicType.MAGIC_TERRAIN_UP);
+                break;
+            case "126354":
+                _DoMagic(element, MagicType.MAGIC_LASER);
+                break;
+            case "1261351":
+            case "1261531":
+            case "1621351":
+            case "1621531":
+            case "2132462":
+            case "2132642":
+            case "2312462":
+            case "2312642":
+            case "3243513":
+            case "3243153":
+            case "3423513":
+            case "3423153":
+            case "5465315":
+            case "5465135":
+            case "5645135":
+            case "5645315":
+            case "6156246":
+            case "6156426":
+            case "6516246":
+            case "6516426":
+                _DoMagic(element, MagicType.MAGIC_TURRET);
+                break;
             default:
                 Debug.Log("No magic matched with path");
                 break;
@@ -126,7 +183,9 @@ public class MagicManager : MonoBehaviour {
     {
         Element e;
         Enum.TryParse(element, out e);
-        Vector3 direction = Camera.main.transform.forward;   // TODO: Change direction to wand front vector
+        //Vector3 direction = Camera.main.transform.forward;   // TODO: Change direction to wand front vector
+        Vector3 direction = Wand.forward;
+
         switch (m)
         {
             // Insert case here!
@@ -143,11 +202,11 @@ public class MagicManager : MonoBehaviour {
             case MagicType.MAGIC_TERRAIN_DOWN:
                 _DoRaycastMagic(direction, element, m);
                 break;
-            case MagicType.MAGIC_TELEPORT:
-                Teleport(direction);
-                break;
             case MagicType.MAGIC_PLAYER_AOE:
                 AOE(direction, e);
+                break;
+            case MagicType.MAGIC_TURRET:
+                CallTurret(element);
                 break;
             default:
                 Debug.Log("No magic matched");
@@ -196,7 +255,9 @@ public class MagicManager : MonoBehaviour {
 
     void Elemental(Vector3 direction, Element e)
     {
-        Instantiate(elementalBullet[(int)e / 2], Camera.main.transform.position, Quaternion.LookRotation(direction));
+        //Instantiate(elementalBullet[(int)e / 2], Wand.position, Quaternion.LookRotation(direction));
+        GameObject g = (GameObject) Instantiate(elementalBullet[(int)e / 2], Wand.position, Quaternion.identity);
+        g.transform.LookAt(Wand.forward + Wand.position);
     }
     
     public void ElementalForTurret(Vector3 origin, Vector3 destination, Element e)
@@ -212,9 +273,13 @@ public class MagicManager : MonoBehaviour {
 
     void Laser(Vector3 direction)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);    // TODO: Change ray
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);    // TODO: Change ray
+        Ray ray = new Ray(Wand.position, Wand.forward);
         RaycastHit[] hits;
         hits = Physics.SphereCastAll(ray, 0.1f);
+
+        GameObject g = (GameObject) Instantiate(LaserEffect, Wand.position, Quaternion.identity);
+        g.transform.LookAt(Wand.forward + Wand.position);
 
         Vector3 target = Vector3.zero;
         for (int i = 0; i < hits.Length; i++)
@@ -226,20 +291,110 @@ public class MagicManager : MonoBehaviour {
         }
     }
 
-    void Teleport(Vector3 direction)
+    void CallTurret(string element)
     {
-        RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, direction, out hit))    // TODO: No camera vector
+        GameObject target = null;
+        GameObject targetbullet = null;
+
+        switch (element)
         {
+            case "Thunder":
+                target = Turret[0];
+                targetbullet = TurretBullet[0];
+                break;
+            case "Air":
+                target = Turret[1];
+                targetbullet = TurretBullet[1];
+                break;
+            case "Flame":
+                target = Turret[2];
+                targetbullet = TurretBullet[2];
+                break;
+            case "Soil":
+                break;
+            case "Water":
+                target = Turret[3];
+                targetbullet = TurretBullet[3];
+                break;
+            case "Ice":
+                target = Turret[4];
+                targetbullet = TurretBullet[4];
+                break;
+        }
+
+        if (target == null)
+            return;
+
+        GameObject g = (GameObject) Instantiate(target, playerTransform.position, Quaternion.identity);
+        g.AddComponent<Turret>();
+        g.GetComponent<Turret>().Bullet = targetbullet;
+    }
+
+    public void Teleport()
+    {
+        //Vector3 direction = Camera.main.transform.forward;
+        Vector3 direction = Wand.forward;
+
+        RaycastHit hit;
+        if (Physics.Raycast(Wand.position, direction, out hit))    // TODO: No camera vector
+        {
+            Debug.Log(hit.point);
+
             int layer = hit.transform.gameObject.layer;
             if (layer == 10 || layer == 13)
             {
-                Vector3 destination = Camera.main.transform.position;
+                Vector3 destination = playerTransform.position;
+
+                Vector3 dir = hit.point - destination;
+                dir.y = 0;
+
                 destination.x = hit.point.x;
                 destination.z = hit.point.z;
-                playerTransform.position = destination;
+                
+                
+                float length = (destination - playerTransform.position).magnitude;
+                if (length < minDistance)
+                {
+                    return;
+                }
+                else if (length > teleportDistance)
+                {
+                    destination = (dir).normalized * teleportDistance + playerTransform.position;
+                    playerTransform.position = destination;
+                }
+                playerTransform.GetComponent<CharacterController>().SimpleMove(destination);
             }
         }
+    }
+
+    void AOETop(Vector3 direction)
+    {
+
+        AOETopObject.enabled = true;
+        VRInputManager.I.JoystickOn = true;
+
+        /*
+        VRInputManager.I.cameramanager.MainToTop();
+        VRInputManager.I.JoystickOn = true;
+
+        int count = 0;
+        const int maxcount = 3;
+
+        float timer = 0.0f;
+        const float magictime = 30.0f;
+
+        for (; ; )
+        {
+            timer += Time.deltaTime;
+
+            if (magictime <= timer || count >= maxcount)
+            {
+                VRInputManager.I.cameramanager.TopToMain();
+                VRInputManager.I.JoystickOn = false;
+                break;
+            }
+        }
+        */
     }
 
     void AOE(Vector3 direction, Element e)

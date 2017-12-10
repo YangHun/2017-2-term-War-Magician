@@ -1,0 +1,123 @@
+fileFormatVersion: 2
+guid: 809f17c0455379941af8c036a1f0cf61
+timeCreated: 1512819791
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: spells/frostbolt
+    100004: spells/frostbolt 1
+    100006: spells/frostbolt_bone_0
+    100008: spells/frostbolt_bone_1
+    100010: spells/frostbolt_bone_2
+    100012: spells/frostbolt_bone_3
+    100014: spells/frostbolt_bone_4
+    100016: spells/frostbolt_bone_5
+    100018: spells/frostbolt_bone_6
+    100020: spells/frostbolt_bone_7
+    100022: spells/frostbolt_bone_8
+    400000: //RootNode
+    400002: spells/frostbolt
+    400004: spells/frostbolt 1
+    400006: spells/frostbolt_bone_0
+    400008: spells/frostbolt_bone_1
+    400010: spells/frostbolt_bone_2
+    400012: spells/frostbolt_bone_3
+    400014: spells/frostbolt_bone_4
+    400016: spells/frostbolt_bone_5
+    400018: spells/frostbolt_bone_6
+    400020: spells/frostbolt_bone_7
+    400022: spells/frostbolt_bone_8
+    4300000: spells/frostbolt
+    7400000: Stand [0]
+    9500000: //RootNode
+    13700000: spells/frostbolt
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spells_frostbolt_0
+    second: {fileID: 2100000, guid: d6e0b89c340442144bd73c6c19f821ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spells_frostbolt_1
+    second: {fileID: 2100000, guid: ffc444cb3daca8e468ada669053c7c33, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

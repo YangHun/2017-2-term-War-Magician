@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RightIndex : MonoBehaviour {
-
-    public EulerLineTracker line;
-
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -20,7 +18,7 @@ public class RightIndex : MonoBehaviour {
     {
         if(col.tag == "Point")
         {
-            MagicCircleInputManager.I.TriggerAction(col);
+            MagicCircleDrawManager.I.TriggerAction(col);
         }
            
         if(col.name == "Points")

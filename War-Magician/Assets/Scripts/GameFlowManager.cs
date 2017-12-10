@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameFlowManager : MonoBehaviour {
 
+    public GameObject MonsterManager;
+    public float StopWatch = 0;
     FSM fsm = new FSM();
 
 
@@ -37,8 +39,13 @@ public class GameFlowManager : MonoBehaviour {
         fsm.states.Add(HelenaStateType.Tutorial_Mana, new State(HelenaStateType.Tutorial_Mana, OnStateTutorialMana));
         fsm.states.Add(HelenaStateType.Tutorial_End, new State(HelenaStateType.Tutorial_End, OnStateTutorialEnd));
 
-        fsm.StartState = fsm.states[HelenaStateType.Tutorial_Welcome];
-
+        fsm.states.Add(HelenaStateType.MainGame_Stage1, new State(HelenaStateType.MainGame_Stage1, OnStateMainGameStage1));
+        fsm.states.Add(HelenaStateType.MainGame_Stage2, new State(HelenaStateType.MainGame_Stage2, OnStateMainGameStage2));
+        fsm.states.Add(HelenaStateType.MainGame_Stage3, new State(HelenaStateType.MainGame_Stage3, OnStateMainGameStage3));
+        fsm.states.Add(HelenaStateType.MainGame_GameOver, new State(HelenaStateType.MainGame_GameOver, OnStateMainGameGameOver));
+        fsm.states.Add(HelenaStateType.MainGame_Clear, new State(HelenaStateType.MainGame_Clear, OnStateMainGameClear));
+        //   fsm.StartState = fsm.states[HelenaStateType.Tutorial_Welcome];
+        fsm.StartState = fsm.states[HelenaStateType.MainGame_Stage1];
     }
 
 	// Update is called once per frame
@@ -86,7 +93,7 @@ public class GameFlowManager : MonoBehaviour {
                 UIManager.I.ChangeTutorialSystemUI("Touch the top vertex and draw a circle Through vertices. If finished, Depress trigger.");
                 LeftTriggerButtonDown = true;
 
-                StartCoroutine(MagicCircleInputManager.I.GuideFadeIn());
+                StartCoroutine(MagicCircleDrawManager.I.GuideFadeIn());
             }
         }
         else
@@ -111,5 +118,82 @@ public class GameFlowManager : MonoBehaviour {
     void OnStateTutorialEnd()
     {
 
+    }
+
+    void OnStateMainGameStage1()
+    {
+        MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
+        MS.Activation_NORMAL = true;
+        MS.Activation_TOTEM = false;
+        MS.Activation_SWARM = false;
+        MS.Activation_SHIELD = false;
+        MS.Activation_FLY = false;
+        MS.Activation_BIRD = false;
+        
+        MS.SpawnTime_NORMAL = 3f;
+
+        StopWatch += Time.deltaTime;
+        if(StopWatch >= 60)
+        {
+            StopWatch = 0;
+            fsm.SetNext(HelenaStateType.MainGame_Stage2);
+        }
+    }
+
+    void OnStateMainGameStage2()
+    {
+        MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
+        MS.Activation_NORMAL = true;
+        MS.Activation_TOTEM = true;
+        MS.Activation_SWARM = true;
+        MS.Activation_SHIELD = false;
+        MS.Activation_FLY = true;
+        MS.Activation_BIRD = false;
+        MS.SpawnTime_NORMAL = 6f;
+        MS.SpawnTime_TOTEM = 18f;
+        MS.SpawnTime_SWARM = 24f;
+        MS.SpawnTime_FLY = 12f;
+        StopWatch += Time.deltaTime;
+        if (StopWatch >= 60)
+        {
+            StopWatch = 0;
+            fsm.SetNext(HelenaStateType.MainGame_Stage3);
+        }
+    }
+
+    void OnStateMainGameStage3()
+    {
+        MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
+        MS.Activation_NORMAL = true;
+        MS.Activation_TOTEM = true;
+        MS.Activation_SWARM = false;
+        MS.Activation_SHIELD = true;
+        MS.Activation_FLY = false;
+        MS.Activation_BIRD = true;
+        MS.SpawnTime_NORMAL = 6f;
+        MS.SpawnTime_TOTEM = 15f;
+        MS.SpawnTime_SHIELD = 20f;
+        MS.SpawnTime_BIRD = 20f;
+        StopWatch += Time.deltaTime;
+        if (StopWatch >= 60)
+        {
+            StopWatch = 0;
+            fsm.SetNext(HelenaStateType.MainGame_Clear);
+        }
+    }
+
+    void OnStateMainGameGameOver()
+    {
+        Debug.Log("Game Over");
+    }
+
+    void OnStateMainGameClear()
+    {
+
+    }
+
+    public void Transition(HelenaStateType next)
+    {
+        fsm.SetNext(next);
     }
 }
