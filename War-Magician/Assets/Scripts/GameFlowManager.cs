@@ -133,7 +133,7 @@ public class GameFlowManager : MonoBehaviour {
         MS.SpawnTime_NORMAL = 3f;
 
         StopWatch += Time.deltaTime;
-        if(StopWatch >= 10)
+        if(StopWatch >= 60)
         {
             StopWatch = 0;
             fsm.SetNext(HelenaStateType.MainGame_Stage2);
@@ -154,7 +154,7 @@ public class GameFlowManager : MonoBehaviour {
         MS.SpawnTime_SWARM = 24f;
         MS.SpawnTime_FLY = 12f;
         StopWatch += Time.deltaTime;
-        if (StopWatch >= 30)
+        if (StopWatch >= 60)
         {
             StopWatch = 0;
             fsm.SetNext(HelenaStateType.MainGame_Stage3);
@@ -175,9 +175,10 @@ public class GameFlowManager : MonoBehaviour {
         MS.SpawnTime_SHIELD = 20f;
         MS.SpawnTime_BIRD = 20f;
         StopWatch += Time.deltaTime;
-        if (StopWatch >= 10)
+        if (StopWatch >= 60)
         {
-            
+            StopWatch = 0;
+            fsm.SetNext(HelenaStateType.MainGame_Clear);
         }
     }
 
