@@ -134,7 +134,8 @@ public class GameFlowManager : MonoBehaviour {
         MS.SpawnTime_TOTEM = 3f;
         MS.SpawnTime_SWARM = 3f;
         MS.SpawnTime_SHIELD = 3f;
-        MS.SpawnTime_FLY = 6f;
+        MS.SpawnTime_FLY = 30f;
+        MS.SpawnTime_BIRD = 6f;
         StopWatch += Time.deltaTime;
         if(StopWatch >= 60)
         {
