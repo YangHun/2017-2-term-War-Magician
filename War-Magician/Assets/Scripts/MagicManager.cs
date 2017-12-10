@@ -69,6 +69,11 @@ public class MagicManager : MonoBehaviour {
     [SerializeField]
     public AOETop AOETopObject;
 
+    // Variables for Special magic
+    [SerializeField]
+    public GameObject Meteora;
+
+
     // Use this for initialization
     void Start () {
         myTerrain = GameObject.Find("Terrain").GetComponent<Terrain>();
@@ -453,18 +458,19 @@ public class MagicManager : MonoBehaviour {
 
     void Special()
     {
+        Instantiate(Meteora);
         GameObject[] fields = GameObject.FindGameObjectsWithTag("FieldMonster");
         if (fields != null)
         {
             foreach (GameObject fmonster in fields)
-                fmonster.GetComponent<Monster_HP>().HP = 0;
+                fmonster.GetComponent<Monster_HP>().GetDamaged(5000);
         }
 
         GameObject[] airs = GameObject.FindGameObjectsWithTag("AirMonster");
         if (airs != null)
         {
             foreach (GameObject amonster in airs)
-                amonster.GetComponent<Monster_HP>().HP = 0;
+                amonster.GetComponent<Monster_HP>().GetDamaged(5000);
         }
     }
 
