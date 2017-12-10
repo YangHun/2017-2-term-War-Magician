@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 54679697812872810}
   - component: {fileID: 136132084018648736}
   - component: {fileID: 114816042599650686}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: birdBolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4482496121412406}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low_bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4054958404397300}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4680754750434706}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low_bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4946970375929238}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low_bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4906783582084708}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low_bone_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4114862173120654}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low_bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4368779642816976}
   - component: {fileID: 137805949950703512}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4248845428539946}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low_bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4810157226448546}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low_bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4390789153118374}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: spells/deathbolt_missile_low_bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
