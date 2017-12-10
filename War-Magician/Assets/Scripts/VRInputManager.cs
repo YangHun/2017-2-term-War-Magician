@@ -11,6 +11,8 @@ public class VRInputManager : MonoBehaviour {
 
     public bool LIndexTriggerDown = false;
     public bool LHandTriggerDown = false;
+    public bool JoystickOn = false;
+
 
     public Camera LineCamera;
     public CameraFade cameramanager;
@@ -25,6 +27,8 @@ public class VRInputManager : MonoBehaviour {
     // Graph Casting Variables
 
 
+
+    
 
 
     // Static variables for singleton
@@ -86,6 +90,12 @@ public class VRInputManager : MonoBehaviour {
             {
                 MagicCircleDrawManager.I.OnLIndexTriggerDown();
 
+                if (JoystickOn)
+                {
+                    MagicManager.I.AOETopObject.OnLIndexTriggerDown();
+                }
+
+
                 LIndexTriggerDown = true;
             }
 
@@ -122,6 +132,17 @@ public class VRInputManager : MonoBehaviour {
         {
 
         }
+
+
+
+        if (JoystickOn) //On When topview Camera is active
+        {
+
+            if (OVRInput.Get(OVRInput.RawAxis2D.LThumbstick, OVRInput.Controller.Active) != Vector2.zero)
+                MagicManager.I.AOETopObject.OnLThumbStick();
+
+        }
+
     }
 
     void PredictContunuousInput()

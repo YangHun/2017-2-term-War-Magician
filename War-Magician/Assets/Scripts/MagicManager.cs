@@ -62,6 +62,10 @@ public class MagicManager : MonoBehaviour {
     GameObject[] AOEBullet = new GameObject[6];
     float fallingHeight;
 
+    // Variables for AOE Top magic
+    [SerializeField]
+    public AOETop AOETopObject;
+
     // Use this for initialization
     void Start () {
         myTerrain = GameObject.Find("Terrain").GetComponent<Terrain>();
@@ -361,6 +365,36 @@ public class MagicManager : MonoBehaviour {
                 playerTransform.GetComponent<CharacterController>().SimpleMove(destination);
             }
         }
+    }
+
+    void AOETop(Vector3 direction)
+    {
+
+        AOETopObject.enabled = true;
+        VRInputManager.I.JoystickOn = true;
+
+        /*
+        VRInputManager.I.cameramanager.MainToTop();
+        VRInputManager.I.JoystickOn = true;
+
+        int count = 0;
+        const int maxcount = 3;
+
+        float timer = 0.0f;
+        const float magictime = 30.0f;
+
+        for (; ; )
+        {
+            timer += Time.deltaTime;
+
+            if (magictime <= timer || count >= maxcount)
+            {
+                VRInputManager.I.cameramanager.TopToMain();
+                VRInputManager.I.JoystickOn = false;
+                break;
+            }
+        }
+        */
     }
 
     void AOE(Vector3 direction, Element e)

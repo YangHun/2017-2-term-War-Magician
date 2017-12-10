@@ -26,7 +26,19 @@ public class CameraFade : MonoBehaviour {
         m = topviewcanvas.GetComponentInChildren<Image>().material;
         m.SetColor("_TintColor", c);
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            MainToTop();
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            TopToMain();
+        }
+    }
+
     public void MainToTop()
     {
         Material m = maincanvas.GetComponentInChildren<Image>().material;
@@ -73,6 +85,7 @@ public class CameraFade : MonoBehaviour {
             Debug.Log("?");
             m = topviewcanvas.GetComponentInChildren<Image>().material;
             m.SetTexture("_MainTex", topviewrt);
+            topviewCamera.targetDisplay = 0;
             mainCamera.targetDisplay = 2;
             yield return null;
         }
@@ -82,6 +95,7 @@ public class CameraFade : MonoBehaviour {
             m = maincanvas.GetComponentInChildren<Image>().material;
             m.SetTexture("_MainTex", mainrt);
             mainCamera.targetDisplay = 0;
+            topviewCamera.targetDisplay = 2;
             yield return null;
         }
         
