@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4173427496764606}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_88
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4811447521822572}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_151
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4976015334459198}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_139
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4734567585392076}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_97
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4706945994680504}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4226857256666970}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4220901346148138}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4528357391878880}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_166
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4076250417903600}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4006052760278942}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_121
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4757156091165684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4349712124860858}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_124
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4215850263435940}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4682435564844224}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4924508241338078}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4223012456580108}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4886910825019168}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4444475983764338}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4039434376879714}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_129
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4364903737688210}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4364902456627206}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4128878262776144}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4666135407845408}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_149
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4145964494618560}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4815941306202048}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4039274226795452}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4220214722918916}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_69
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4421617916696792}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4074986684140486}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4802520389225348}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4086311039325064}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4633721754392238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4662067413578728}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4441829148644344}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4541002532122436}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4537011241441420}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_150
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4460163166940556}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4942620276657912}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4891367961612804}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_157
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4326212952258370}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4754192007177974}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_141
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +634,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4299643815543576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_167
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4376756883826600}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4316488146751526}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_146
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4572157027415254}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_148
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 135936383996374346}
   - component: {fileID: 54780861551778124}
   - component: {fileID: 114620921162805036}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TotemMonster
   m_TagString: FieldMonster
   m_Icon: {fileID: 0}
@@ -717,7 +717,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4726094014425382}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4384747214216690}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4092817229010848}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_131
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -762,7 +762,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4765678660923546}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,7 +777,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4180113881561094}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,7 +792,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4765714721683564}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +807,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4883451233270392}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4388768708092260}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_86
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +837,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4600352792361406}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +852,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4762107951706858}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +867,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4010873293690682}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +882,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4632489514152324}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -898,7 +898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4602184614591306}
   - component: {fileID: 137916580611714728}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -913,7 +913,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4017996334654148}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4843479513906098}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -943,7 +943,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4377927555767404}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +958,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4989005220099092}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4216294919358294}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_117
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -988,7 +988,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4841363890355662}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_98
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1003,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4771332847978114}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_133
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,7 +1018,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4075692486063916}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_93
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,7 +1033,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4411818701376702}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_163
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,7 +1048,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4570445300093886}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_114
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1063,7 +1063,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4802170625538080}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_136
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1078,7 +1078,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4765939772264210}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,7 +1093,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4901780470819626}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_155
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1108,7 +1108,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4325434268243398}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,7 +1123,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4465165089598082}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1138,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4076288173350484}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1153,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4152606476975198}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1168,7 +1168,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4571092005847936}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_128
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1183,7 +1183,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4203451795306290}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1198,7 +1198,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4881940651282916}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_123
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1213,7 +1213,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4163272377794822}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_142
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1228,7 +1228,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4370898353933240}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1243,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4860888925302636}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1258,7 +1258,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4864456515694950}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_125
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,7 +1273,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4920756600669904}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1288,7 +1288,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4582405726437510}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_116
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1303,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4368299279162668}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1318,7 +1318,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4810697304078002}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_90
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1333,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4563015491640192}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_137
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1348,7 +1348,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4137817823535038}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1363,7 +1363,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4743502469162068}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_126
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1378,7 +1378,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4486904755104614}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_168
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1393,7 +1393,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4851061644583892}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_91
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,7 +1408,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4762608637199408}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1423,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4320268796809704}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1438,7 +1438,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4642073106920394}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_145
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1453,7 +1453,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4317875797265844}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_140
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1468,7 +1468,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4294460494867196}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1483,7 +1483,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4688440720006968}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_119
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,7 +1498,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4182040509595576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1513,7 +1513,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4474920073370120}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1528,7 +1528,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4054955669430200}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_153
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1543,7 +1543,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4424890327750678}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1558,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4732174895349400}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1573,7 +1573,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4681422874678526}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1588,7 +1588,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4792716327415498}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1603,7 +1603,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4430684960929350}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_99
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,7 +1618,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4832234045543684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1633,7 +1633,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4744236357679640}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1648,7 +1648,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4117257031576808}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1663,7 +1663,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4704990535218562}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1678,7 +1678,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4669441984345908}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1693,7 +1693,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4869169219624194}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1708,7 +1708,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4578577351452106}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_147
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1723,7 +1723,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4876841707341028}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1738,7 +1738,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4150967732974496}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_108
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1753,7 +1753,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4699215099054576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_122
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1768,7 +1768,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4112898866310042}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_135
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1783,7 +1783,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4254864039986326}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_134
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1798,7 +1798,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4258567661165008}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1813,7 +1813,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4217922481065852}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_113
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1828,7 +1828,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4278230651826088}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_95
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1843,7 +1843,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4183804705142670}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1858,7 +1858,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4690798007202230}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_160
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1873,7 +1873,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4841003988331050}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1888,7 +1888,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4947812344413340}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_138
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1903,7 +1903,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4439786044055092}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1918,7 +1918,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4594118831355960}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_89
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1933,7 +1933,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4681113029261100}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,7 +1948,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4481572381067920}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1963,7 +1963,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4005061959320296}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1978,7 +1978,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4926462993607636}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_144
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1993,7 +1993,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4301187515568060}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2008,7 +2008,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4910565717333524}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_169
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2023,7 +2023,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4862235636907912}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2038,7 +2038,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4292580247056684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_115
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2053,7 +2053,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4117298697213172}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_94
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2068,7 +2068,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4364577489922024}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_154
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2083,7 +2083,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4961908864140122}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2098,7 +2098,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4919614395784102}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2113,7 +2113,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4296451725897024}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2128,7 +2128,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4946042651183518}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_162
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2143,7 +2143,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4591054814937998}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2158,7 +2158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4425038636762040}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_152
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2173,7 +2173,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4911944743407888}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2188,7 +2188,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4145464245271948}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_156
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2203,7 +2203,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4961600419894908}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2218,7 +2218,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4954642443343020}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_143
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2233,7 +2233,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4010440913746598}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_159
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2248,7 +2248,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4447305524065832}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2263,7 +2263,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4180245013847426}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_85
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2278,7 +2278,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4351385796160322}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_165
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2293,7 +2293,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4336576057317234}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2308,7 +2308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4962554166814228}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2323,7 +2323,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4837535464217170}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2338,7 +2338,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4731810121748140}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2353,7 +2353,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4282366034611480}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_132
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2368,7 +2368,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4647374474044276}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_96
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2383,7 +2383,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4720474826985148}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_130
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2398,7 +2398,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4840523277593288}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2413,7 +2413,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4704605240117394}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2428,7 +2428,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4647931876222368}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2443,7 +2443,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4850509218483986}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2458,7 +2458,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4669744978331730}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2473,7 +2473,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4786339368265114}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_127
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2488,7 +2488,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4629086265441466}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2503,7 +2503,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4705556997646440}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2518,7 +2518,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4777312096554982}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2533,7 +2533,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4483302527343964}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_164
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2548,7 +2548,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4589232463915494}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2563,7 +2563,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4749424972754098}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_105
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2578,7 +2578,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4422270945207182}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2593,7 +2593,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4439242527170796}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_158
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2608,7 +2608,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4692727764432544}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: creature/shredder/shreddermount_bone_44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5095,6 +5095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3
+  alreadyDead: 0
 --- !u!114 &114926906984033854
 MonoBehaviour:
   m_ObjectHideFlags: 1
