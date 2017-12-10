@@ -74,13 +74,15 @@ MonoBehaviour:
   transformSize: 50
   frameToTransform: 15
   timeToDefault: 3
+  Obstacle: {fileID: 1883893157230704, guid: 2082d0522918ff04694f2b76123c5fa0, type: 2}
   playerTransform: {fileID: 0}
   minDistance: 0
   teleportDistance: 3
   AOEBullet:
+  - {fileID: 1571924385682046, guid: adcfee07a50518347a25e800e04ebd56, type: 2}
   - {fileID: 0}
+  - {fileID: 1196059729696870, guid: 895b795b072f5c0458f2afe38374d643, type: 2}
   - {fileID: 0}
+  - {fileID: 1474860772862738, guid: c0137a875168f6440b7c45e1c0342bb2, type: 2}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  AOETopObject: {fileID: 0}

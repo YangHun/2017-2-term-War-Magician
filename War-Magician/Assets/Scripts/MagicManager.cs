@@ -349,16 +349,16 @@ public class MagicManager : MonoBehaviour {
 
     public void Teleport()
     {
-        //Vector3 direction = Camera.main.transform.forward;
-        Vector3 direction = Wand.forward;
+        Vector3 direction = Camera.main.transform.forward;
+        //Vector3 direction = Wand.forward;
 
         RaycastHit hit;
-        if (Physics.Raycast(Wand.position, direction, out hit))    // TODO: No camera vector
+        if (Physics.Raycast(playerTransform.position, direction, out hit))    // TODO: No camera vector
         {
             Debug.Log(hit.point);
 
             int layer = hit.transform.gameObject.layer;
-            if (layer == 10 || layer == 13)
+            if (layer == 10 || layer == 12)
             {
                 Vector3 destination = playerTransform.position;
 
@@ -367,8 +367,8 @@ public class MagicManager : MonoBehaviour {
 
                 destination.x = hit.point.x;
                 destination.z = hit.point.z;
-                
-                
+
+               
                 float length = (destination - playerTransform.position).magnitude;
                 if (length < minDistance)
                 {
@@ -378,8 +378,10 @@ public class MagicManager : MonoBehaviour {
                 {
                     destination = (dir).normalized * teleportDistance + playerTransform.position;
                     playerTransform.position = destination;
+                    //playerTransform.GetComponent<CharacterController>().SimpleMove(destination);
                 }
-                playerTransform.GetComponent<CharacterController>().SimpleMove(destination);
+                  
+                     
             }
         }
     }
