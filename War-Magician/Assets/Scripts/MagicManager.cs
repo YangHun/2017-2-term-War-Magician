@@ -358,7 +358,7 @@ public class MagicManager : MonoBehaviour {
             Debug.Log(hit.point);
 
             int layer = hit.transform.gameObject.layer;
-            if (layer == 10 || layer == 12)
+            if (layer == 8 || layer == 9)
             {
                 Vector3 destination = playerTransform.position;
 
