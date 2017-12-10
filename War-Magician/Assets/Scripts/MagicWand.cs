@@ -16,11 +16,19 @@ public class MagicWand : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
-        RaycastHit hit;
-        if (Physics.Raycast (transform.position, transform.forward, out hit))
+
+        RaycastHit[] hit = Physics.RaycastAll(transform.position, transform.forward);
+        if (hit.Length > 0)
         {
-            _renderer.SetPosition(1, Vector3.forward * (transform.position - hit.point).magnitude);
+            for (int i = 0; i < hit.Length; i++)
+            {
+                if (hit[i].transform.gameObject.layer != 9)
+                {
+                    _renderer.SetPosition(1, Vector3.forward * (transform.position - hit[i].point).magnitude);
+                    break;
+                }
+            }
+            
         }
         else
         {
