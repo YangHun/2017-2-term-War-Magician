@@ -1,0 +1,417 @@
+fileFormatVersion: 2
+guid: 78832a817520755468b28a6b4843fcce
+timeCreated: 1512825782
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: creature/drakedarkshade/drakedarkshade
+    100004: creature/drakedarkshade/drakedarkshade 1
+    100006: creature/drakedarkshade/drakedarkshade_bone_0
+    100008: creature/drakedarkshade/drakedarkshade_bone_1
+    100010: creature/drakedarkshade/drakedarkshade_bone_10
+    100012: creature/drakedarkshade/drakedarkshade_bone_100
+    100014: creature/drakedarkshade/drakedarkshade_bone_101
+    100016: creature/drakedarkshade/drakedarkshade_bone_102
+    100018: creature/drakedarkshade/drakedarkshade_bone_103
+    100020: creature/drakedarkshade/drakedarkshade_bone_104
+    100022: creature/drakedarkshade/drakedarkshade_bone_105
+    100024: creature/drakedarkshade/drakedarkshade_bone_106
+    100026: creature/drakedarkshade/drakedarkshade_bone_107
+    100028: creature/drakedarkshade/drakedarkshade_bone_11
+    100030: creature/drakedarkshade/drakedarkshade_bone_12
+    100032: creature/drakedarkshade/drakedarkshade_bone_13
+    100034: creature/drakedarkshade/drakedarkshade_bone_14
+    100036: creature/drakedarkshade/drakedarkshade_bone_15
+    100038: creature/drakedarkshade/drakedarkshade_bone_16
+    100040: creature/drakedarkshade/drakedarkshade_bone_17
+    100042: creature/drakedarkshade/drakedarkshade_bone_18
+    100044: creature/drakedarkshade/drakedarkshade_bone_19
+    100046: creature/drakedarkshade/drakedarkshade_bone_2
+    100048: creature/drakedarkshade/drakedarkshade_bone_20
+    100050: creature/drakedarkshade/drakedarkshade_bone_21
+    100052: creature/drakedarkshade/drakedarkshade_bone_22
+    100054: creature/drakedarkshade/drakedarkshade_bone_23
+    100056: creature/drakedarkshade/drakedarkshade_bone_24
+    100058: creature/drakedarkshade/drakedarkshade_bone_25
+    100060: creature/drakedarkshade/drakedarkshade_bone_26
+    100062: creature/drakedarkshade/drakedarkshade_bone_27
+    100064: creature/drakedarkshade/drakedarkshade_bone_28
+    100066: creature/drakedarkshade/drakedarkshade_bone_29
+    100068: creature/drakedarkshade/drakedarkshade_bone_3
+    100070: creature/drakedarkshade/drakedarkshade_bone_30
+    100072: creature/drakedarkshade/drakedarkshade_bone_31
+    100074: creature/drakedarkshade/drakedarkshade_bone_32
+    100076: creature/drakedarkshade/drakedarkshade_bone_33
+    100078: creature/drakedarkshade/drakedarkshade_bone_34
+    100080: creature/drakedarkshade/drakedarkshade_bone_35
+    100082: creature/drakedarkshade/drakedarkshade_bone_36
+    100084: creature/drakedarkshade/drakedarkshade_bone_37
+    100086: creature/drakedarkshade/drakedarkshade_bone_38
+    100088: creature/drakedarkshade/drakedarkshade_bone_39
+    100090: creature/drakedarkshade/drakedarkshade_bone_4
+    100092: creature/drakedarkshade/drakedarkshade_bone_40
+    100094: creature/drakedarkshade/drakedarkshade_bone_41
+    100096: creature/drakedarkshade/drakedarkshade_bone_42
+    100098: creature/drakedarkshade/drakedarkshade_bone_43
+    100100: creature/drakedarkshade/drakedarkshade_bone_44
+    100102: creature/drakedarkshade/drakedarkshade_bone_45
+    100104: creature/drakedarkshade/drakedarkshade_bone_46
+    100106: creature/drakedarkshade/drakedarkshade_bone_47
+    100108: creature/drakedarkshade/drakedarkshade_bone_48
+    100110: creature/drakedarkshade/drakedarkshade_bone_49
+    100112: creature/drakedarkshade/drakedarkshade_bone_5
+    100114: creature/drakedarkshade/drakedarkshade_bone_50
+    100116: creature/drakedarkshade/drakedarkshade_bone_51
+    100118: creature/drakedarkshade/drakedarkshade_bone_52
+    100120: creature/drakedarkshade/drakedarkshade_bone_53
+    100122: creature/drakedarkshade/drakedarkshade_bone_54
+    100124: creature/drakedarkshade/drakedarkshade_bone_55
+    100126: creature/drakedarkshade/drakedarkshade_bone_56
+    100128: creature/drakedarkshade/drakedarkshade_bone_57
+    100130: creature/drakedarkshade/drakedarkshade_bone_58
+    100132: creature/drakedarkshade/drakedarkshade_bone_59
+    100134: creature/drakedarkshade/drakedarkshade_bone_6
+    100136: creature/drakedarkshade/drakedarkshade_bone_60
+    100138: creature/drakedarkshade/drakedarkshade_bone_61
+    100140: creature/drakedarkshade/drakedarkshade_bone_62
+    100142: creature/drakedarkshade/drakedarkshade_bone_63
+    100144: creature/drakedarkshade/drakedarkshade_bone_64
+    100146: creature/drakedarkshade/drakedarkshade_bone_65
+    100148: creature/drakedarkshade/drakedarkshade_bone_66
+    100150: creature/drakedarkshade/drakedarkshade_bone_67
+    100152: creature/drakedarkshade/drakedarkshade_bone_68
+    100154: creature/drakedarkshade/drakedarkshade_bone_69
+    100156: creature/drakedarkshade/drakedarkshade_bone_7
+    100158: creature/drakedarkshade/drakedarkshade_bone_70
+    100160: creature/drakedarkshade/drakedarkshade_bone_71
+    100162: creature/drakedarkshade/drakedarkshade_bone_72
+    100164: creature/drakedarkshade/drakedarkshade_bone_73
+    100166: creature/drakedarkshade/drakedarkshade_bone_74
+    100168: creature/drakedarkshade/drakedarkshade_bone_75
+    100170: creature/drakedarkshade/drakedarkshade_bone_76
+    100172: creature/drakedarkshade/drakedarkshade_bone_77
+    100174: creature/drakedarkshade/drakedarkshade_bone_78
+    100176: creature/drakedarkshade/drakedarkshade_bone_79
+    100178: creature/drakedarkshade/drakedarkshade_bone_8
+    100180: creature/drakedarkshade/drakedarkshade_bone_80
+    100182: creature/drakedarkshade/drakedarkshade_bone_81
+    100184: creature/drakedarkshade/drakedarkshade_bone_82
+    100186: creature/drakedarkshade/drakedarkshade_bone_83
+    100188: creature/drakedarkshade/drakedarkshade_bone_84
+    100190: creature/drakedarkshade/drakedarkshade_bone_85
+    100192: creature/drakedarkshade/drakedarkshade_bone_86
+    100194: creature/drakedarkshade/drakedarkshade_bone_87
+    100196: creature/drakedarkshade/drakedarkshade_bone_88
+    100198: creature/drakedarkshade/drakedarkshade_bone_89
+    100200: creature/drakedarkshade/drakedarkshade_bone_9
+    100202: creature/drakedarkshade/drakedarkshade_bone_90
+    100204: creature/drakedarkshade/drakedarkshade_bone_91
+    100206: creature/drakedarkshade/drakedarkshade_bone_92
+    100208: creature/drakedarkshade/drakedarkshade_bone_93
+    100210: creature/drakedarkshade/drakedarkshade_bone_94
+    100212: creature/drakedarkshade/drakedarkshade_bone_95
+    100214: creature/drakedarkshade/drakedarkshade_bone_96
+    100216: creature/drakedarkshade/drakedarkshade_bone_97
+    100218: creature/drakedarkshade/drakedarkshade_bone_98
+    100220: creature/drakedarkshade/drakedarkshade_bone_99
+    400000: //RootNode
+    400002: creature/drakedarkshade/drakedarkshade
+    400004: creature/drakedarkshade/drakedarkshade 1
+    400006: creature/drakedarkshade/drakedarkshade_bone_0
+    400008: creature/drakedarkshade/drakedarkshade_bone_1
+    400010: creature/drakedarkshade/drakedarkshade_bone_10
+    400012: creature/drakedarkshade/drakedarkshade_bone_100
+    400014: creature/drakedarkshade/drakedarkshade_bone_101
+    400016: creature/drakedarkshade/drakedarkshade_bone_102
+    400018: creature/drakedarkshade/drakedarkshade_bone_103
+    400020: creature/drakedarkshade/drakedarkshade_bone_104
+    400022: creature/drakedarkshade/drakedarkshade_bone_105
+    400024: creature/drakedarkshade/drakedarkshade_bone_106
+    400026: creature/drakedarkshade/drakedarkshade_bone_107
+    400028: creature/drakedarkshade/drakedarkshade_bone_11
+    400030: creature/drakedarkshade/drakedarkshade_bone_12
+    400032: creature/drakedarkshade/drakedarkshade_bone_13
+    400034: creature/drakedarkshade/drakedarkshade_bone_14
+    400036: creature/drakedarkshade/drakedarkshade_bone_15
+    400038: creature/drakedarkshade/drakedarkshade_bone_16
+    400040: creature/drakedarkshade/drakedarkshade_bone_17
+    400042: creature/drakedarkshade/drakedarkshade_bone_18
+    400044: creature/drakedarkshade/drakedarkshade_bone_19
+    400046: creature/drakedarkshade/drakedarkshade_bone_2
+    400048: creature/drakedarkshade/drakedarkshade_bone_20
+    400050: creature/drakedarkshade/drakedarkshade_bone_21
+    400052: creature/drakedarkshade/drakedarkshade_bone_22
+    400054: creature/drakedarkshade/drakedarkshade_bone_23
+    400056: creature/drakedarkshade/drakedarkshade_bone_24
+    400058: creature/drakedarkshade/drakedarkshade_bone_25
+    400060: creature/drakedarkshade/drakedarkshade_bone_26
+    400062: creature/drakedarkshade/drakedarkshade_bone_27
+    400064: creature/drakedarkshade/drakedarkshade_bone_28
+    400066: creature/drakedarkshade/drakedarkshade_bone_29
+    400068: creature/drakedarkshade/drakedarkshade_bone_3
+    400070: creature/drakedarkshade/drakedarkshade_bone_30
+    400072: creature/drakedarkshade/drakedarkshade_bone_31
+    400074: creature/drakedarkshade/drakedarkshade_bone_32
+    400076: creature/drakedarkshade/drakedarkshade_bone_33
+    400078: creature/drakedarkshade/drakedarkshade_bone_34
+    400080: creature/drakedarkshade/drakedarkshade_bone_35
+    400082: creature/drakedarkshade/drakedarkshade_bone_36
+    400084: creature/drakedarkshade/drakedarkshade_bone_37
+    400086: creature/drakedarkshade/drakedarkshade_bone_38
+    400088: creature/drakedarkshade/drakedarkshade_bone_39
+    400090: creature/drakedarkshade/drakedarkshade_bone_4
+    400092: creature/drakedarkshade/drakedarkshade_bone_40
+    400094: creature/drakedarkshade/drakedarkshade_bone_41
+    400096: creature/drakedarkshade/drakedarkshade_bone_42
+    400098: creature/drakedarkshade/drakedarkshade_bone_43
+    400100: creature/drakedarkshade/drakedarkshade_bone_44
+    400102: creature/drakedarkshade/drakedarkshade_bone_45
+    400104: creature/drakedarkshade/drakedarkshade_bone_46
+    400106: creature/drakedarkshade/drakedarkshade_bone_47
+    400108: creature/drakedarkshade/drakedarkshade_bone_48
+    400110: creature/drakedarkshade/drakedarkshade_bone_49
+    400112: creature/drakedarkshade/drakedarkshade_bone_5
+    400114: creature/drakedarkshade/drakedarkshade_bone_50
+    400116: creature/drakedarkshade/drakedarkshade_bone_51
+    400118: creature/drakedarkshade/drakedarkshade_bone_52
+    400120: creature/drakedarkshade/drakedarkshade_bone_53
+    400122: creature/drakedarkshade/drakedarkshade_bone_54
+    400124: creature/drakedarkshade/drakedarkshade_bone_55
+    400126: creature/drakedarkshade/drakedarkshade_bone_56
+    400128: creature/drakedarkshade/drakedarkshade_bone_57
+    400130: creature/drakedarkshade/drakedarkshade_bone_58
+    400132: creature/drakedarkshade/drakedarkshade_bone_59
+    400134: creature/drakedarkshade/drakedarkshade_bone_6
+    400136: creature/drakedarkshade/drakedarkshade_bone_60
+    400138: creature/drakedarkshade/drakedarkshade_bone_61
+    400140: creature/drakedarkshade/drakedarkshade_bone_62
+    400142: creature/drakedarkshade/drakedarkshade_bone_63
+    400144: creature/drakedarkshade/drakedarkshade_bone_64
+    400146: creature/drakedarkshade/drakedarkshade_bone_65
+    400148: creature/drakedarkshade/drakedarkshade_bone_66
+    400150: creature/drakedarkshade/drakedarkshade_bone_67
+    400152: creature/drakedarkshade/drakedarkshade_bone_68
+    400154: creature/drakedarkshade/drakedarkshade_bone_69
+    400156: creature/drakedarkshade/drakedarkshade_bone_7
+    400158: creature/drakedarkshade/drakedarkshade_bone_70
+    400160: creature/drakedarkshade/drakedarkshade_bone_71
+    400162: creature/drakedarkshade/drakedarkshade_bone_72
+    400164: creature/drakedarkshade/drakedarkshade_bone_73
+    400166: creature/drakedarkshade/drakedarkshade_bone_74
+    400168: creature/drakedarkshade/drakedarkshade_bone_75
+    400170: creature/drakedarkshade/drakedarkshade_bone_76
+    400172: creature/drakedarkshade/drakedarkshade_bone_77
+    400174: creature/drakedarkshade/drakedarkshade_bone_78
+    400176: creature/drakedarkshade/drakedarkshade_bone_79
+    400178: creature/drakedarkshade/drakedarkshade_bone_8
+    400180: creature/drakedarkshade/drakedarkshade_bone_80
+    400182: creature/drakedarkshade/drakedarkshade_bone_81
+    400184: creature/drakedarkshade/drakedarkshade_bone_82
+    400186: creature/drakedarkshade/drakedarkshade_bone_83
+    400188: creature/drakedarkshade/drakedarkshade_bone_84
+    400190: creature/drakedarkshade/drakedarkshade_bone_85
+    400192: creature/drakedarkshade/drakedarkshade_bone_86
+    400194: creature/drakedarkshade/drakedarkshade_bone_87
+    400196: creature/drakedarkshade/drakedarkshade_bone_88
+    400198: creature/drakedarkshade/drakedarkshade_bone_89
+    400200: creature/drakedarkshade/drakedarkshade_bone_9
+    400202: creature/drakedarkshade/drakedarkshade_bone_90
+    400204: creature/drakedarkshade/drakedarkshade_bone_91
+    400206: creature/drakedarkshade/drakedarkshade_bone_92
+    400208: creature/drakedarkshade/drakedarkshade_bone_93
+    400210: creature/drakedarkshade/drakedarkshade_bone_94
+    400212: creature/drakedarkshade/drakedarkshade_bone_95
+    400214: creature/drakedarkshade/drakedarkshade_bone_96
+    400216: creature/drakedarkshade/drakedarkshade_bone_97
+    400218: creature/drakedarkshade/drakedarkshade_bone_98
+    400220: creature/drakedarkshade/drakedarkshade_bone_99
+    4300000: creature/drakedarkshade/drakedarkshade
+    7400000: Run [6]
+    7400002: AttackUnarmed [8]
+    7400004: Death [16]
+    9500000: //RootNode
+    13700000: creature/drakedarkshade/drakedarkshade
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_drakedarkshade_drakedarkshade_0
+    second: {fileID: 2100000, guid: a397478b26206ab4792598b73643fee6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_drakedarkshade_drakedarkshade_1
+    second: {fileID: 2100000, guid: 4e0ef93c07fb2bd449af7b578fa3cb25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_drakedarkshade_drakedarkshade_2
+    second: {fileID: 2100000, guid: 383503ba0a678924383b1032000857f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_drakedarkshade_drakedarkshade_3
+    second: {fileID: 2100000, guid: a397478b26206ab4792598b73643fee6, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run [6]
+      takeName: Run [6]
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AttackUnarmed [8]
+      takeName: AttackUnarmed [8]
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death [16]
+      takeName: Death [16]
+      firstFrame: 0
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

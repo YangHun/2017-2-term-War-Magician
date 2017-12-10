@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 public class AI_FIELD : MonoBehaviour {
     public GameObject target;
+    public float originSpeed;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,14 +13,11 @@ public class AI_FIELD : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
     public void Init()
     {
         GetComponent<NavMeshAgent>().SetDestination(target.transform.position);
-    }
-    void OnEnable()
-    {
-        
+        GetComponent<Animator>().SetTrigger("Walk");
     }
 }
