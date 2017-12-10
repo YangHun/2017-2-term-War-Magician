@@ -9,8 +9,10 @@ public class GameFlowManager : MonoBehaviour {
     FSM fsm = new FSM();
 
 
+    bool firstStart = true;
 
     bool LeftTriggerButtonDown = false;
+
 
     // Static variables for singleton
     private static GameFlowManager _manager = null;
@@ -42,10 +44,12 @@ public class GameFlowManager : MonoBehaviour {
         fsm.states.Add(HelenaStateType.MainGame_Stage1, new State(HelenaStateType.MainGame_Stage1, OnStateMainGameStage1));
         fsm.states.Add(HelenaStateType.MainGame_Stage2, new State(HelenaStateType.MainGame_Stage2, OnStateMainGameStage2));
         fsm.states.Add(HelenaStateType.MainGame_Stage3, new State(HelenaStateType.MainGame_Stage3, OnStateMainGameStage3));
+        fsm.states.Add(HelenaStateType.MainGame_Stage4, new State(HelenaStateType.MainGame_Stage4, OnStateMainGameStage4));
+        fsm.states.Add(HelenaStateType.MainGame_Stage5, new State(HelenaStateType.MainGame_Stage5, OnStateMainGameStage5));
         fsm.states.Add(HelenaStateType.MainGame_GameOver, new State(HelenaStateType.MainGame_GameOver, OnStateMainGameGameOver));
         fsm.states.Add(HelenaStateType.MainGame_Clear, new State(HelenaStateType.MainGame_Clear, OnStateMainGameClear));
         //   fsm.StartState = fsm.states[HelenaStateType.Tutorial_Welcome];
-        fsm.StartState = fsm.states[HelenaStateType.MainGame_Stage1];
+        fsm.StartState = fsm.states[HelenaStateType.MainGame_Stage5];
     }
 
 	// Update is called once per frame
@@ -67,7 +71,6 @@ public class GameFlowManager : MonoBehaviour {
         {
             fsm.SetNext(HelenaStateType.Tutorial_Moving);
         }
-
     }
 
     void OnStateTutorialMoving()
@@ -123,23 +126,30 @@ public class GameFlowManager : MonoBehaviour {
     void OnStateMainGameStage1()
     {
         MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
-        MS.Activation_NORMAL = true;
-        MS.Activation_TOTEM = false;
-        MS.Activation_SWARM = false;
-        MS.Activation_SHIELD = false;
-        MS.Activation_FLY = false;
-        MS.Activation_BIRD = false;
-        
-        MS.SpawnTime_NORMAL = 3f;
-        MS.SpawnTime_TOTEM = 3f;
-        MS.SpawnTime_SWARM = 3f;
-        MS.SpawnTime_SHIELD = 3f;
-        MS.SpawnTime_FLY = 30f;
-        MS.SpawnTime_BIRD = 6f;
+        if (firstStart)
+        {  
+            MS.Activation_NORMAL = true;
+            MS.Activation_TOTEM = false;
+            MS.Activation_SWARM = true;
+            MS.Activation_SHIELD = false;
+            MS.Activation_FLY = false;
+            MS.Activation_BIRD = false;
+
+            MS.SpawnTime_NORMAL = 5f;
+            MS.SpawnTime_SWARM = 10f;
+            MS.TimeCounter_NORMAL = 5f;
+            MS.TimeCounter_SWARM = 5f;
+
+            firstStart = false;
+        }
         StopWatch += Time.deltaTime;
         if(StopWatch >= 60)
         {
+            MS.NumOfMonster = 0;
+            MS.TimeCounter_NORMAL = 0f;
+            MS.TimeCounter_SWARM = 0f;
             StopWatch = 0;
+            firstStart = true;
             fsm.SetNext(HelenaStateType.MainGame_Stage2);
         }
     }
@@ -147,20 +157,30 @@ public class GameFlowManager : MonoBehaviour {
     void OnStateMainGameStage2()
     {
         MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
-        MS.Activation_NORMAL = true;
-        MS.Activation_TOTEM = true;
-        MS.Activation_SWARM = true;
-        MS.Activation_SHIELD = false;
-        MS.Activation_FLY = true;
-        MS.Activation_BIRD = false;
-        MS.SpawnTime_NORMAL = 6f;
-        MS.SpawnTime_TOTEM = 18f;
-        MS.SpawnTime_SWARM = 24f;
-        MS.SpawnTime_FLY = 12f;
+        if (firstStart)
+        {
+            MS.Activation_NORMAL = false;
+            MS.Activation_TOTEM = true;
+            MS.Activation_SWARM = false;
+            MS.Activation_SHIELD = true;
+            MS.Activation_FLY = false;
+            MS.Activation_BIRD = false;
+
+            MS.SpawnTime_TOTEM = 10f;
+            MS.SpawnTime_SHIELD = 17f;
+            MS.TimeCounter_TOTEM = 10f;
+            MS.TimeCounter_SHIELD = 12f;
+
+            firstStart = false;
+        }
         StopWatch += Time.deltaTime;
         if (StopWatch >= 60)
         {
+            MS.NumOfMonster = 0;
+            MS.TimeCounter_TOTEM = 0f;
+            MS.TimeCounter_SHIELD = 0f;
             StopWatch = 0;
+            firstStart = true;
             fsm.SetNext(HelenaStateType.MainGame_Stage3);
         }
     }
@@ -168,22 +188,123 @@ public class GameFlowManager : MonoBehaviour {
     void OnStateMainGameStage3()
     {
         MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
-        MS.Activation_NORMAL = true;
-        MS.Activation_TOTEM = true;
-        MS.Activation_SWARM = false;
-        MS.Activation_SHIELD = true;
-        MS.Activation_FLY = false;
-        MS.Activation_BIRD = true;
-        MS.SpawnTime_NORMAL = 6f;
-        MS.SpawnTime_TOTEM = 15f;
-        MS.SpawnTime_SHIELD = 20f;
-        MS.SpawnTime_BIRD = 20f;
+        if (firstStart)
+        {
+            MS.Activation_NORMAL = false;
+            MS.Activation_TOTEM = false;
+            MS.Activation_SWARM = false;
+            MS.Activation_SHIELD = false;
+            MS.Activation_FLY = true;
+            MS.Activation_BIRD = true;
+
+            MS.SpawnTime_FLY = 10f;
+            MS.SpawnTime_BIRD = 20f;
+            MS.TimeCounter_FLY = 10f;
+            MS.TimeCounter_BIRD = 15f;
+
+            firstStart = false;
+        }
         StopWatch += Time.deltaTime;
         if (StopWatch >= 60)
         {
+            MS.NumOfMonster = 0;
+            MS.TimeCounter_FLY = 0f;
+            MS.TimeCounter_BIRD = 0f;
             StopWatch = 0;
-            fsm.SetNext(HelenaStateType.MainGame_Clear);
+            firstStart = true;
+            fsm.SetNext(HelenaStateType.MainGame_Stage3);
         }
+    }
+
+    void OnStateMainGameStage4()
+    {
+        MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
+        if (firstStart)
+        {
+            MS.Activation_NORMAL = true;
+            MS.Activation_TOTEM = false;
+            MS.Activation_SWARM = false;
+            MS.Activation_SHIELD = false;
+            MS.Activation_FLY = false;
+            MS.Activation_BIRD = false;
+
+            MS.SpawnTime_NORMAL = 1f;
+            MS.TimeCounter_NORMAL = 1f;
+
+            firstStart = false;
+        }
+        StopWatch += Time.deltaTime;
+        if(MS.NumOfMonster > 40 && MS.Activation_NORMAL)
+        {
+            MS.TimeCounter_NORMAL = 0f;
+            MS.Activation_NORMAL = false;
+            MS.SummonBoss();
+        }
+        if (StopWatch >= 60)
+        {
+            MS.NumOfMonster = 0;
+            MS.TimeCounter_FLY = 0f;
+            MS.TimeCounter_BIRD = 0f;
+            StopWatch = 0;
+            firstStart = true;
+            fsm.SetNext(HelenaStateType.MainGame_Stage3);
+        }
+    }
+
+    void OnStateMainGameStage5()
+    {
+        MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
+        if (firstStart)
+        {
+            MS.Activation_NORMAL = true;
+            MS.Activation_TOTEM = true;
+            MS.Activation_SWARM = true;
+            MS.Activation_SHIELD = true;
+            MS.Activation_FLY = true;
+            MS.Activation_BIRD = true;
+
+            MS.SpawnTime_NORMAL = 10f;
+            MS.SpawnTime_TOTEM = 25f;
+            MS.SpawnTime_SWARM = 20f;
+            MS.SpawnTime_SHIELD = 30f;
+            MS.SpawnTime_FLY = 20f;
+            MS.SpawnTime_BIRD = 30f;
+            MS.TimeCounter_NORMAL = 10f;
+            MS.TimeCounter_TOTEM = 0f;
+            MS.TimeCounter_SWARM = 0f;
+            MS.TimeCounter_SHIELD = 0f;
+            MS.TimeCounter_FLY = 0f;
+            MS.TimeCounter_BIRD = 0f;
+
+            firstStart = false;
+        }
+        StopWatch += Time.deltaTime;
+        if (MS.NumOfMonster > 80 && MS.Activation_NORMAL)
+        {
+            MS.TimeCounter_NORMAL = 0f;
+            MS.TimeCounter_TOTEM = 0f;
+            MS.TimeCounter_SWARM = 0f;
+            MS.TimeCounter_SHIELD = 0f;
+            MS.TimeCounter_FLY = 0f;
+            MS.TimeCounter_BIRD = 0f;
+            MS.Activation_NORMAL = false;
+            MS.Activation_TOTEM = false;
+            MS.Activation_SWARM = false;
+            MS.Activation_SHIELD = false;
+            MS.Activation_FLY = false;
+            MS.Activation_BIRD = false;
+            MS.SummonBoss();
+        }
+        /*
+        if (StopWatch >= 60)
+        {
+            MS.TimeCounter_FLY = 0f;
+            MS.TimeCounter_BIRD = 0f;
+            StopWatch = 0;
+            firstStart = true;
+            fsm.SetNext(HelenaStateType.MainGame_Stage3);
+        }
+        */
     }
 
     void OnStateMainGameGameOver()

@@ -13,15 +13,18 @@ public class Destination : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(HP <= 0)
+        {
+            GFM.GetComponent<GameFlowManager>().Transition(HelenaStateType.MainGame_GameOver);
+        }
 	}
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("FieldMonster"))
         {
-            //other.gameObject.GetComponent<Animator>().SetTrigger("Dead");
-            //GFM.GetComponent<GameFlowManager>().Transition(HelenaStateType.MainGame_GameOver);
+            other.gameObject.GetComponent<Animator>().SetTrigger("Dead");
+            HP--;
         }
     }
 }

@@ -5,10 +5,14 @@ using UnityEngine.AI;
 public class Field_OnDead : StateMachineBehaviour {
     public float deathWaitTime = 1f;
     float timeCounter = 0f;
-    
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         animator.GetComponent<NavMeshAgent>().enabled = false;
+        GameObject.Find("MonsterManager").GetComponent<MonsterSpawner>().NumOfMonster--;
+        if(animator.GetComponent<Totem>() != null)
+        {
+            animator.GetComponent<Totem>().isDead = true;
+        }
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

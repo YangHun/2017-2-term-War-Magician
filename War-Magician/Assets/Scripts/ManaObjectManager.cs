@@ -17,7 +17,6 @@ public class ManaObjectManager : MonoBehaviour {
     public void Destroyed(GameObject obj)
     {
         obj.GetComponent<Animator>().SetTrigger("Destroyed");
-        Debug.Log("ha");
     }
     public void Restructed(GameObject obj)
     {

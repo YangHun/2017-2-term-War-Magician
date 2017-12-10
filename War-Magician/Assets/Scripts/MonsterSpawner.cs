@@ -17,12 +17,12 @@ public class MonsterSpawner : MonoBehaviour {
     public float SpawnTime_SHIELD = 10.0f;
     public float SpawnTime_FLY = 20.0f;
     public float SpawnTime_BIRD = 30.0f;
-    float TimeCounter_NORMAL = 0.0f;
-    float TimeCounter_TOTEM = 0.0f;
-    float TimeCounter_SWARM = 0.0f;
-    float TimeCounter_SHIELD = 0.0f;
-    float TimeCounter_FLY = 27.0f;
-    float TimeCounter_BIRD = 0.0f;
+    public float TimeCounter_NORMAL = 0.0f;
+    public float TimeCounter_TOTEM = 0.0f;
+    public float TimeCounter_SWARM = 0.0f;
+    public float TimeCounter_SHIELD = 0.0f;
+    public float TimeCounter_FLY = 0.0f;
+    public float TimeCounter_BIRD = 0.0f;
     public bool Activation_NORMAL = false;
     public bool Activation_TOTEM = false;
     public bool Activation_SWARM = false;
@@ -35,7 +35,7 @@ public class MonsterSpawner : MonoBehaviour {
 
     int Interval_Normal = 6;
     int Interval_Totem = 3;
-    int Interval_Shield = 3;
+    int Interval_Shield = 5;
 
     public int NumOfMonster = 0;
     public GameObject bossMonster;
@@ -84,6 +84,7 @@ public class MonsterSpawner : MonoBehaviour {
             for (int i = Cycle_Totem * Interval_Totem; i < (Cycle_Totem + 1) * Interval_Totem; i++)
             {
                 GameObject g = GetComponent<MonsterPool>().GetObject(Spawnpoint_field[i], MonsterPool.Category.TOTEM);
+                g.GetComponent<Totem>().isDead = false;
                 g.GetComponent<NavMeshAgent>().enabled = true;
                 g.GetComponent<AI_FIELD>().Init();
             }
@@ -108,7 +109,7 @@ public class MonsterSpawner : MonoBehaviour {
 
         if (TimeCounter_SHIELD >= SpawnTime_SHIELD)
         {
-            for (int i = Cycle_Shield * Interval_Shield; i < (Cycle_Shield + 1) * Interval_Shield; i++)
+            for (int i = Cycle_Shield * Interval_Shield; i < (Cycle_Shield + 1) * Interval_Shield; i += 2)
             {
 
                 GameObject g = GetComponent<MonsterPool>().GetObject(Spawnpoint_field[i], MonsterPool.Category.SHIELD);
@@ -139,16 +140,16 @@ public class MonsterSpawner : MonoBehaviour {
             }
             TimeCounter_BIRD = 0;
         }
-          
-        if(NumOfMonster >= 6000)
-        {
-            GameObject g = Instantiate(bossMonster);
-            g.transform.position = Spawnpoint_boss.Pivot.position;
-            g.transform.rotation = Quaternion.identity;
-            g.GetComponent<AI_AIR>().target = bossTarget;
-            NumOfMonster = 0;
-        }
     }
+
+    public void SummonBoss()
+    {
+        GameObject g = Instantiate(bossMonster);
+        g.transform.position = Spawnpoint_boss.Pivot.position;
+        g.transform.rotation = Quaternion.identity;
+        g.GetComponent<AI_AIR>().target = bossTarget;
+    }
+
     void TimeIsTicking()
     {
         if (Activation_NORMAL)

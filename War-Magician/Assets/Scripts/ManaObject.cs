@@ -5,9 +5,9 @@ using UnityEngine;
 public class ManaObject : MonoBehaviour {
     public GameObject Manager;
     ManaObjectManager ManaObjectManager; 
-    int HP = 10;
+    int HP = 20;
     bool isDestroyed = false;
-    float RestructTime = 3.0f;
+    float RestructTime = 10.0f;
     float timeCounter = 0.0f;
 	// Use this for initialization
 	void Start () {
