@@ -13,8 +13,12 @@ public class UIManager : MonoBehaviour {
     }
 
 
-    public Text TutorialSystemText; 
+    public Text TutorialSystemText;
+    public Text Timer;
+    public Text BossGage;
+    public Text CastleHP;
 
+    public GameObject[] Manas = new GameObject[4];
 
     // Use this for initialization
     void Start () {
@@ -38,6 +42,33 @@ public class UIManager : MonoBehaviour {
     public void ChangeTutorialSystemUI (string text)
     {
         TutorialSystemText.text = text;
+    }
+
+    public void ChangeText(string name, string text)
+    {
+        switch (name)
+        {
+            case "Timer": Timer.text = text;
+                break;
+            case "BossGage": BossGage.text = text;
+                break;
+            case "CastleHP": CastleHP.text = text;
+                break;
+        }
+    }
+
+    public void UpdateManaIcon(int n, bool on)
+    {
+        if (on)
+        {
+            Manas[n].transform.Find("On").gameObject.SetActive(true);
+            Manas[n].transform.Find("Off").gameObject.SetActive(false);
+        }
+        else
+        {
+            Manas[n].transform.Find("On").gameObject.SetActive(false);
+            Manas[n].transform.Find("Off").gameObject.SetActive(true);
+        }
     }
 
 }

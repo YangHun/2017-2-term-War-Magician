@@ -8,6 +8,7 @@ public class GameFlowManager : MonoBehaviour {
     public float StopWatch = 0;
     FSM fsm = new FSM();
 
+    float GameTimer = 0.0f;
 
     bool firstStart = true;
 
@@ -55,6 +56,7 @@ public class GameFlowManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         fsm.Running();
+        UIManager.I.ChangeText("BossGage", MonsterManager.GetComponent<MonsterSpawner>().NumOfMonster.ToString() + "/250");
 	}
 
     void FixedUpdate()
@@ -125,6 +127,7 @@ public class GameFlowManager : MonoBehaviour {
 
     void OnStateMainGameStage1()
     {
+
         MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
         if (firstStart)
         {  
@@ -143,8 +146,11 @@ public class GameFlowManager : MonoBehaviour {
             firstStart = false;
         }
         StopWatch += Time.deltaTime;
-        if(StopWatch >= 60)
+        UIManager.I.ChangeText("Timer", "2:" + ((int)(60.0f - StopWatch)).ToString());
+        if (StopWatch >= 60)
         {
+            StopWatch = 60;
+            UIManager.I.ChangeText("Timer", "2:" + (int)(60.0f - StopWatch));
             MS.NumOfMonster = 0;
             MS.TimeCounter_NORMAL = 0f;
             MS.TimeCounter_SWARM = 0f;
@@ -174,8 +180,11 @@ public class GameFlowManager : MonoBehaviour {
             firstStart = false;
         }
         StopWatch += Time.deltaTime;
+        UIManager.I.ChangeText("Timer", "1:" + (int)(60.0f - StopWatch));
         if (StopWatch >= 60)
         {
+            StopWatch = 60;
+            UIManager.I.ChangeText("Timer", "2:" + (int)(60.0f - StopWatch));
             MS.NumOfMonster = 0;
             MS.TimeCounter_TOTEM = 0f;
             MS.TimeCounter_SHIELD = 0f;
@@ -205,8 +214,11 @@ public class GameFlowManager : MonoBehaviour {
             firstStart = false;
         }
         StopWatch += Time.deltaTime;
+        UIManager.I.ChangeText("Timer", "0:" + (int)(60.0f - StopWatch));
         if (StopWatch >= 60)
         {
+            StopWatch = 60;
+            UIManager.I.ChangeText("Timer", "0:" + (int)(60.0f - StopWatch));
             MS.NumOfMonster = 0;
             MS.TimeCounter_FLY = 0f;
             MS.TimeCounter_BIRD = 0f;
@@ -234,7 +246,8 @@ public class GameFlowManager : MonoBehaviour {
             firstStart = false;
         }
         StopWatch += Time.deltaTime;
-        if(MS.NumOfMonster > 40 && MS.Activation_NORMAL)
+        UIManager.I.ChangeText("Timer", "0:" + (int)(60.0f - StopWatch));
+        if (MS.NumOfMonster > 40 && MS.Activation_NORMAL)
         {
             MS.TimeCounter_NORMAL = 0f;
             MS.Activation_NORMAL = false;
@@ -242,6 +255,8 @@ public class GameFlowManager : MonoBehaviour {
         }
         if (StopWatch >= 60)
         {
+            StopWatch = 60.0f;
+            UIManager.I.ChangeText("Timer", "0:" + (int)(60.0f - StopWatch));
             MS.NumOfMonster = 0;
             MS.TimeCounter_FLY = 0f;
             MS.TimeCounter_BIRD = 0f;
@@ -279,6 +294,7 @@ public class GameFlowManager : MonoBehaviour {
             firstStart = false;
         }
         StopWatch += Time.deltaTime;
+        UIManager.I.ChangeText("Timer", "0:" + (int)(60.0f - StopWatch));
         if (MS.NumOfMonster > 80 && MS.Activation_NORMAL)
         {
             MS.TimeCounter_NORMAL = 0f;
@@ -295,6 +311,13 @@ public class GameFlowManager : MonoBehaviour {
             MS.Activation_BIRD = false;
             MS.SummonBoss();
         }
+
+        if (StopWatch >= 60)
+        {
+            StopWatch = 60;
+            UIManager.I.ChangeText("Timer", "0:" + (int)(60.0f - StopWatch));
+        }
+
         /*
         if (StopWatch >= 60)
         {
