@@ -51,12 +51,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e6a1053487d224287cb1447ecd8fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Wand: {fileID: 0}
   elementalBullet:
-  - {fileID: 1839039111523184, guid: 5b1eef9a445faf7409f85cbfdc5a9d4a, type: 2}
-  - {fileID: 1549112048287968, guid: d370c5b7f282c664199213e27f2ab086, type: 2}
   - {fileID: 1200669314583062, guid: 579f749b55e4d044babb0d4e51c479a5, type: 2}
+  - {fileID: 1549112048287968, guid: d370c5b7f282c664199213e27f2ab086, type: 2}
+  - {fileID: 1839039111523184, guid: 5b1eef9a445faf7409f85cbfdc5a9d4a, type: 2}
+  LaserEffect: {fileID: 1967827983791270, guid: 4e91c3169fe28f847b8ee1e822d25ebe,
+    type: 2}
+  Turret:
+  - {fileID: 1381487899614564, guid: 062f6a3ef01556447a18d40d8a8c76ab, type: 2}
+  - {fileID: 1976561464148710, guid: bc5783158b228d84bac475874a7b44d6, type: 2}
+  - {fileID: 1062011714679886, guid: 916968f9aeab98342b7f307fdef9d27a, type: 2}
+  - {fileID: 1693814495532304, guid: 0dda5d19da9c64043a51a4a278015126, type: 2}
+  - {fileID: 1859825343815312, guid: 124b656a8a912fe4a8de5af1c67bebdd, type: 2}
+  TurretBullet:
+  - {fileID: 1200669314583062, guid: 579f749b55e4d044babb0d4e51c479a5, type: 2}
+  - {fileID: 1832033815043424, guid: 7b367575151fda14cb5cda4177dab974, type: 2}
+  - {fileID: 1549112048287968, guid: d370c5b7f282c664199213e27f2ab086, type: 2}
+  - {fileID: 1839039111523184, guid: 5b1eef9a445faf7409f85cbfdc5a9d4a, type: 2}
+  - {fileID: 1752872718775070, guid: 10f24b7cd2cf680438fe53f9a9107769, type: 2}
   transformHeight: 0.03
   transformSize: 50
   frameToTransform: 15
   timeToDefault: 3
-  velocity: 5
+  playerTransform: {fileID: 0}
+  minDistance: 0
+  teleportDistance: 3
+  AOEBullet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

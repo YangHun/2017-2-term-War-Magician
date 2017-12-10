@@ -1,0 +1,458 @@
+fileFormatVersion: 2
+guid: 46c2eca424cab39419759976afa5d64b
+timeCreated: 1512843261
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: creature/nagabruteboss/nagabruteboss
+    100002: creature/nagabruteboss/nagabruteboss 1
+    100004: creature/nagabruteboss/nagabruteboss_bone_0
+    100006: creature/nagabruteboss/nagabruteboss_bone_1
+    100008: creature/nagabruteboss/nagabruteboss_bone_10
+    100010: creature/nagabruteboss/nagabruteboss_bone_11
+    100012: creature/nagabruteboss/nagabruteboss_bone_12
+    100014: creature/nagabruteboss/nagabruteboss_bone_13
+    100016: creature/nagabruteboss/nagabruteboss_bone_14
+    100018: creature/nagabruteboss/nagabruteboss_bone_15
+    100020: creature/nagabruteboss/nagabruteboss_bone_16
+    100022: creature/nagabruteboss/nagabruteboss_bone_17
+    100024: creature/nagabruteboss/nagabruteboss_bone_18
+    100026: creature/nagabruteboss/nagabruteboss_bone_19
+    100028: creature/nagabruteboss/nagabruteboss_bone_2
+    100030: creature/nagabruteboss/nagabruteboss_bone_20
+    100032: creature/nagabruteboss/nagabruteboss_bone_21
+    100034: creature/nagabruteboss/nagabruteboss_bone_22
+    100036: creature/nagabruteboss/nagabruteboss_bone_23
+    100038: creature/nagabruteboss/nagabruteboss_bone_24
+    100040: creature/nagabruteboss/nagabruteboss_bone_25
+    100042: creature/nagabruteboss/nagabruteboss_bone_26
+    100044: creature/nagabruteboss/nagabruteboss_bone_27
+    100046: creature/nagabruteboss/nagabruteboss_bone_28
+    100048: creature/nagabruteboss/nagabruteboss_bone_29
+    100050: creature/nagabruteboss/nagabruteboss_bone_3
+    100052: creature/nagabruteboss/nagabruteboss_bone_30
+    100054: creature/nagabruteboss/nagabruteboss_bone_31
+    100056: creature/nagabruteboss/nagabruteboss_bone_32
+    100058: creature/nagabruteboss/nagabruteboss_bone_33
+    100060: creature/nagabruteboss/nagabruteboss_bone_34
+    100062: creature/nagabruteboss/nagabruteboss_bone_35
+    100064: creature/nagabruteboss/nagabruteboss_bone_36
+    100066: creature/nagabruteboss/nagabruteboss_bone_37
+    100068: creature/nagabruteboss/nagabruteboss_bone_38
+    100070: creature/nagabruteboss/nagabruteboss_bone_39
+    100072: creature/nagabruteboss/nagabruteboss_bone_4
+    100074: creature/nagabruteboss/nagabruteboss_bone_40
+    100076: creature/nagabruteboss/nagabruteboss_bone_41
+    100078: creature/nagabruteboss/nagabruteboss_bone_42
+    100080: creature/nagabruteboss/nagabruteboss_bone_43
+    100082: creature/nagabruteboss/nagabruteboss_bone_44
+    100084: creature/nagabruteboss/nagabruteboss_bone_45
+    100086: creature/nagabruteboss/nagabruteboss_bone_46
+    100088: creature/nagabruteboss/nagabruteboss_bone_47
+    100090: creature/nagabruteboss/nagabruteboss_bone_48
+    100092: creature/nagabruteboss/nagabruteboss_bone_49
+    100094: creature/nagabruteboss/nagabruteboss_bone_5
+    100096: creature/nagabruteboss/nagabruteboss_bone_50
+    100098: creature/nagabruteboss/nagabruteboss_bone_51
+    100100: creature/nagabruteboss/nagabruteboss_bone_52
+    100102: creature/nagabruteboss/nagabruteboss_bone_53
+    100104: creature/nagabruteboss/nagabruteboss_bone_54
+    100106: creature/nagabruteboss/nagabruteboss_bone_55
+    100108: creature/nagabruteboss/nagabruteboss_bone_56
+    100110: creature/nagabruteboss/nagabruteboss_bone_57
+    100112: creature/nagabruteboss/nagabruteboss_bone_58
+    100114: creature/nagabruteboss/nagabruteboss_bone_59
+    100116: creature/nagabruteboss/nagabruteboss_bone_6
+    100118: creature/nagabruteboss/nagabruteboss_bone_60
+    100120: creature/nagabruteboss/nagabruteboss_bone_61
+    100122: creature/nagabruteboss/nagabruteboss_bone_62
+    100124: creature/nagabruteboss/nagabruteboss_bone_63
+    100126: creature/nagabruteboss/nagabruteboss_bone_64
+    100128: creature/nagabruteboss/nagabruteboss_bone_65
+    100130: creature/nagabruteboss/nagabruteboss_bone_66
+    100132: creature/nagabruteboss/nagabruteboss_bone_67
+    100134: creature/nagabruteboss/nagabruteboss_bone_68
+    100136: creature/nagabruteboss/nagabruteboss_bone_69
+    100138: creature/nagabruteboss/nagabruteboss_bone_7
+    100140: creature/nagabruteboss/nagabruteboss_bone_70
+    100142: creature/nagabruteboss/nagabruteboss_bone_71
+    100144: creature/nagabruteboss/nagabruteboss_bone_72
+    100146: creature/nagabruteboss/nagabruteboss_bone_73
+    100148: creature/nagabruteboss/nagabruteboss_bone_74
+    100150: creature/nagabruteboss/nagabruteboss_bone_75
+    100152: creature/nagabruteboss/nagabruteboss_bone_76
+    100154: creature/nagabruteboss/nagabruteboss_bone_77
+    100156: creature/nagabruteboss/nagabruteboss_bone_78
+    100158: creature/nagabruteboss/nagabruteboss_bone_79
+    100160: creature/nagabruteboss/nagabruteboss_bone_8
+    100162: creature/nagabruteboss/nagabruteboss_bone_80
+    100164: creature/nagabruteboss/nagabruteboss_bone_81
+    100166: creature/nagabruteboss/nagabruteboss_bone_82
+    100168: creature/nagabruteboss/nagabruteboss_bone_83
+    100170: creature/nagabruteboss/nagabruteboss_bone_84
+    100172: creature/nagabruteboss/nagabruteboss_bone_85
+    100174: creature/nagabruteboss/nagabruteboss_bone_86
+    100176: creature/nagabruteboss/nagabruteboss_bone_87
+    100178: creature/nagabruteboss/nagabruteboss_bone_88
+    100180: creature/nagabruteboss/nagabruteboss_bone_89
+    100182: creature/nagabruteboss/nagabruteboss_bone_9
+    100184: creature/nagabruteboss/nagabruteboss_bone_90
+    100186: creature/nagabruteboss/nagabruteboss_bone_91
+    100188: creature/nagabruteboss/nagabruteboss_bone_92
+    100190: creature/nagabruteboss/nagabruteboss_bone_93
+    100192: creature/nagabruteboss/nagabruteboss_bone_94
+    100194: creature/nagabruteboss/nagabruteboss_bone_95
+    100196: creature/nagabruteboss/nagabruteboss_bone_96
+    100198: //RootNode
+    400000: creature/nagabruteboss/nagabruteboss
+    400002: creature/nagabruteboss/nagabruteboss 1
+    400004: creature/nagabruteboss/nagabruteboss_bone_0
+    400006: creature/nagabruteboss/nagabruteboss_bone_1
+    400008: creature/nagabruteboss/nagabruteboss_bone_10
+    400010: creature/nagabruteboss/nagabruteboss_bone_11
+    400012: creature/nagabruteboss/nagabruteboss_bone_12
+    400014: creature/nagabruteboss/nagabruteboss_bone_13
+    400016: creature/nagabruteboss/nagabruteboss_bone_14
+    400018: creature/nagabruteboss/nagabruteboss_bone_15
+    400020: creature/nagabruteboss/nagabruteboss_bone_16
+    400022: creature/nagabruteboss/nagabruteboss_bone_17
+    400024: creature/nagabruteboss/nagabruteboss_bone_18
+    400026: creature/nagabruteboss/nagabruteboss_bone_19
+    400028: creature/nagabruteboss/nagabruteboss_bone_2
+    400030: creature/nagabruteboss/nagabruteboss_bone_20
+    400032: creature/nagabruteboss/nagabruteboss_bone_21
+    400034: creature/nagabruteboss/nagabruteboss_bone_22
+    400036: creature/nagabruteboss/nagabruteboss_bone_23
+    400038: creature/nagabruteboss/nagabruteboss_bone_24
+    400040: creature/nagabruteboss/nagabruteboss_bone_25
+    400042: creature/nagabruteboss/nagabruteboss_bone_26
+    400044: creature/nagabruteboss/nagabruteboss_bone_27
+    400046: creature/nagabruteboss/nagabruteboss_bone_28
+    400048: creature/nagabruteboss/nagabruteboss_bone_29
+    400050: creature/nagabruteboss/nagabruteboss_bone_3
+    400052: creature/nagabruteboss/nagabruteboss_bone_30
+    400054: creature/nagabruteboss/nagabruteboss_bone_31
+    400056: creature/nagabruteboss/nagabruteboss_bone_32
+    400058: creature/nagabruteboss/nagabruteboss_bone_33
+    400060: creature/nagabruteboss/nagabruteboss_bone_34
+    400062: creature/nagabruteboss/nagabruteboss_bone_35
+    400064: creature/nagabruteboss/nagabruteboss_bone_36
+    400066: creature/nagabruteboss/nagabruteboss_bone_37
+    400068: creature/nagabruteboss/nagabruteboss_bone_38
+    400070: creature/nagabruteboss/nagabruteboss_bone_39
+    400072: creature/nagabruteboss/nagabruteboss_bone_4
+    400074: creature/nagabruteboss/nagabruteboss_bone_40
+    400076: creature/nagabruteboss/nagabruteboss_bone_41
+    400078: creature/nagabruteboss/nagabruteboss_bone_42
+    400080: creature/nagabruteboss/nagabruteboss_bone_43
+    400082: creature/nagabruteboss/nagabruteboss_bone_44
+    400084: creature/nagabruteboss/nagabruteboss_bone_45
+    400086: creature/nagabruteboss/nagabruteboss_bone_46
+    400088: creature/nagabruteboss/nagabruteboss_bone_47
+    400090: creature/nagabruteboss/nagabruteboss_bone_48
+    400092: creature/nagabruteboss/nagabruteboss_bone_49
+    400094: creature/nagabruteboss/nagabruteboss_bone_5
+    400096: creature/nagabruteboss/nagabruteboss_bone_50
+    400098: creature/nagabruteboss/nagabruteboss_bone_51
+    400100: creature/nagabruteboss/nagabruteboss_bone_52
+    400102: creature/nagabruteboss/nagabruteboss_bone_53
+    400104: creature/nagabruteboss/nagabruteboss_bone_54
+    400106: creature/nagabruteboss/nagabruteboss_bone_55
+    400108: creature/nagabruteboss/nagabruteboss_bone_56
+    400110: creature/nagabruteboss/nagabruteboss_bone_57
+    400112: creature/nagabruteboss/nagabruteboss_bone_58
+    400114: creature/nagabruteboss/nagabruteboss_bone_59
+    400116: creature/nagabruteboss/nagabruteboss_bone_6
+    400118: creature/nagabruteboss/nagabruteboss_bone_60
+    400120: creature/nagabruteboss/nagabruteboss_bone_61
+    400122: creature/nagabruteboss/nagabruteboss_bone_62
+    400124: creature/nagabruteboss/nagabruteboss_bone_63
+    400126: creature/nagabruteboss/nagabruteboss_bone_64
+    400128: creature/nagabruteboss/nagabruteboss_bone_65
+    400130: creature/nagabruteboss/nagabruteboss_bone_66
+    400132: creature/nagabruteboss/nagabruteboss_bone_67
+    400134: creature/nagabruteboss/nagabruteboss_bone_68
+    400136: creature/nagabruteboss/nagabruteboss_bone_69
+    400138: creature/nagabruteboss/nagabruteboss_bone_7
+    400140: creature/nagabruteboss/nagabruteboss_bone_70
+    400142: creature/nagabruteboss/nagabruteboss_bone_71
+    400144: creature/nagabruteboss/nagabruteboss_bone_72
+    400146: creature/nagabruteboss/nagabruteboss_bone_73
+    400148: creature/nagabruteboss/nagabruteboss_bone_74
+    400150: creature/nagabruteboss/nagabruteboss_bone_75
+    400152: creature/nagabruteboss/nagabruteboss_bone_76
+    400154: creature/nagabruteboss/nagabruteboss_bone_77
+    400156: creature/nagabruteboss/nagabruteboss_bone_78
+    400158: creature/nagabruteboss/nagabruteboss_bone_79
+    400160: creature/nagabruteboss/nagabruteboss_bone_8
+    400162: creature/nagabruteboss/nagabruteboss_bone_80
+    400164: creature/nagabruteboss/nagabruteboss_bone_81
+    400166: creature/nagabruteboss/nagabruteboss_bone_82
+    400168: creature/nagabruteboss/nagabruteboss_bone_83
+    400170: creature/nagabruteboss/nagabruteboss_bone_84
+    400172: creature/nagabruteboss/nagabruteboss_bone_85
+    400174: creature/nagabruteboss/nagabruteboss_bone_86
+    400176: creature/nagabruteboss/nagabruteboss_bone_87
+    400178: creature/nagabruteboss/nagabruteboss_bone_88
+    400180: creature/nagabruteboss/nagabruteboss_bone_89
+    400182: creature/nagabruteboss/nagabruteboss_bone_9
+    400184: creature/nagabruteboss/nagabruteboss_bone_90
+    400186: creature/nagabruteboss/nagabruteboss_bone_91
+    400188: creature/nagabruteboss/nagabruteboss_bone_92
+    400190: creature/nagabruteboss/nagabruteboss_bone_93
+    400192: creature/nagabruteboss/nagabruteboss_bone_94
+    400194: creature/nagabruteboss/nagabruteboss_bone_95
+    400196: creature/nagabruteboss/nagabruteboss_bone_96
+    400198: //RootNode
+    4300000: creature/nagabruteboss/nagabruteboss
+    7400000: AttackUnarmed [5]
+    7400002: Death [8]
+    7400004: Run [14]
+    7400006: Walk [25]
+    7400008: Stand [49]
+    9500000: //RootNode
+    13700000: creature/nagabruteboss/nagabruteboss
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_nagabruteboss_nagabruteboss_0
+    second: {fileID: 2100000, guid: 4938f92ad88fe274ab374aa1bb138824, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_nagabruteboss_nagabruteboss_1
+    second: {fileID: 2100000, guid: 4938f92ad88fe274ab374aa1bb138824, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_nagabruteboss_nagabruteboss_2
+    second: {fileID: 2100000, guid: 78aee627e37cdc6438a83b9b5188f07e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_nagabruteboss_nagabruteboss_3
+    second: {fileID: 2100000, guid: 37e1f16295df2fb42994ceff2291903c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_nagabruteboss_nagabruteboss_4
+    second: {fileID: 2100000, guid: 78aee627e37cdc6438a83b9b5188f07e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: AttackUnarmed [5]
+      takeName: AttackUnarmed [5]
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death [8]
+      takeName: Death [8]
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run [14]
+      takeName: Run [14]
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk [25]
+      takeName: Walk [25]
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Stand [49]
+      takeName: Stand [49]
+      firstFrame: 0
+      lastFrame: 155
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

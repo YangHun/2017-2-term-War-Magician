@@ -45,7 +45,8 @@ public class FSM {
 
 }
 
-public enum HelenaStateType { Tutorial_Welcome, Tutorial_Moving, Tutorial_FirstCast, Tutorial_TrainMagics, Tutorial_Mana, Tutorial_End }
+public enum HelenaStateType { Tutorial_Welcome, Tutorial_Moving, Tutorial_FirstCast, Tutorial_TrainMagics, Tutorial_Mana, Tutorial_End,
+                              MainGame_Stage1, MainGame_Stage2, MainGame_Stage3, MainGame_GameOver, MainGame_Clear};
 
 public delegate void OnState();
 
