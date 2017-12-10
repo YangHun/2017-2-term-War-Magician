@@ -343,7 +343,7 @@ public class MagicCircleDrawManager : MonoBehaviour {
                     break;
             }
 
-            yield return new WaitForSeconds(fadeSpeed * 0.25f);
+           // yield return new WaitForSeconds(fadeSpeed * 0.25f);
         }
 
         while (true)

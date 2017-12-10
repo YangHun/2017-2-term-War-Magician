@@ -6,9 +6,10 @@ public class Turret : MonoBehaviour {
 
     public GameObject Bullet;
 
-
+    [SerializeField]
     List<GameObject> enemies = new List<GameObject>();
 
+    [SerializeField]
     GameObject Target;
     public Transform forward;
 
@@ -16,11 +17,13 @@ public class Turret : MonoBehaviour {
     const float lifetime = 30.0f;
 
     float skilltimer = 0.0f;
-    const float skillcooltime = 3.0f;
+    public float skillcooltime = 1.5f;
+    Animator _animator;
 
 	// Use this for initialization
 	void Start () {
         forward = transform.Find("forward");
+        _animator = GetComponent<Animator>();
         if (forward == null)
             forward = transform;        
     }
@@ -31,6 +34,11 @@ public class Turret : MonoBehaviour {
 
         if(skilltimer < skillcooltime)
             skilltimer += Time.deltaTime;
+        if (Target == null || (Target!= null &&Target.GetComponent<Monster_HP>().alreadyDead) )
+        {
+            Target = null;
+            _animator.SetTrigger("LostTarget");
+        }
 
         if (skilltimer >= skillcooltime && FindTarget())
         {
@@ -51,6 +59,10 @@ public class Turret : MonoBehaviour {
             for (int i =0; i < enemies.Count; i++) {
 
                 if(enemies[i] == null)
+                {
+                    continue;
+                }
+                else if (enemies [i].GetComponent<Monster_HP>().alreadyDead)
                 {
                     continue;
                 }
@@ -76,17 +88,25 @@ public class Turret : MonoBehaviour {
             dir = transform.forward + forward.position;
         }
         else
+        {
             dir = Target.transform.position;
-
-        GameObject b = (GameObject)Instantiate(Bullet, forward.position, Quaternion.identity);
+            transform.LookAt(dir);
+        }
+        GameObject b = (GameObject)Instantiate(Bullet, forward.position , Quaternion.identity);
         b.transform.LookAt(dir);
-        GetComponent<Animator>().SetTrigger("Attack");
-            
+       
+        if (b.GetComponent<ElementalCyclon>() != null)
+        {
+            b.GetComponent<ElementalCyclon>().forward = forward.forward;
+        }
+
+        _animator.SetTrigger("Attack");
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "FieldMonster")
+        if (other.tag == "FieldMonster" || other.tag == "AirMonster")
         {
             enemies.Add(other.gameObject);
         }

@@ -235,7 +235,7 @@ ModelImporter:
       name: AttackUnarmed [9]
       takeName: AttackUnarmed [9]
       firstFrame: 0
-      lastFrame: 59
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
