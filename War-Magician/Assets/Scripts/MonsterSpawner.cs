@@ -30,7 +30,13 @@ public class MonsterSpawner : MonoBehaviour {
     public bool Activation_FLY = false;
     public bool Activation_BIRD = false;
     int Cycle_Normal = 0;
+    int Cycle_Totem = 0;
     int Cycle_Shield = 0;
+
+    int Interval_Normal = 6;
+    int Interval_Totem = 3;
+    int Interval_Shield = 3;
+
     public int NumOfMonster = 0;
     public GameObject bossMonster;
     public GameObject bossTarget;
@@ -59,7 +65,7 @@ public class MonsterSpawner : MonoBehaviour {
         TimeIsTicking();
         if (TimeCounter_NORMAL >= SpawnTime_NORMAL)
         {
-            for (int i = Cycle_Normal * 6; i < (Cycle_Normal + 1) * 6; i++)
+            for (int i = Cycle_Normal * Interval_Normal; i < (Cycle_Normal + 1) * Interval_Normal; i++)
             {
 
                 GameObject g = GetComponent<MonsterPool>().GetObject(Spawnpoint_field[i], MonsterPool.Category.NORMAL);
@@ -67,7 +73,7 @@ public class MonsterSpawner : MonoBehaviour {
                 g.GetComponent<AI_FIELD>().Init();
             }
             Cycle_Normal++;
-            if(Cycle_Normal == 5)
+            if(Cycle_Normal == point_field.Length / Interval_Normal)
             {
                 Cycle_Normal = 0;
             }
@@ -75,11 +81,16 @@ public class MonsterSpawner : MonoBehaviour {
         }
         if(TimeCounter_TOTEM >= SpawnTime_TOTEM)
         {
-            for(int i = 0; i < point_field.Length; i++)
+            for (int i = Cycle_Totem * Interval_Totem; i < (Cycle_Totem + 1) * Interval_Totem; i++)
             {
                 GameObject g = GetComponent<MonsterPool>().GetObject(Spawnpoint_field[i], MonsterPool.Category.TOTEM);
                 g.GetComponent<NavMeshAgent>().enabled = true;
                 g.GetComponent<AI_FIELD>().Init();
+            }
+            Cycle_Totem++;
+            if (Cycle_Totem == point_field.Length / Interval_Totem)
+            {
+                Cycle_Totem = 0;
             }
             TimeCounter_TOTEM = 0;
         }
@@ -97,7 +108,7 @@ public class MonsterSpawner : MonoBehaviour {
 
         if (TimeCounter_SHIELD >= SpawnTime_SHIELD)
         {
-            for (int i = Cycle_Shield * 3; i < (Cycle_Shield + 1) * 3; i++)
+            for (int i = Cycle_Shield * Interval_Shield; i < (Cycle_Shield + 1) * Interval_Shield; i++)
             {
 
                 GameObject g = GetComponent<MonsterPool>().GetObject(Spawnpoint_field[i], MonsterPool.Category.SHIELD);
@@ -105,7 +116,7 @@ public class MonsterSpawner : MonoBehaviour {
                 g.GetComponent<AI_FIELD>().Init();
             }
             Cycle_Shield++;
-            if (Cycle_Shield == 10)
+            if (Cycle_Shield == point_field.Length / Interval_Shield)
             {
                 Cycle_Shield = 0;
             }

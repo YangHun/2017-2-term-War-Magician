@@ -211,6 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed240d66feebd484fbbdcfe98215672c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MonsterManager: {fileID: 2078591938}
+  StopWatch: 0
 --- !u!4 &80585456
 Transform:
   m_ObjectHideFlags: 0
@@ -966,12 +968,12 @@ Prefab:
     - target: {fileID: 224364775431513258, guid: 9847a012b0ebb904daee1e15081cd104,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 775.82837
+      value: 53.82834
       objectReference: {fileID: 0}
     - target: {fileID: 224364775431513258, guid: 9847a012b0ebb904daee1e15081cd104,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 437.82846
+      value: 212.32843
       objectReference: {fileID: 0}
     - target: {fileID: 224130038878339820, guid: 9847a012b0ebb904daee1e15081cd104,
         type: 2}
@@ -2078,6 +2080,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 881132937}
+  - component: {fileID: 881132939}
+  - component: {fileID: 881132938}
   m_Layer: 0
   m_Name: Target_field
   m_TagString: Untagged
@@ -2091,13 +2095,37 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881132936}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 247.9, y: 25.8, z: 274.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.39478245, z: -0, w: 0.9187746}
+  m_LocalPosition: {x: 247.04, y: 28.09, z: 274.38}
+  m_LocalScale: {x: 6, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -46.505, z: 0}
+--- !u!114 &881132938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881132936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cf8a2538e2e4e42baae6007c9a20e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GFM: {fileID: 80585454}
+--- !u!65 &881132939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881132936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &887863207
 GameObject:
   m_ObjectHideFlags: 0
@@ -5017,6 +5045,18 @@ MonoBehaviour:
   - {fileID: 2044759236}
   - {fileID: 1233356241}
   point_boss: {fileID: 848949074}
+  SpawnTime_NORMAL: 2
+  SpawnTime_TOTEM: 15
+  SpawnTime_SWARM: 10
+  SpawnTime_SHIELD: 10
+  SpawnTime_FLY: 20
+  SpawnTime_BIRD: 30
+  Activation_NORMAL: 0
+  Activation_TOTEM: 0
+  Activation_SWARM: 0
+  Activation_SHIELD: 0
+  Activation_FLY: 0
+  Activation_BIRD: 0
   NumOfMonster: 0
   bossMonster: {fileID: 1603663500191178, guid: 38064abad4a83e4498c29b4da89671f2,
     type: 2}
