@@ -37,6 +37,7 @@ public class EulerLineTracker : MonoBehaviour {
     
     public void SetNextPosition(Vector3 n, Vector3 d)
     {
+
         _renderer.SetPosition(_renderer.positionCount - 1, n - d * linedistance);
         _renderer.positionCount++;
     }

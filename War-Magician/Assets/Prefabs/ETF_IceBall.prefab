@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 4805029986300326}
   - component: {fileID: 198088355879112900}
   - component: {fileID: 199380737050532816}
+  - component: {fileID: 114997972913657430}
   m_Layer: 12
   m_Name: ETF_IceBall
   m_TagString: Untagged
@@ -289,6 +290,17 @@ Transform:
   m_Father: {fileID: 4805029986300326}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114997972913657430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1752872718775070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04371407c59185542b35a2a7eb57e020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198088355879112900
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -349,7 +361,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 81070610
+  randomSeed: -467391016
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -397,7 +409,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 50
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2775,7 +2787,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 1
   TriggerModule:
@@ -13408,7 +13420,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 253964640
+  randomSeed: 30716237
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -23254,7 +23266,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 182922934
+  randomSeed: 939385129
   InitialModule:
     serializedVersion: 3
     enabled: 1

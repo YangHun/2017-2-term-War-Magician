@@ -140,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4393512913479128}
   - component: {fileID: 95334614709044680}
+  - component: {fileID: 135231200685003638}
   m_Layer: 0
   m_Name: fairiedragon
   m_TagString: Untagged
@@ -1628,8 +1629,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062011714679886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.010015187, y: 0.97015136, z: -0.016662018, w: 0.24171987}
+  m_LocalPosition: {x: 229.68, y: 41.84, z: 261.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4797656799562188}
@@ -2291,6 +2292,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!135 &135231200685003638
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062011714679886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137038223019654448
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
