@@ -89,6 +89,8 @@ GameObject:
   - component: {fileID: 4047060449527494}
   - component: {fileID: 198487089338740658}
   - component: {fileID: 199477783411049920}
+  - component: {fileID: 114743831095442220}
+  - component: {fileID: 114201887224381804}
   m_Layer: 0
   m_Name: ETF_Cyclone
   m_TagString: Untagged
@@ -196,6 +198,30 @@ Transform:
   m_Father: {fileID: 4047060449527494}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114201887224381804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1832033815043424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207805dbfbd84c748ba47b4766ea5481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forward: {fileID: 0}
+  speed: 4
+--- !u!114 &114743831095442220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1832033815043424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04371407c59185542b35a2a7eb57e020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198038031435450350
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -9017,9 +9043,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -9159,11 +9185,11 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 512
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 1
   TriggerModule:

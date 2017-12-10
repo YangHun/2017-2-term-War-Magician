@@ -8,6 +8,7 @@ TagManager:
   - FieldMonster
   - Point
   - ManaObject
+  - AirMonster
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - 
   - FieldMonster
-  - 
+  - AirMonster
   - 
   - Line
   - 

@@ -191,6 +191,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1161799989300424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4422941027561928}
+  m_Layer: 0
+  m_Name: forward
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1164071989499984
 GameObject:
   m_ObjectHideFlags: 1
@@ -381,6 +396,7 @@ GameObject:
   - component: {fileID: 4682073654328170}
   - component: {fileID: 95152397074884788}
   - component: {fileID: 135755750937199340}
+  - component: {fileID: 114873845398028142}
   m_Layer: 0
   m_Name: wolf
   m_TagString: Untagged
@@ -1405,6 +1421,19 @@ Transform:
   m_Father: {fileID: 4430706687039508}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4422941027561928
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1161799989300424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.52, z: 0.599}
+  m_LocalScale: {x: 0.1286295, y: 0.12862949, z: 0.12862949}
+  m_Children: []
+  m_Father: {fileID: 4682073654328170}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4430706687039508
 Transform:
   m_ObjectHideFlags: 1
@@ -1664,11 +1693,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381487899614564}
   m_LocalRotation: {x: 0.010015187, y: 0.97015136, z: -0.016662018, w: 0.24171987}
-  m_LocalPosition: {x: 229.68, y: 41.84, z: 261.69}
+  m_LocalPosition: {x: 230.961, y: 42.607, z: 260.009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4500260908571772}
   - {fileID: 4430706687039508}
+  - {fileID: 4422941027561928}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2002,6 +2032,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114873845398028142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381487899614564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17293044d9e58344d9a5397cbf03c7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 1200669314583062, guid: 579f749b55e4d044babb0d4e51c479a5, type: 2}
+  enemies: []
+  Target: {fileID: 0}
+  forward: {fileID: 4422941027561928}
+  skillcooltime: 2
 --- !u!135 &135755750937199340
 SphereCollider:
   m_ObjectHideFlags: 1

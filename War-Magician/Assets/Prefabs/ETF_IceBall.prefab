@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4041962657858228}
   - component: {fileID: 198870395954391036}
   - component: {fileID: 199019398586872166}
+  - component: {fileID: 114675195644371566}
   m_Layer: 0
   m_Name: ETF_HeavySnowfall
   m_TagString: Untagged
@@ -290,6 +291,17 @@ Transform:
   m_Father: {fileID: 4805029986300326}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114675195644371566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107611032245538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04371407c59185542b35a2a7eb57e020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114997972913657430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2783,7 +2795,7 @@ ParticleSystem:
     radiusScale: 0.01
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294966271
+      m_Bits: 4294967295
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -25721,11 +25733,11 @@ ParticleSystem:
     radiusScale: 0.01
     collidesWith:
       serializedVersion: 2
-      m_Bits: 256
+      m_Bits: 768
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 1
   TriggerModule:
