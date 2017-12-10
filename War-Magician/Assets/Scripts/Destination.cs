@@ -25,6 +25,7 @@ public class Destination : MonoBehaviour {
         {
             other.gameObject.GetComponent<Animator>().SetTrigger("Dead");
             HP--;
+            UIManager.I.ChangeText("CastleHP", HP.ToString() + "/100");
         }
     }
 }

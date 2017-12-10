@@ -6,6 +6,7 @@ public class ManaObject : MonoBehaviour {
     public GameObject Manager;
     ManaObjectManager ManaObjectManager; 
     int HP = 20;
+    public int ID;
     bool isDestroyed = false;
     float RestructTime = 10.0f;
     float timeCounter = 0.0f;
