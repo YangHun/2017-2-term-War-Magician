@@ -26,19 +26,7 @@ public class CameraFade : MonoBehaviour {
         m = topviewcanvas.GetComponentInChildren<Image>().material;
         m.SetColor("_TintColor", c);
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            MainToTop();
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            TopToMain();
-        }
-    }
-
+    
     public void MainToTop()
     {
         Material m = maincanvas.GetComponentInChildren<Image>().material;
@@ -82,24 +70,21 @@ public class CameraFade : MonoBehaviour {
         
         if (cam.Equals("main"))
         {
-            Debug.Log("?");
-            m = topviewcanvas.GetComponentInChildren<Image>().material;
-            m.SetTexture("_MainTex", topviewrt);
+            Material mat = topviewcanvas.GetComponentInChildren<Image>().material;
+            mat.SetTexture("_MainTex", topviewrt);
             topviewCamera.targetDisplay = 0;
-            mainCamera.targetDisplay = 2;
-            yield return null;
+            mainCamera.targetDisplay = 1;
+            yield return StartCoroutine(ImageFadeout(mat));
         }
         else if (cam.Equals("top"))
         {
-            Debug.Log("?");
-            m = maincanvas.GetComponentInChildren<Image>().material;
-            m.SetTexture("_MainTex", mainrt);
+            Material mat = maincanvas.GetComponentInChildren<Image>().material;
+            mat.SetTexture("_MainTex", mainrt);
             mainCamera.targetDisplay = 0;
-            topviewCamera.targetDisplay = 2;
-            yield return null;
+            topviewCamera.targetDisplay = 1;
+            yield return StartCoroutine(ImageFadeout(mat));
         }
         
-        yield return StartCoroutine(ImageFadeout(m));
     }
 
     IEnumerator ImageFadeout (Material m)

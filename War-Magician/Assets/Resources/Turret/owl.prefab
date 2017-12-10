@@ -1086,6 +1086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4390086635561602}
   - component: {fileID: 95787997701679014}
+  - component: {fileID: 135040414662131586}
   m_Layer: 0
   m_Name: owl
   m_TagString: Untagged
@@ -1503,8 +1504,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976561464148710}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.010015187, y: 0.97015136, z: -0.016662018, w: 0.24171987}
+  m_LocalPosition: {x: 229.68, y: 41.84, z: 261.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4747919856064298}
@@ -2117,6 +2118,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!135 &135040414662131586
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976561464148710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137121480889688756
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
