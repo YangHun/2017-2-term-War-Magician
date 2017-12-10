@@ -1,0 +1,621 @@
+fileFormatVersion: 2
+guid: 723d8f52ed696a8429860646071ebe68
+timeCreated: 1512840001
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: creature/deathwing/deathwing
+    100004: creature/deathwing/deathwing 1
+    100006: creature/deathwing/deathwing_bone_0
+    100008: creature/deathwing/deathwing_bone_1
+    100010: creature/deathwing/deathwing_bone_10
+    100012: creature/deathwing/deathwing_bone_100
+    100014: creature/deathwing/deathwing_bone_101
+    100016: creature/deathwing/deathwing_bone_102
+    100018: creature/deathwing/deathwing_bone_103
+    100020: creature/deathwing/deathwing_bone_104
+    100022: creature/deathwing/deathwing_bone_105
+    100024: creature/deathwing/deathwing_bone_106
+    100026: creature/deathwing/deathwing_bone_107
+    100028: creature/deathwing/deathwing_bone_108
+    100030: creature/deathwing/deathwing_bone_109
+    100032: creature/deathwing/deathwing_bone_11
+    100034: creature/deathwing/deathwing_bone_110
+    100036: creature/deathwing/deathwing_bone_111
+    100038: creature/deathwing/deathwing_bone_112
+    100040: creature/deathwing/deathwing_bone_113
+    100042: creature/deathwing/deathwing_bone_114
+    100044: creature/deathwing/deathwing_bone_115
+    100046: creature/deathwing/deathwing_bone_116
+    100048: creature/deathwing/deathwing_bone_117
+    100050: creature/deathwing/deathwing_bone_118
+    100052: creature/deathwing/deathwing_bone_119
+    100054: creature/deathwing/deathwing_bone_12
+    100056: creature/deathwing/deathwing_bone_120
+    100058: creature/deathwing/deathwing_bone_121
+    100060: creature/deathwing/deathwing_bone_122
+    100062: creature/deathwing/deathwing_bone_123
+    100064: creature/deathwing/deathwing_bone_124
+    100066: creature/deathwing/deathwing_bone_125
+    100068: creature/deathwing/deathwing_bone_126
+    100070: creature/deathwing/deathwing_bone_127
+    100072: creature/deathwing/deathwing_bone_128
+    100074: creature/deathwing/deathwing_bone_129
+    100076: creature/deathwing/deathwing_bone_13
+    100078: creature/deathwing/deathwing_bone_130
+    100080: creature/deathwing/deathwing_bone_131
+    100082: creature/deathwing/deathwing_bone_132
+    100084: creature/deathwing/deathwing_bone_133
+    100086: creature/deathwing/deathwing_bone_134
+    100088: creature/deathwing/deathwing_bone_135
+    100090: creature/deathwing/deathwing_bone_136
+    100092: creature/deathwing/deathwing_bone_137
+    100094: creature/deathwing/deathwing_bone_138
+    100096: creature/deathwing/deathwing_bone_139
+    100098: creature/deathwing/deathwing_bone_14
+    100100: creature/deathwing/deathwing_bone_140
+    100102: creature/deathwing/deathwing_bone_141
+    100104: creature/deathwing/deathwing_bone_15
+    100106: creature/deathwing/deathwing_bone_16
+    100108: creature/deathwing/deathwing_bone_17
+    100110: creature/deathwing/deathwing_bone_18
+    100112: creature/deathwing/deathwing_bone_19
+    100114: creature/deathwing/deathwing_bone_2
+    100116: creature/deathwing/deathwing_bone_20
+    100118: creature/deathwing/deathwing_bone_21
+    100120: creature/deathwing/deathwing_bone_22
+    100122: creature/deathwing/deathwing_bone_23
+    100124: creature/deathwing/deathwing_bone_24
+    100126: creature/deathwing/deathwing_bone_25
+    100128: creature/deathwing/deathwing_bone_26
+    100130: creature/deathwing/deathwing_bone_27
+    100132: creature/deathwing/deathwing_bone_28
+    100134: creature/deathwing/deathwing_bone_29
+    100136: creature/deathwing/deathwing_bone_3
+    100138: creature/deathwing/deathwing_bone_30
+    100140: creature/deathwing/deathwing_bone_31
+    100142: creature/deathwing/deathwing_bone_32
+    100144: creature/deathwing/deathwing_bone_33
+    100146: creature/deathwing/deathwing_bone_34
+    100148: creature/deathwing/deathwing_bone_35
+    100150: creature/deathwing/deathwing_bone_36
+    100152: creature/deathwing/deathwing_bone_37
+    100154: creature/deathwing/deathwing_bone_38
+    100156: creature/deathwing/deathwing_bone_39
+    100158: creature/deathwing/deathwing_bone_4
+    100160: creature/deathwing/deathwing_bone_40
+    100162: creature/deathwing/deathwing_bone_41
+    100164: creature/deathwing/deathwing_bone_42
+    100166: creature/deathwing/deathwing_bone_43
+    100168: creature/deathwing/deathwing_bone_44
+    100170: creature/deathwing/deathwing_bone_45
+    100172: creature/deathwing/deathwing_bone_46
+    100174: creature/deathwing/deathwing_bone_47
+    100176: creature/deathwing/deathwing_bone_48
+    100178: creature/deathwing/deathwing_bone_49
+    100180: creature/deathwing/deathwing_bone_5
+    100182: creature/deathwing/deathwing_bone_50
+    100184: creature/deathwing/deathwing_bone_51
+    100186: creature/deathwing/deathwing_bone_52
+    100188: creature/deathwing/deathwing_bone_53
+    100190: creature/deathwing/deathwing_bone_54
+    100192: creature/deathwing/deathwing_bone_55
+    100194: creature/deathwing/deathwing_bone_56
+    100196: creature/deathwing/deathwing_bone_57
+    100198: creature/deathwing/deathwing_bone_58
+    100200: creature/deathwing/deathwing_bone_59
+    100202: creature/deathwing/deathwing_bone_6
+    100204: creature/deathwing/deathwing_bone_60
+    100206: creature/deathwing/deathwing_bone_61
+    100208: creature/deathwing/deathwing_bone_62
+    100210: creature/deathwing/deathwing_bone_63
+    100212: creature/deathwing/deathwing_bone_64
+    100214: creature/deathwing/deathwing_bone_65
+    100216: creature/deathwing/deathwing_bone_66
+    100218: creature/deathwing/deathwing_bone_67
+    100220: creature/deathwing/deathwing_bone_68
+    100222: creature/deathwing/deathwing_bone_69
+    100224: creature/deathwing/deathwing_bone_7
+    100226: creature/deathwing/deathwing_bone_70
+    100228: creature/deathwing/deathwing_bone_71
+    100230: creature/deathwing/deathwing_bone_72
+    100232: creature/deathwing/deathwing_bone_73
+    100234: creature/deathwing/deathwing_bone_74
+    100236: creature/deathwing/deathwing_bone_75
+    100238: creature/deathwing/deathwing_bone_76
+    100240: creature/deathwing/deathwing_bone_77
+    100242: creature/deathwing/deathwing_bone_78
+    100244: creature/deathwing/deathwing_bone_79
+    100246: creature/deathwing/deathwing_bone_8
+    100248: creature/deathwing/deathwing_bone_80
+    100250: creature/deathwing/deathwing_bone_81
+    100252: creature/deathwing/deathwing_bone_82
+    100254: creature/deathwing/deathwing_bone_83
+    100256: creature/deathwing/deathwing_bone_84
+    100258: creature/deathwing/deathwing_bone_85
+    100260: creature/deathwing/deathwing_bone_86
+    100262: creature/deathwing/deathwing_bone_87
+    100264: creature/deathwing/deathwing_bone_88
+    100266: creature/deathwing/deathwing_bone_89
+    100268: creature/deathwing/deathwing_bone_9
+    100270: creature/deathwing/deathwing_bone_90
+    100272: creature/deathwing/deathwing_bone_91
+    100274: creature/deathwing/deathwing_bone_92
+    100276: creature/deathwing/deathwing_bone_93
+    100278: creature/deathwing/deathwing_bone_94
+    100280: creature/deathwing/deathwing_bone_95
+    100282: creature/deathwing/deathwing_bone_96
+    100284: creature/deathwing/deathwing_bone_97
+    100286: creature/deathwing/deathwing_bone_98
+    100288: creature/deathwing/deathwing_bone_99
+    400000: //RootNode
+    400002: creature/deathwing/deathwing
+    400004: creature/deathwing/deathwing 1
+    400006: creature/deathwing/deathwing_bone_0
+    400008: creature/deathwing/deathwing_bone_1
+    400010: creature/deathwing/deathwing_bone_10
+    400012: creature/deathwing/deathwing_bone_100
+    400014: creature/deathwing/deathwing_bone_101
+    400016: creature/deathwing/deathwing_bone_102
+    400018: creature/deathwing/deathwing_bone_103
+    400020: creature/deathwing/deathwing_bone_104
+    400022: creature/deathwing/deathwing_bone_105
+    400024: creature/deathwing/deathwing_bone_106
+    400026: creature/deathwing/deathwing_bone_107
+    400028: creature/deathwing/deathwing_bone_108
+    400030: creature/deathwing/deathwing_bone_109
+    400032: creature/deathwing/deathwing_bone_11
+    400034: creature/deathwing/deathwing_bone_110
+    400036: creature/deathwing/deathwing_bone_111
+    400038: creature/deathwing/deathwing_bone_112
+    400040: creature/deathwing/deathwing_bone_113
+    400042: creature/deathwing/deathwing_bone_114
+    400044: creature/deathwing/deathwing_bone_115
+    400046: creature/deathwing/deathwing_bone_116
+    400048: creature/deathwing/deathwing_bone_117
+    400050: creature/deathwing/deathwing_bone_118
+    400052: creature/deathwing/deathwing_bone_119
+    400054: creature/deathwing/deathwing_bone_12
+    400056: creature/deathwing/deathwing_bone_120
+    400058: creature/deathwing/deathwing_bone_121
+    400060: creature/deathwing/deathwing_bone_122
+    400062: creature/deathwing/deathwing_bone_123
+    400064: creature/deathwing/deathwing_bone_124
+    400066: creature/deathwing/deathwing_bone_125
+    400068: creature/deathwing/deathwing_bone_126
+    400070: creature/deathwing/deathwing_bone_127
+    400072: creature/deathwing/deathwing_bone_128
+    400074: creature/deathwing/deathwing_bone_129
+    400076: creature/deathwing/deathwing_bone_13
+    400078: creature/deathwing/deathwing_bone_130
+    400080: creature/deathwing/deathwing_bone_131
+    400082: creature/deathwing/deathwing_bone_132
+    400084: creature/deathwing/deathwing_bone_133
+    400086: creature/deathwing/deathwing_bone_134
+    400088: creature/deathwing/deathwing_bone_135
+    400090: creature/deathwing/deathwing_bone_136
+    400092: creature/deathwing/deathwing_bone_137
+    400094: creature/deathwing/deathwing_bone_138
+    400096: creature/deathwing/deathwing_bone_139
+    400098: creature/deathwing/deathwing_bone_14
+    400100: creature/deathwing/deathwing_bone_140
+    400102: creature/deathwing/deathwing_bone_141
+    400104: creature/deathwing/deathwing_bone_15
+    400106: creature/deathwing/deathwing_bone_16
+    400108: creature/deathwing/deathwing_bone_17
+    400110: creature/deathwing/deathwing_bone_18
+    400112: creature/deathwing/deathwing_bone_19
+    400114: creature/deathwing/deathwing_bone_2
+    400116: creature/deathwing/deathwing_bone_20
+    400118: creature/deathwing/deathwing_bone_21
+    400120: creature/deathwing/deathwing_bone_22
+    400122: creature/deathwing/deathwing_bone_23
+    400124: creature/deathwing/deathwing_bone_24
+    400126: creature/deathwing/deathwing_bone_25
+    400128: creature/deathwing/deathwing_bone_26
+    400130: creature/deathwing/deathwing_bone_27
+    400132: creature/deathwing/deathwing_bone_28
+    400134: creature/deathwing/deathwing_bone_29
+    400136: creature/deathwing/deathwing_bone_3
+    400138: creature/deathwing/deathwing_bone_30
+    400140: creature/deathwing/deathwing_bone_31
+    400142: creature/deathwing/deathwing_bone_32
+    400144: creature/deathwing/deathwing_bone_33
+    400146: creature/deathwing/deathwing_bone_34
+    400148: creature/deathwing/deathwing_bone_35
+    400150: creature/deathwing/deathwing_bone_36
+    400152: creature/deathwing/deathwing_bone_37
+    400154: creature/deathwing/deathwing_bone_38
+    400156: creature/deathwing/deathwing_bone_39
+    400158: creature/deathwing/deathwing_bone_4
+    400160: creature/deathwing/deathwing_bone_40
+    400162: creature/deathwing/deathwing_bone_41
+    400164: creature/deathwing/deathwing_bone_42
+    400166: creature/deathwing/deathwing_bone_43
+    400168: creature/deathwing/deathwing_bone_44
+    400170: creature/deathwing/deathwing_bone_45
+    400172: creature/deathwing/deathwing_bone_46
+    400174: creature/deathwing/deathwing_bone_47
+    400176: creature/deathwing/deathwing_bone_48
+    400178: creature/deathwing/deathwing_bone_49
+    400180: creature/deathwing/deathwing_bone_5
+    400182: creature/deathwing/deathwing_bone_50
+    400184: creature/deathwing/deathwing_bone_51
+    400186: creature/deathwing/deathwing_bone_52
+    400188: creature/deathwing/deathwing_bone_53
+    400190: creature/deathwing/deathwing_bone_54
+    400192: creature/deathwing/deathwing_bone_55
+    400194: creature/deathwing/deathwing_bone_56
+    400196: creature/deathwing/deathwing_bone_57
+    400198: creature/deathwing/deathwing_bone_58
+    400200: creature/deathwing/deathwing_bone_59
+    400202: creature/deathwing/deathwing_bone_6
+    400204: creature/deathwing/deathwing_bone_60
+    400206: creature/deathwing/deathwing_bone_61
+    400208: creature/deathwing/deathwing_bone_62
+    400210: creature/deathwing/deathwing_bone_63
+    400212: creature/deathwing/deathwing_bone_64
+    400214: creature/deathwing/deathwing_bone_65
+    400216: creature/deathwing/deathwing_bone_66
+    400218: creature/deathwing/deathwing_bone_67
+    400220: creature/deathwing/deathwing_bone_68
+    400222: creature/deathwing/deathwing_bone_69
+    400224: creature/deathwing/deathwing_bone_7
+    400226: creature/deathwing/deathwing_bone_70
+    400228: creature/deathwing/deathwing_bone_71
+    400230: creature/deathwing/deathwing_bone_72
+    400232: creature/deathwing/deathwing_bone_73
+    400234: creature/deathwing/deathwing_bone_74
+    400236: creature/deathwing/deathwing_bone_75
+    400238: creature/deathwing/deathwing_bone_76
+    400240: creature/deathwing/deathwing_bone_77
+    400242: creature/deathwing/deathwing_bone_78
+    400244: creature/deathwing/deathwing_bone_79
+    400246: creature/deathwing/deathwing_bone_8
+    400248: creature/deathwing/deathwing_bone_80
+    400250: creature/deathwing/deathwing_bone_81
+    400252: creature/deathwing/deathwing_bone_82
+    400254: creature/deathwing/deathwing_bone_83
+    400256: creature/deathwing/deathwing_bone_84
+    400258: creature/deathwing/deathwing_bone_85
+    400260: creature/deathwing/deathwing_bone_86
+    400262: creature/deathwing/deathwing_bone_87
+    400264: creature/deathwing/deathwing_bone_88
+    400266: creature/deathwing/deathwing_bone_89
+    400268: creature/deathwing/deathwing_bone_9
+    400270: creature/deathwing/deathwing_bone_90
+    400272: creature/deathwing/deathwing_bone_91
+    400274: creature/deathwing/deathwing_bone_92
+    400276: creature/deathwing/deathwing_bone_93
+    400278: creature/deathwing/deathwing_bone_94
+    400280: creature/deathwing/deathwing_bone_95
+    400282: creature/deathwing/deathwing_bone_96
+    400284: creature/deathwing/deathwing_bone_97
+    400286: creature/deathwing/deathwing_bone_98
+    400288: creature/deathwing/deathwing_bone_99
+    4300000: creature/deathwing/deathwing
+    7400000: FlyChannelCastDirected [1]
+    7400002: FlyDeathLoop [26]
+    7400004: FlyAttackUnarmed [28]
+    7400006: FlyDeathEnd [29]
+    7400008: FlyDeathStart [31]
+    7400010: FlyRun [39]
+    7400012: FlyRun [40]
+    9500000: //RootNode
+    13700000: creature/deathwing/deathwing
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_deathwing_deathwing_0
+    second: {fileID: 2100000, guid: d6f65a6c6af0e9b43b2cb7e52fb820df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_deathwing_deathwing_1
+    second: {fileID: 2100000, guid: 6fc7dc66e3ee2694f942043191d5a3af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_deathwing_deathwing_2
+    second: {fileID: 2100000, guid: 488d542c945d0fe4db1586af6bd426d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_deathwing_deathwing_3
+    second: {fileID: 2100000, guid: 488d542c945d0fe4db1586af6bd426d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_deathwing_deathwing_4
+    second: {fileID: 2100000, guid: 6fc7dc66e3ee2694f942043191d5a3af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_deathwing_deathwing_5
+    second: {fileID: 2100000, guid: 488d542c945d0fe4db1586af6bd426d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_deathwing_deathwing_6
+    second: {fileID: 2100000, guid: 6fc7dc66e3ee2694f942043191d5a3af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: creature_deathwing_deathwing_7
+    second: {fileID: 2100000, guid: d6f65a6c6af0e9b43b2cb7e52fb820df, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: FlyChannelCastDirected [1]
+      takeName: FlyChannelCastDirected [1]
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FlyDeathLoop [26]
+      takeName: FlyDeathLoop [26]
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FlyAttackUnarmed [28]
+      takeName: FlyAttackUnarmed [28]
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FlyDeathEnd [29]
+      takeName: FlyDeathEnd [29]
+      firstFrame: 0
+      lastFrame: 76
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FlyDeathStart [31]
+      takeName: FlyDeathStart [31]
+      firstFrame: 0
+      lastFrame: 76
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FlyRun [39]
+      takeName: FlyRun [39]
+      firstFrame: 0
+      lastFrame: 76
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FlyRun [40]
+      takeName: FlyRun [40]
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
