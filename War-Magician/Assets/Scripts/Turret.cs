@@ -6,6 +6,9 @@ public class Turret : MonoBehaviour {
 
     public GameObject Bullet;
 
+
+    List<GameObject> enemies = new List<GameObject>();
+
     GameObject Target;
     public Transform forward;
 
@@ -29,7 +32,7 @@ public class Turret : MonoBehaviour {
         if(skilltimer < skillcooltime)
             skilltimer += Time.deltaTime;
 
-        if (skilltimer >= skillcooltime)
+        if (skilltimer >= skillcooltime && FindTarget())
         {
             Attack();
             skilltimer = 0.0f;
@@ -41,6 +44,26 @@ public class Turret : MonoBehaviour {
 
     bool FindTarget()
     {
+        if (enemies.Count > 0)
+        {
+            float min = 500f;
+
+            for (int i =0; i < enemies.Count; i++) {
+
+                if(enemies[i] == null)
+                {
+                    continue;
+                }
+                else if ((enemies[i].transform.position - transform.position).magnitude < min)
+                 {
+                    min = (enemies[i].transform.position - transform.position).magnitude;
+                    Target = enemies[i];
+                }
+            }
+
+            if (Target != null)
+                return true;
+        }
 
         return false;
     }
@@ -63,7 +86,18 @@ public class Turret : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "FieldMonster")
+        {
+            enemies.Add(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (enemies.Contains (other.gameObject))
+        {
+            enemies.Remove(other.gameObject);
+        }
     }
 
 }

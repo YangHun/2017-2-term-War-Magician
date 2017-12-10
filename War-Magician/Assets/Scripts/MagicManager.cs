@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MagicManager : MonoBehaviour {
     // Static variables for singleton
@@ -46,8 +47,10 @@ public class MagicManager : MonoBehaviour {
     int frameToTransform;  // Frame to modify terrain
     [SerializeField]
     float timeToDefault;    // Time to change modified terrain into default
+    [SerializeField]
+    GameObject Obstacle;    // GameObject for Navmesh Obstacle
 
-    
+
 
     // Variables for teleport magic
     [SerializeField]
@@ -268,7 +271,13 @@ public class MagicManager : MonoBehaviour {
     void TerrainTransform(Vector3 destination, bool up)
     {
         Debug.Log(destination);
-        StartCoroutine(TTBegin((int)destination.x, (int)destination.z, up));
+        
+        GameObject g = (GameObject)Instantiate(Obstacle, destination + Vector3.up * transformHeight, Quaternion.identity);
+        g.transform.SetParent(this.transform);
+        g.GetComponent<NavMeshObstacle>().radius = transformSize / 2;
+        g.GetComponent<NavMeshObstacle>().height = transformHeight * 2;
+
+        StartCoroutine(TTBegin((int)destination.x, (int)destination.z, up, g));
     }
 
     void Laser(Vector3 direction)
@@ -411,7 +420,7 @@ public class MagicManager : MonoBehaviour {
             Instantiate(AOEBullet[(int)e], Camera.main.transform.position, Quaternion.LookRotation(direction));
     }
 
-    IEnumerator TTBegin(int x, int y, bool up)
+    IEnumerator TTBegin(int x, int y, bool up, GameObject obstcl)
     {
         float[,] defaultHeight = myTerrain.terrainData.GetHeights(x - (transformSize / 2), y - (transformSize / 2), transformSize, transformSize);
         float[,] targetHeight = new float[transformSize, transformSize];
@@ -440,6 +449,10 @@ public class MagicManager : MonoBehaviour {
         }
         // float[,] resultHeight = myTerrain.terrainData.GetHeights(x - (transformSize / 2), y - (transformSize / 2), transformSize, transformSize);
         yield return StartCoroutine(TTCore(x, y, targetHeight, defaultHeight));
+
+        Destroy(gameObject);
+        yield return null;
+
     }
 
     IEnumerator TTCore(int x, int y, float[,] from, float[,] to)
@@ -468,6 +481,7 @@ public class MagicManager : MonoBehaviour {
             myTerrain.terrainData.SetHeights(x - (transformSize / 2), y - (transformSize / 2), tmp);
             yield return null;
         }
+        
     }
 
 }
