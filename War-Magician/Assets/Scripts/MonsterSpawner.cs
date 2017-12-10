@@ -11,18 +11,24 @@ public class MonsterSpawner : MonoBehaviour {
     public Spawnpoint[] Spawnpoint_air;
     public Spawnpoint[] Spawnpoint_swarm;
     public Spawnpoint Spawnpoint_boss;
-    float SpawnTime_NORMAL = 2.0f;
-    float SpawnTime_TOTEM = 15.0f;
-    float SpawnTime_SWARM = 10.0f;
-    float SpawnTime_SHIELD = 10.0f;
-    float SpawnTime_FLY = 20.0f;
-    float SpawnTime_BIRD = 30.0f;
+    public float SpawnTime_NORMAL = 2.0f;
+    public float SpawnTime_TOTEM = 15.0f;
+    public float SpawnTime_SWARM = 10.0f;
+    public float SpawnTime_SHIELD = 10.0f;
+    public float SpawnTime_FLY = 20.0f;
+    public float SpawnTime_BIRD = 30.0f;
     float TimeCounter_NORMAL = 0.0f;
     float TimeCounter_TOTEM = 0.0f;
     float TimeCounter_SWARM = 0.0f;
     float TimeCounter_SHIELD = 0.0f;
     float TimeCounter_FLY = 0.0f;
     float TimeCounter_BIRD = 0.0f;
+    public bool Activation_NORMAL = false;
+    public bool Activation_TOTEM = false;
+    public bool Activation_SWARM = false;
+    public bool Activation_SHIELD = false;
+    public bool Activation_FLY = false;
+    public bool Activation_BIRD = false;
     int Cycle_Normal = 0;
     int Cycle_Shield = 0;
     public int NumOfMonster = 0;
@@ -50,12 +56,7 @@ public class MonsterSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        TimeCounter_NORMAL += Time.deltaTime;
-        TimeCounter_TOTEM += Time.deltaTime;
-        TimeCounter_SWARM += Time.deltaTime;
-        TimeCounter_SHIELD += Time.deltaTime;
-        TimeCounter_FLY += Time.deltaTime;
-        TimeCounter_BIRD += Time.deltaTime;
+        TimeIsTicking();
         if (TimeCounter_NORMAL >= SpawnTime_NORMAL)
         {
             for (int i = Cycle_Normal * 6; i < (Cycle_Normal + 1) * 6; i++)
@@ -137,7 +138,36 @@ public class MonsterSpawner : MonoBehaviour {
             NumOfMonster = 0;
         }
     }
+    void TimeIsTicking()
+    {
+        if (Activation_NORMAL)
+        {
+            TimeCounter_NORMAL += Time.deltaTime;
+        }
+        if (Activation_TOTEM)
+        {
+            TimeCounter_TOTEM += Time.deltaTime;
+        }
+        if (Activation_SWARM)
+        {
+            TimeCounter_SWARM += Time.deltaTime;
+        }
+        if (Activation_SHIELD)
+        {
+            TimeCounter_SHIELD += Time.deltaTime;
+        }
+        if (Activation_FLY)
+        {
+            TimeCounter_FLY += Time.deltaTime;
+        }
+        if (Activation_BIRD)
+        {
+            TimeCounter_BIRD += Time.deltaTime;
+        }
+    }
 }
+
+
 
 public class Spawnpoint
 {
