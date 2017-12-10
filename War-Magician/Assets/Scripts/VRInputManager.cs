@@ -50,10 +50,24 @@ public class VRInputManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+        if (isContinuous)
+        {
+            MagicCircleDrawManager.I.EulerLineTracker.GetComponent<LineRenderer>().startWidth = 0.0f;
+            MagicCircleDrawManager.I.ContinuousLineTracker.GetComponent<LineRenderer>().startWidth = 0.025f;
+        }
+        else
+        {
+            MagicCircleDrawManager.I.EulerLineTracker.GetComponent<LineRenderer>().startWidth = 0.025f;
+            MagicCircleDrawManager.I.ContinuousLineTracker.GetComponent<LineRenderer>().startWidth = 0.0f;
+        }
+
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        
 
         if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger, OVRInput.Controller.Active) == 0 && !LIndexTriggerDown)
         {
@@ -158,18 +172,21 @@ public class VRInputManager : MonoBehaviour {
         Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
         cam.Render();
         yield return null;
+
         RenderTexture.active = rt;
         tex.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
         yield return null;
+        
         bytes = tex.EncodeToJPG();
 
         yield return StartCoroutine(machine.StartPredict(bytes));
 
+        /*
         if (predictions == null)
             yield break;
 
         yield return StartCoroutine(CallMagic());
-
+        */
     }
 
     IEnumerator CallMagic()

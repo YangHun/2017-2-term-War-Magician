@@ -36,8 +36,10 @@ public class ImageProcessor : MonoBehaviour {
         
         runner.AddInput(graph["binary"][0], TFTensor.CreateString(bytes) );
         runner.Fetch(graph["InceptionV3/Predictions/Reshape_1"][0]);
-        
+  
         float[,] result = runner.Run()[0].GetValue() as float[,];
+        yield return null;
+
         float[] output = new float[result.GetLength(1)];
 
         for (int i = 0; i < result.GetLength(1); i++) {
@@ -47,8 +49,6 @@ public class ImageProcessor : MonoBehaviour {
         }
 
         VRInputManager.I.predictions = output;
-
-        yield return null;
 
     }
 
