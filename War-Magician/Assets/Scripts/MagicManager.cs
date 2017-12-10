@@ -15,7 +15,7 @@ public class MagicManager : MonoBehaviour {
     // Magic types
     public enum Element { Thunder, Air, Flame, Soil, Water, Ice }
     public enum MagicType { MAGIC_ELEMENTAL, MAGIC_TERRAIN_DOWN, MAGIC_TERRAIN_UP, MAGIC_TURRET, MAGIC_LASER,
-                            MAGIC_PLAYER_AOE, MATIC_TOP_AOE, MAGIC_RAGE, MAGIC_TELEPORT, MAGIC_SPECIAL }
+                            MAGIC_PLAYER_AOE, MAGIC_TOP_AOE, MAGIC_RAGE, MAGIC_TELEPORT, MAGIC_SPECIAL }
 
     // Variables for elemental bullet magic
     [SerializeField]
@@ -171,6 +171,10 @@ public class MagicManager : MonoBehaviour {
             case "6516426":
                 _DoMagic(element, MagicType.MAGIC_TURRET);
                 break;
+            case "23652":
+            case "25632":
+                _DoMagic(element, MagicType.MAGIC_TOP_AOE);
+                break;
             default:
                 Debug.Log("No magic matched with path");
                 break;
@@ -207,6 +211,9 @@ public class MagicManager : MonoBehaviour {
                 break;
             case MagicType.MAGIC_PLAYER_AOE:
                 AOE(direction, e);
+                break;
+            case MagicType.MAGIC_TOP_AOE:
+                AOETop(direction);
                 break;
             case MagicType.MAGIC_TURRET:
                 CallTurret(element);
@@ -376,34 +383,32 @@ public class MagicManager : MonoBehaviour {
         }
     }
 
+    public void GetTopAOEMagic(Vector3 direction)
+    {
+        int e = UnityEngine.Random.Range(0, 2) * 2;
+
+        RaycastHit hit;
+        if (Physics.Raycast(AOETopObject.transform.position, direction, out hit))
+        {
+            Instantiate(AOEBullet[e], hit.point, Quaternion.identity);
+        }
+    }
+
+
     void AOETop(Vector3 direction)
     {
 
         AOETopObject.enabled = true;
         VRInputManager.I.JoystickOn = true;
-
-        /*
         VRInputManager.I.cameramanager.MainToTop();
-        VRInputManager.I.JoystickOn = true;
+     
+    }
 
-        int count = 0;
-        const int maxcount = 3;
-
-        float timer = 0.0f;
-        const float magictime = 30.0f;
-
-        for (; ; )
-        {
-            timer += Time.deltaTime;
-
-            if (magictime <= timer || count >= maxcount)
-            {
-                VRInputManager.I.cameramanager.TopToMain();
-                VRInputManager.I.JoystickOn = false;
-                break;
-            }
-        }
-        */
+    public void AOETopEnd() //Callback when AOE Attack is over
+    {
+        AOETopObject.enabled = false;
+        VRInputManager.I.JoystickOn = false;
+        VRInputManager.I.cameramanager.TopToMain();
     }
 
     void AOE(Vector3 direction, Element e)
