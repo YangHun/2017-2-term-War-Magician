@@ -123,15 +123,18 @@ public class GameFlowManager : MonoBehaviour {
     void OnStateMainGameStage1()
     {
         MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
-        MS.Activation_NORMAL = true;
+        MS.Activation_NORMAL = false;
         MS.Activation_TOTEM = false;
         MS.Activation_SWARM = false;
         MS.Activation_SHIELD = false;
-        MS.Activation_FLY = false;
+        MS.Activation_FLY = true;
         MS.Activation_BIRD = false;
         
         MS.SpawnTime_NORMAL = 3f;
-
+        MS.SpawnTime_TOTEM = 3f;
+        MS.SpawnTime_SWARM = 3f;
+        MS.SpawnTime_SHIELD = 3f;
+        MS.SpawnTime_FLY = 6f;
         StopWatch += Time.deltaTime;
         if(StopWatch >= 60)
         {

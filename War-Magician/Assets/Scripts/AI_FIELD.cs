@@ -5,7 +5,8 @@ using UnityEngine.AI;
 public class AI_FIELD : MonoBehaviour {
     public GameObject target;
     public float originSpeed;
-
+    public int originHP;
+    public GameObject mesh;
 	// Use this for initialization
 	void Start () {
 		

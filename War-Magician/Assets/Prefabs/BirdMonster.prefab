@@ -3264,6 +3264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 0.3
+  originHP: 10
 --- !u!114 &114949870875692604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3275,7 +3276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9e9660cc4de3148ae519bf4165ca65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 10
+  HP: 10
 --- !u!137 &137730449770051496
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -5,7 +5,8 @@ using UnityEngine;
 public class AI_AIR : MonoBehaviour {
     public GameObject target;
     public float speed;
-    bool isInitialized = false;
+    public int originHP;
+    public bool isInitialized = false;
 	// Use this for initialization
 	void Start () {
 		
