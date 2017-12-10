@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4040448489114532}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4621000721540860}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4395385140288988}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4278809722102946}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4926440728963766}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4326755644818734}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4363945332512600}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4930978512517458}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4654719537588458}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4534564255614374}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4995162244082842}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4668009373324420}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4666597146818892}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4435175878359690}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4636818852460066}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4493065629991858}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4219222755968254}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4833434860085098}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4179710813535418}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4436617781678648}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4874808276139514}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4978838524143146}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4595125953340980}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4828920343317112}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4812430697665474}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4445987968665484}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4509851919051680}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4758392797089832}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4288485969647440}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4416476776537440}
   - component: {fileID: 137776512118017364}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4866262945316654}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4459724597971086}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4154925676317070}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4452342312128238}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4705916018254926}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4778103432192590}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +560,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4247055955362074}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4059574990762138}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +590,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4129102662937594}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4472653716463276}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4034089940146700}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4250050216524856}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4123021967136244}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4414179991254664}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4647291659344986}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4912664561355882}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 195819799189709970}
   - component: {fileID: 54663425593989122}
   - component: {fileID: 114616924829562072}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: SwarmMonster
   m_TagString: FieldMonster
   m_Icon: {fileID: 0}
@@ -731,7 +731,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4158755880636640}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_93
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,7 +746,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4628500901974926}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4850312830991340}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,7 +776,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4384398265554344}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +791,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4081427388451818}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,7 +806,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4961060042056888}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_95
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4567214187100794}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4563364131046256}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,7 +851,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4989524349969962}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +866,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4531824828309220}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +881,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4833541937907358}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -896,7 +896,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4752571367745368}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -911,7 +911,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4159657657921300}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_89
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,7 +926,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4639746539488864}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -941,7 +941,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4487069014243386}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +956,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4993755045788102}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +971,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4395488991501586}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,7 +986,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4794883676936750}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4440736952778952}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1016,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4674876113458652}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_85
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1031,7 +1031,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4957900320672134}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_90
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4174622891369542}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1061,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4454772350867832}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1076,7 +1076,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4654865251766716}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_91
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1091,7 +1091,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4869385371562268}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1106,7 +1106,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4287373640516442}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1121,7 +1121,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4883831898947320}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1136,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4307583490174882}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,7 +1151,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4150567210742068}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_69
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1166,7 +1166,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4536413758989644}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4194466643482108}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1196,7 +1196,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4146406857755890}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1211,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4255784927884908}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1226,7 +1226,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4727869198798778}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1241,7 +1241,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4188278961185064}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1256,7 +1256,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4515121898958488}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1271,7 +1271,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4590289935272046}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_94
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1286,7 +1286,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4061275939673122}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1301,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4130064335554590}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1316,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4705395506113628}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,7 +1331,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4419547938841074}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1346,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4138317659750622}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,7 +1361,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4270607149586004}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_86
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1376,7 +1376,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4058980992494470}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1391,7 +1391,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4224757547149910}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1406,7 +1406,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4276791898072596}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1421,7 +1421,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4369901354637140}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_88
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1436,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4634641084918876}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1451,7 +1451,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4160891658734520}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1466,7 +1466,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4838491152282858}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1481,7 +1481,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4399203157826164}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1496,7 +1496,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4014349504362702}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: creature/alliancemurloc/alliancemurloc_bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2944,7 +2944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9e9660cc4de3148ae519bf4165ca65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 1
+  HP: 0
 --- !u!136 &136964030266486684
 CapsuleCollider:
   m_ObjectHideFlags: 1

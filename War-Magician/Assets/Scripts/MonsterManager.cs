@@ -3,5 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterManager : MonoBehaviour {
-    MonsterSpawner MS = GetComponent<MonsterSpawner>();
+    MonsterSpawner MS;
+
+    void Start()
+    {
+        MS = GetComponent<MonsterSpawner>();
+    }
 }

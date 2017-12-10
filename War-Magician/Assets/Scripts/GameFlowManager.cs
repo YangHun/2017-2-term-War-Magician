@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameFlowManager : MonoBehaviour {
 
+    public GameObject MonsterManager;
+    public float StopWatch = 0;
     FSM fsm = new FSM();
 
 
@@ -120,26 +122,77 @@ public class GameFlowManager : MonoBehaviour {
 
     void OnStateMainGameStage1()
     {
+        MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
+        MS.Activation_NORMAL = true;
+        MS.Activation_TOTEM = false;
+        MS.Activation_SWARM = false;
+        MS.Activation_SHIELD = false;
+        MS.Activation_FLY = false;
+        MS.Activation_BIRD = false;
         
+        MS.SpawnTime_NORMAL = 3f;
+
+        StopWatch += Time.deltaTime;
+        if(StopWatch >= 10)
+        {
+            StopWatch = 0;
+            fsm.SetNext(HelenaStateType.MainGame_Stage2);
+        }
     }
 
     void OnStateMainGameStage2()
     {
-
+        MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
+        MS.Activation_NORMAL = true;
+        MS.Activation_TOTEM = true;
+        MS.Activation_SWARM = true;
+        MS.Activation_SHIELD = false;
+        MS.Activation_FLY = true;
+        MS.Activation_BIRD = false;
+        MS.SpawnTime_NORMAL = 6f;
+        MS.SpawnTime_TOTEM = 18f;
+        MS.SpawnTime_SWARM = 24f;
+        MS.SpawnTime_FLY = 12f;
+        StopWatch += Time.deltaTime;
+        if (StopWatch >= 30)
+        {
+            StopWatch = 0;
+            fsm.SetNext(HelenaStateType.MainGame_Stage3);
+        }
     }
 
     void OnStateMainGameStage3()
     {
-
+        MonsterSpawner MS = MonsterManager.GetComponent<MonsterSpawner>();
+        MS.Activation_NORMAL = true;
+        MS.Activation_TOTEM = true;
+        MS.Activation_SWARM = false;
+        MS.Activation_SHIELD = true;
+        MS.Activation_FLY = false;
+        MS.Activation_BIRD = true;
+        MS.SpawnTime_NORMAL = 6f;
+        MS.SpawnTime_TOTEM = 15f;
+        MS.SpawnTime_SHIELD = 20f;
+        MS.SpawnTime_BIRD = 20f;
+        StopWatch += Time.deltaTime;
+        if (StopWatch >= 10)
+        {
+            
+        }
     }
 
     void OnStateMainGameGameOver()
     {
-
+        Debug.Log("Game Over");
     }
 
     void OnStateMainGameClear()
     {
 
+    }
+
+    public void Transition(HelenaStateType next)
+    {
+        fsm.SetNext(next);
     }
 }
