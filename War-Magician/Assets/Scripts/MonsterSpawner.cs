@@ -21,7 +21,7 @@ public class MonsterSpawner : MonoBehaviour {
     float TimeCounter_TOTEM = 0.0f;
     float TimeCounter_SWARM = 0.0f;
     float TimeCounter_SHIELD = 0.0f;
-    float TimeCounter_FLY = 0.0f;
+    float TimeCounter_FLY = 27.0f;
     float TimeCounter_BIRD = 0.0f;
     public bool Activation_NORMAL = false;
     public bool Activation_TOTEM = false;

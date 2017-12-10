@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 452a71929cd3dd9489ba9fb1686204a1
-timeCreated: 1512911706
+guid: 68b44c879ea59824fbd239bb0c5af1f2
+timeCreated: 1512926704
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -66,12 +66,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: creature_spells_draeneitotem_air_0
-    second: {fileID: 2100000, guid: a064647b991a74a449397d0abeaf88f1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: creature_spells_draeneitotem_air_1
-    second: {fileID: 2100000, guid: a064647b991a74a449397d0abeaf88f1, type: 2}
+    second: {fileID: 2100000, guid: 814959b4f40e57045b924f4f22349a2d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -80,23 +75,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: creature_spells_draeneitotem_air_3
-    second: {fileID: 2100000, guid: d16d8017a145a09469223bd0405f99d2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: creature_spells_draeneitotem_air_4
-    second: {fileID: 2100000, guid: a064647b991a74a449397d0abeaf88f1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: creature_spells_draeneitotem_air_5
-    second: {fileID: 2100000, guid: 814959b4f40e57045b924f4f22349a2d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: creature_spells_draeneitotem_air_6
-    second: {fileID: 2100000, guid: faa5bce003857494eb3719e53da32a01, type: 2}
+    second: {fileID: 2100000, guid: d16d8017a145a09469223bd0405f99d2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

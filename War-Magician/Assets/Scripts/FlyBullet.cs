@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlyBullet : MonoBehaviour
 {
-
+    public int Damage;
     // Use this for initialization
     void Start()
     {
@@ -20,7 +20,7 @@ public class FlyBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ManaObject"))
         {
-            collision.gameObject.GetComponent<ManaObject>().GetDamaged();
+            collision.gameObject.GetComponent<ManaObject>().GetDamaged(Damage);
 
         }
         Destroy(gameObject);
