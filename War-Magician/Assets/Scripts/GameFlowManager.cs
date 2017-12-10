@@ -37,8 +37,13 @@ public class GameFlowManager : MonoBehaviour {
         fsm.states.Add(HelenaStateType.Tutorial_Mana, new State(HelenaStateType.Tutorial_Mana, OnStateTutorialMana));
         fsm.states.Add(HelenaStateType.Tutorial_End, new State(HelenaStateType.Tutorial_End, OnStateTutorialEnd));
 
-        fsm.StartState = fsm.states[HelenaStateType.Tutorial_Welcome];
-
+        fsm.states.Add(HelenaStateType.MainGame_Stage1, new State(HelenaStateType.MainGame_Stage1, OnStateMainGameStage1));
+        fsm.states.Add(HelenaStateType.MainGame_Stage2, new State(HelenaStateType.MainGame_Stage2, OnStateMainGameStage2));
+        fsm.states.Add(HelenaStateType.MainGame_Stage3, new State(HelenaStateType.MainGame_Stage3, OnStateMainGameStage3));
+        fsm.states.Add(HelenaStateType.MainGame_GameOver, new State(HelenaStateType.MainGame_GameOver, OnStateMainGameGameOver));
+        fsm.states.Add(HelenaStateType.MainGame_Clear, new State(HelenaStateType.MainGame_Clear, OnStateMainGameClear));
+        //   fsm.StartState = fsm.states[HelenaStateType.Tutorial_Welcome];
+        fsm.StartState = fsm.states[HelenaStateType.MainGame_Stage1];
     }
 
 	// Update is called once per frame
@@ -109,6 +114,31 @@ public class GameFlowManager : MonoBehaviour {
     }
 
     void OnStateTutorialEnd()
+    {
+
+    }
+
+    void OnStateMainGameStage1()
+    {
+        
+    }
+
+    void OnStateMainGameStage2()
+    {
+
+    }
+
+    void OnStateMainGameStage3()
+    {
+
+    }
+
+    void OnStateMainGameGameOver()
+    {
+
+    }
+
+    void OnStateMainGameClear()
     {
 
     }
