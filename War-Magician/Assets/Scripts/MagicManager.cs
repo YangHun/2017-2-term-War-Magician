@@ -72,6 +72,10 @@ public class MagicManager : MonoBehaviour {
     // Variables for Special magic
     [SerializeField]
     public GameObject Meteora;
+    [SerializeField]
+    Light light;
+    [SerializeField]
+    Material skybox;
 
 
     // Use this for initialization
@@ -458,6 +462,7 @@ public class MagicManager : MonoBehaviour {
 
     void Special()
     {
+        StartCoroutine(Sunset());
         Instantiate(Meteora);
         GameObject[] fields = GameObject.FindGameObjectsWithTag("FieldMonster");
         if (fields != null)
@@ -538,4 +543,30 @@ public class MagicManager : MonoBehaviour {
         
     }
 
+    IEnumerator Sunset()
+    {
+        for(float i = 0; i <= 1f; i += 0.05f)
+        {
+            skybox.SetFloat("_AtmosphereThickness", 1 + 3*i);
+            light.color = new Color(1 - i, 1 - i, 1 - i);
+
+            yield return null;
+        }
+        skybox.SetFloat("_AtmosphereThickness", 4);
+        light.color = Color.black;
+        yield return new WaitForSeconds(5f);
+        yield return StartCoroutine(Sunrise());
+    }
+    IEnumerator Sunrise()
+    {
+        for (float i = 0; i <= 1f; i += 0.05f)
+        {
+            skybox.SetFloat("_AtmosphereThickness", 4 - 3 * i);
+            light.color = new Color(i, i, i);
+
+            yield return null;
+        }
+        skybox.SetFloat("_AtmosphereThickness", 1);
+        light.color = Color.white;
+    }
 }
